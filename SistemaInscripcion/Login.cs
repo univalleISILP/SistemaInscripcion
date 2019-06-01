@@ -43,8 +43,8 @@ namespace SistemaInscripcion
             }
             if (LoginABML.Autenticar(us) == "alm")
             {
-                PlataformaUser pU = new PlataformaUser();
-                pU.Show();
+                PlataformaAlumno pAL = new PlataformaAlumno();
+                pAL.Show();
                 this.Hide();
             }
         }

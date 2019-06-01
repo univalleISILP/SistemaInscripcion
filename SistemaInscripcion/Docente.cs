@@ -9,15 +9,11 @@ namespace SistemaInscripcion
     class Docente
     {
         public int CI { get; set; }
-        public String Nombre { get; set; }
-
+        public string Nombre { get; set; }
         public string Apellido { get; set; }
-
         public char Genero { get; set; }
         public string Especialidad { get; set; }
-
         public int Telefono { get; set; }
-
         public string Direccion { get; set; }
 
         public Docente() { }

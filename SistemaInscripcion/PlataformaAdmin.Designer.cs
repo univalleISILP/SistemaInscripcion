@@ -74,7 +74,7 @@
             // 
             // btnAddMaterias
             // 
-            this.btnAddMaterias.BackColor = System.Drawing.Color.Teal;
+            this.btnAddMaterias.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAddMaterias.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnAddMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -90,7 +90,7 @@
             // 
             // btnAddDocentes
             // 
-            this.btnAddDocentes.BackColor = System.Drawing.Color.Teal;
+            this.btnAddDocentes.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAddDocentes.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddDocentes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnAddDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -106,7 +106,7 @@
             // 
             // btnAddAlumnos
             // 
-            this.btnAddAlumnos.BackColor = System.Drawing.Color.Teal;
+            this.btnAddAlumnos.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAddAlumnos.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddAlumnos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnAddAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

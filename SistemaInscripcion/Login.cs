@@ -77,7 +77,7 @@ namespace SistemaInscripcion
             if (txtUserName.Text == "")
             {
                 txtUserName.Text = "UserName";
-                txtUserName.ForeColor = Color.Gray;
+                txtUserName.ForeColor = Color.White;
             }
         }
 
@@ -86,7 +86,7 @@ namespace SistemaInscripcion
             if (txtPassword.Text == "")
             {
                 txtPassword.Text = "Password";
-                txtPassword.ForeColor = Color.Gray;
+                txtPassword.ForeColor = Color.White;
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
@@ -96,7 +96,7 @@ namespace SistemaInscripcion
             if (txtUserName.Text == "UserName")
             {
                 txtUserName.Text = "";
-                txtUserName.ForeColor = Color.Black;
+                txtUserName.ForeColor = Color.White;
 
                 lblusuario.Visible = false;
                 lblpassword.Visible = false;
@@ -109,7 +109,7 @@ namespace SistemaInscripcion
             if (txtPassword.Text == "Password")
             {
                 txtPassword.Text = "";
-                txtPassword.ForeColor = Color.Black;
+                txtPassword.ForeColor = Color.White;
                 txtPassword.UseSystemPasswordChar = false;
                 lblusuario.Visible = false;
                 lblpassword.Visible = false;

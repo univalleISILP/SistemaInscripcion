@@ -26,7 +26,27 @@ namespace SistemaInscripcion
 
         private void BtnAcceder_Click(object sender, EventArgs e)
         {
-
+            usuario us = new usuario();
+            us.CodUsuario = txtUserName.Text;
+            us.Contraseña = txtPassword.Text;
+            if (LoginABML.Autenticar(us)=="adm")
+            {
+                PlataformaAdmin pA = new PlataformaAdmin();
+                pA.Show();
+                this.Hide();
+            }
+            if (LoginABML.Autenticar(us) == "doc")
+            {
+                PlataformaUser pU = new PlataformaUser();
+                pU.Show();
+                this.Hide();
+            }
+            if (LoginABML.Autenticar(us) == "alm")
+            {
+                PlataformaUser pU = new PlataformaUser();
+                pU.Show();
+                this.Hide();
+            }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)

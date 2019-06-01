@@ -40,12 +40,12 @@
             this.txtCantidadProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.btnSaveProducto = new System.Windows.Forms.Button();
+            this.btnSaveDocentes = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodPro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.UpdateAdmin = new System.Windows.Forms.Button();
+            this.DeleteAdmin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosGridView)).BeginInit();
@@ -117,12 +117,12 @@
             this.panelProductos.Controls.Add(this.txtCantidadProducto);
             this.panelProductos.Controls.Add(this.label3);
             this.panelProductos.Controls.Add(this.txtNombreProducto);
-            this.panelProductos.Controls.Add(this.btnSaveProducto);
+            this.panelProductos.Controls.Add(this.btnSaveDocentes);
             this.panelProductos.Controls.Add(this.label2);
             this.panelProductos.Controls.Add(this.txtCodPro);
             this.panelProductos.Controls.Add(this.label1);
-            this.panelProductos.Controls.Add(this.btnUpdate);
-            this.panelProductos.Controls.Add(this.btnDelete);
+            this.panelProductos.Controls.Add(this.UpdateAdmin);
+            this.panelProductos.Controls.Add(this.DeleteAdmin);
             this.panelProductos.Location = new System.Drawing.Point(291, 42);
             this.panelProductos.MaximumSize = new System.Drawing.Size(1151, 440);
             this.panelProductos.MinimumSize = new System.Drawing.Size(1151, 440);
@@ -204,15 +204,15 @@
             this.txtNombreProducto.Size = new System.Drawing.Size(207, 31);
             this.txtNombreProducto.TabIndex = 68;
             // 
-            // btnSaveProducto
+            // btnSaveDocentes
             // 
-            this.btnSaveProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveProducto.Location = new System.Drawing.Point(725, 293);
-            this.btnSaveProducto.Name = "btnSaveProducto";
-            this.btnSaveProducto.Size = new System.Drawing.Size(393, 53);
-            this.btnSaveProducto.TabIndex = 73;
-            this.btnSaveProducto.Text = "save";
-            this.btnSaveProducto.UseVisualStyleBackColor = true;
+            this.btnSaveDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveDocentes.Location = new System.Drawing.Point(725, 293);
+            this.btnSaveDocentes.Name = "btnSaveDocentes";
+            this.btnSaveDocentes.Size = new System.Drawing.Size(393, 53);
+            this.btnSaveDocentes.TabIndex = 73;
+            this.btnSaveDocentes.Text = "save";
+            this.btnSaveDocentes.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -245,29 +245,29 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "CodProducto";
             // 
-            // btnUpdate
+            // UpdateAdmin
             // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(84, 362);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(243, 53);
-            this.btnUpdate.TabIndex = 63;
-            this.btnUpdate.Text = "update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.UpdateAdmin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.UpdateAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateAdmin.ForeColor = System.Drawing.Color.Black;
+            this.UpdateAdmin.Location = new System.Drawing.Point(84, 362);
+            this.UpdateAdmin.Name = "UpdateAdmin";
+            this.UpdateAdmin.Size = new System.Drawing.Size(243, 53);
+            this.UpdateAdmin.TabIndex = 63;
+            this.UpdateAdmin.Text = "update";
+            this.UpdateAdmin.UseVisualStyleBackColor = false;
             // 
-            // btnDelete
+            // DeleteAdmin
             // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(360, 362);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(251, 53);
-            this.btnDelete.TabIndex = 62;
-            this.btnDelete.Text = "delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.DeleteAdmin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.DeleteAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteAdmin.ForeColor = System.Drawing.Color.Black;
+            this.DeleteAdmin.Location = new System.Drawing.Point(360, 362);
+            this.DeleteAdmin.Name = "DeleteAdmin";
+            this.DeleteAdmin.Size = new System.Drawing.Size(251, 53);
+            this.DeleteAdmin.TabIndex = 62;
+            this.DeleteAdmin.Text = "delete";
+            this.DeleteAdmin.UseVisualStyleBackColor = false;
             // 
             // PlataformaAdmin
             // 
@@ -301,11 +301,11 @@
         private System.Windows.Forms.TextBox txtCantidadProducto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombreProducto;
-        private System.Windows.Forms.Button btnSaveProducto;
+        private System.Windows.Forms.Button btnSaveDocentes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodPro;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button UpdateAdmin;
+        private System.Windows.Forms.Button DeleteAdmin;
     }
 }

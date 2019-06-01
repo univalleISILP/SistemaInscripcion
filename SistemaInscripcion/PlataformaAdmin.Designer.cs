@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
+            this.btnAddMaterias = new System.Windows.Forms.Button();
+            this.btnAddDocentes = new System.Windows.Forms.Button();
+            this.btnAddAlumnos = new System.Windows.Forms.Button();
             this.panelProductos = new System.Windows.Forms.Panel();
             this.datosGridView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,59 +54,59 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(230)))));
-            this.panel1.Controls.Add(this.btnReportes);
-            this.panel1.Controls.Add(this.btnProductos);
-            this.panel1.Controls.Add(this.btnVentas);
+            this.panel1.Controls.Add(this.btnAddMaterias);
+            this.panel1.Controls.Add(this.btnAddDocentes);
+            this.panel1.Controls.Add(this.btnAddAlumnos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 662);
+            this.panel1.Size = new System.Drawing.Size(247, 987);
             this.panel1.TabIndex = 2;
             // 
-            // btnReportes
+            // btnAddMaterias
             // 
-            this.btnReportes.BackColor = System.Drawing.Color.Teal;
-            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnReportes.ForeColor = System.Drawing.Color.Black;
-            this.btnReportes.Location = new System.Drawing.Point(30, 242);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(180, 55);
-            this.btnReportes.TabIndex = 5;
-            this.btnReportes.Text = "REPORTES";
-            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnAddMaterias.BackColor = System.Drawing.Color.Teal;
+            this.btnAddMaterias.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAddMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnAddMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAddMaterias.ForeColor = System.Drawing.Color.Black;
+            this.btnAddMaterias.Location = new System.Drawing.Point(30, 242);
+            this.btnAddMaterias.Name = "btnAddMaterias";
+            this.btnAddMaterias.Size = new System.Drawing.Size(180, 55);
+            this.btnAddMaterias.TabIndex = 5;
+            this.btnAddMaterias.Text = "MATERIAS";
+            this.btnAddMaterias.UseVisualStyleBackColor = false;
             // 
-            // btnProductos
+            // btnAddDocentes
             // 
-            this.btnProductos.BackColor = System.Drawing.Color.Teal;
-            this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.Color.Black;
-            this.btnProductos.Location = new System.Drawing.Point(30, 72);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(180, 55);
-            this.btnProductos.TabIndex = 3;
-            this.btnProductos.Text = "PRODUCTOS";
-            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnAddDocentes.BackColor = System.Drawing.Color.Teal;
+            this.btnAddDocentes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAddDocentes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnAddDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDocentes.ForeColor = System.Drawing.Color.Black;
+            this.btnAddDocentes.Location = new System.Drawing.Point(30, 72);
+            this.btnAddDocentes.Name = "btnAddDocentes";
+            this.btnAddDocentes.Size = new System.Drawing.Size(180, 55);
+            this.btnAddDocentes.TabIndex = 3;
+            this.btnAddDocentes.Text = "DOCENTES";
+            this.btnAddDocentes.UseVisualStyleBackColor = false;
             // 
-            // btnVentas
+            // btnAddAlumnos
             // 
-            this.btnVentas.BackColor = System.Drawing.Color.Teal;
-            this.btnVentas.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnVentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.ForeColor = System.Drawing.Color.Black;
-            this.btnVentas.Location = new System.Drawing.Point(30, 159);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(180, 55);
-            this.btnVentas.TabIndex = 4;
-            this.btnVentas.Text = "VENTAS";
-            this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnAddAlumnos.BackColor = System.Drawing.Color.Teal;
+            this.btnAddAlumnos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAddAlumnos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnAddAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAlumnos.ForeColor = System.Drawing.Color.Black;
+            this.btnAddAlumnos.Location = new System.Drawing.Point(30, 159);
+            this.btnAddAlumnos.Name = "btnAddAlumnos";
+            this.btnAddAlumnos.Size = new System.Drawing.Size(180, 55);
+            this.btnAddAlumnos.TabIndex = 4;
+            this.btnAddAlumnos.Text = "ALUMNOS";
+            this.btnAddAlumnos.UseVisualStyleBackColor = false;
             // 
             // panelProductos
             // 
@@ -123,7 +123,7 @@
             this.panelProductos.Controls.Add(this.label1);
             this.panelProductos.Controls.Add(this.btnUpdate);
             this.panelProductos.Controls.Add(this.btnDelete);
-            this.panelProductos.Location = new System.Drawing.Point(284, 72);
+            this.panelProductos.Location = new System.Drawing.Point(291, 42);
             this.panelProductos.MaximumSize = new System.Drawing.Size(1151, 440);
             this.panelProductos.MinimumSize = new System.Drawing.Size(1151, 440);
             this.panelProductos.Name = "panelProductos";
@@ -274,7 +274,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(1477, 662);
+            this.ClientSize = new System.Drawing.Size(1477, 987);
             this.Controls.Add(this.panelProductos);
             this.Controls.Add(this.panel1);
             this.Name = "PlataformaAdmin";
@@ -290,9 +290,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnVentas;
+        private System.Windows.Forms.Button btnAddMaterias;
+        private System.Windows.Forms.Button btnAddDocentes;
+        private System.Windows.Forms.Button btnAddAlumnos;
         public System.Windows.Forms.Panel panelProductos;
         public System.Windows.Forms.DataGridView datosGridView;
         private System.Windows.Forms.Panel panel2;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaInscripcion
 {
-    public partial class Form1 : Form
+    public partial class PlataformaUser : Form
     {
-        public Form1()
+        public PlataformaUser()
         {
             InitializeComponent();
         }

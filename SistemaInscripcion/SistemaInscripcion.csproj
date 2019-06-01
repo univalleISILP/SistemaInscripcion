@@ -63,6 +63,12 @@
     <Compile Include="PlataformaAdmin.Designer.cs">
       <DependentUpon>PlataformaAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlataformaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlataformaAlumno.Designer.cs">
+      <DependentUpon>PlataformaAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlataformaUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlataformaAdmin.resx">
       <DependentUpon>PlataformaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlataformaAlumno.resx">
+      <DependentUpon>PlataformaAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlataformaUser.resx">
       <DependentUpon>PlataformaUser.cs</DependentUpon>

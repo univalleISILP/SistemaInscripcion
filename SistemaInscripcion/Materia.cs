@@ -12,7 +12,7 @@ namespace SistemaInscripcion
         public String Nombre { get; set; }
 
         public Materia() { }
-        public Materia(int claveM,string nombre)
+        public Materia(int claveM, string nombre)
         {
             ClaveM = claveM;
             Nombre = nombre;

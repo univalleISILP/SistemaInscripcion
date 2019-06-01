@@ -16,6 +16,7 @@ namespace SistemaInscripcion
         public PlataformaAdmin()
         {
             InitializeComponent();
+            
         }
         void limpiar()
         {
@@ -132,6 +133,69 @@ namespace SistemaInscripcion
         }
 
         private void PanelProductos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnSaveAlumno_Click(object sender, EventArgs e)
+        {
+            if (radioVaron.Text == "varon")
+            {
+                gen = 'v';
+            }
+            if (radioMujer.Text == "mujer")
+            {
+                gen = 'm';
+            }
+
+            if (editar == false)
+            {
+                alumno doc = new alumno();
+
+                doc.CI_Alumno = int.Parse(txtCIDoc.Text);
+                doc.Nombre = txtNombreDoc.Text;
+                doc.Apellido = txtApellidosDoc.Text;
+                doc.Genero = gen;
+                doc.Especialidad = cbxEspecialidadDoc.Text;
+                doc.Telefono = int.Parse(txtTelefonoDoc.Text);
+                doc.Direccion = txtDirecDoc.Text;
+
+
+
+                //clsProductosABML.AgregarProducto(product);
+
+                //datosGridView.DataSource = clsProductosABML.listar();
+                //MessageBox.Show("Se agrego correctamente");
+                //limpiar();
+            }
+            else
+            {
+                //Docente modificar = new Docente();
+
+                //modificar.CI = int.Parse(txtCIDoc.Text);
+                //modificar.Nombre = txtNombreDoc.Text;
+                //modificar.Apellido = txtApellidosDoc.Text;
+                //modificar.Genero;
+                //modificar.Especialidad = txtEspecialidadDoc.Text;
+                //modificar.Telefono = int.Parse(txtTelefonoDoc.Text);
+                //modificar.Direccion = txtDirecDoc.Text;
+
+
+                //clsProductosABML.ModificarProducto(modificar);
+
+                //datosGridView.DataSource = clsProductosABML.listar();
+
+                //MessageBox.Show("modificado");
+                limpiar();
+            }
+        }
+
+        private void BtnDeleteAlu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnUpdateAlu_Click(object sender, EventArgs e)
         {
 
         }

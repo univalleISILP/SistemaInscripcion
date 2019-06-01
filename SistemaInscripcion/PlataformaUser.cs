@@ -16,5 +16,20 @@ namespace SistemaInscripcion
         {
             InitializeComponent();
         }
+
+        private void DeleteAlu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateAlu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSaveAlumno_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

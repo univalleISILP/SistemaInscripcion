@@ -54,32 +54,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.UpdateDoc = new System.Windows.Forms.Button();
             this.DeleteDoc = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtEdadAlu = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtAñoCursoAlu = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnSaveAlumno = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.txtGradoAlu = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtApellAlu = new System.Windows.Forms.Label();
-            this.txtNombreAlu = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtCIAlu = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.UpdateAlu = new System.Windows.Forms.Button();
             this.DeleteAlu = new System.Windows.Forms.Button();
+            this.UpdateAlu = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtCIAlu = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtNombreAlu = new System.Windows.Forms.TextBox();
+            this.txtApellAlu = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtGradoAlu = new System.Windows.Forms.TextBox();
+            this.btnSaveAlumno = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtAñoCursoAlu = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtEdadAlu = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cbxGeneroAlu = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panelProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosGridView)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,7 +90,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 749);
+            this.panel1.Size = new System.Drawing.Size(248, 825);
             this.panel1.TabIndex = 2;
             // 
             // btnAddMaterias
@@ -165,7 +164,7 @@
             this.panelProductos.Controls.Add(this.DeleteDoc);
             this.panelProductos.Location = new System.Drawing.Point(274, 42);
             this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(1314, 182);
+            this.panelProductos.Size = new System.Drawing.Size(1314, 184);
             this.panelProductos.TabIndex = 39;
             this.panelProductos.Visible = false;
             this.panelProductos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelProductos_Paint);
@@ -398,138 +397,100 @@
             this.DeleteDoc.UseVisualStyleBackColor = false;
             this.DeleteDoc.Click += new System.EventHandler(this.DeleteAdmin_Click);
             // 
-            // panel3
+            // DeleteAlu
             // 
-            this.panel3.Controls.Add(this.txtEdadAlu);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.txtAñoCursoAlu);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.btnSaveAlumno);
-            this.panel3.Controls.Add(this.radioButton1);
-            this.panel3.Controls.Add(this.radioButton2);
-            this.panel3.Controls.Add(this.txtGradoAlu);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.txtApellAlu);
-            this.panel3.Controls.Add(this.txtNombreAlu);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.txtCIAlu);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.UpdateAlu);
-            this.panel3.Controls.Add(this.DeleteAlu);
-            this.panel3.Location = new System.Drawing.Point(274, 294);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1447, 581);
-            this.panel3.TabIndex = 41;
+            this.DeleteAlu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.DeleteAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteAlu.ForeColor = System.Drawing.Color.Black;
+            this.DeleteAlu.Location = new System.Drawing.Point(480, 486);
+            this.DeleteAlu.Name = "DeleteAlu";
+            this.DeleteAlu.Size = new System.Drawing.Size(251, 53);
+            this.DeleteAlu.TabIndex = 62;
+            this.DeleteAlu.Text = "delete";
+            this.DeleteAlu.UseVisualStyleBackColor = false;
             // 
-            // txtEdadAlu
+            // UpdateAlu
             // 
-            this.txtEdadAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdadAlu.Location = new System.Drawing.Point(1065, 219);
-            this.txtEdadAlu.Multiline = true;
-            this.txtEdadAlu.Name = "txtEdadAlu";
-            this.txtEdadAlu.Size = new System.Drawing.Size(326, 31);
-            this.txtEdadAlu.TabIndex = 88;
+            this.UpdateAlu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.UpdateAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateAlu.ForeColor = System.Drawing.Color.Black;
+            this.UpdateAlu.Location = new System.Drawing.Point(142, 486);
+            this.UpdateAlu.Name = "UpdateAlu";
+            this.UpdateAlu.Size = new System.Drawing.Size(243, 53);
+            this.UpdateAlu.TabIndex = 63;
+            this.UpdateAlu.Text = "update";
+            this.UpdateAlu.UseVisualStyleBackColor = false;
             // 
-            // label9
+            // label15
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(874, 223);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 29);
-            this.label9.TabIndex = 87;
-            this.label9.Text = "Edad";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(874, 45);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(132, 29);
+            this.label15.TabIndex = 65;
+            this.label15.Text = "CI Alumno";
             // 
-            // txtAñoCursoAlu
+            // txtCIAlu
             // 
-            this.txtAñoCursoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAñoCursoAlu.Location = new System.Drawing.Point(1065, 386);
-            this.txtAñoCursoAlu.Multiline = true;
-            this.txtAñoCursoAlu.Name = "txtAñoCursoAlu";
-            this.txtAñoCursoAlu.Size = new System.Drawing.Size(326, 31);
-            this.txtAñoCursoAlu.TabIndex = 86;
+            this.txtCIAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCIAlu.Location = new System.Drawing.Point(1065, 45);
+            this.txtCIAlu.Multiline = true;
+            this.txtCIAlu.Name = "txtCIAlu";
+            this.txtCIAlu.Size = new System.Drawing.Size(326, 31);
+            this.txtCIAlu.TabIndex = 66;
             // 
-            // label10
+            // label14
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(874, 388);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 29);
-            this.label10.TabIndex = 85;
-            this.label10.Text = "Año Curso";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(874, 102);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(107, 29);
+            this.label14.TabIndex = 67;
+            this.label14.Text = "Nombre";
             // 
-            // btnSaveAlumno
+            // txtNombreAlu
             // 
-            this.btnSaveAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAlumno.Location = new System.Drawing.Point(1011, 486);
-            this.btnSaveAlumno.Name = "btnSaveAlumno";
-            this.btnSaveAlumno.Size = new System.Drawing.Size(393, 53);
-            this.btnSaveAlumno.TabIndex = 73;
-            this.btnSaveAlumno.Text = "save";
-            this.btnSaveAlumno.UseVisualStyleBackColor = true;
+            this.txtNombreAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreAlu.Location = new System.Drawing.Point(1065, 102);
+            this.txtNombreAlu.Multiline = true;
+            this.txtNombreAlu.Name = "txtNombreAlu";
+            this.txtNombreAlu.Size = new System.Drawing.Size(326, 31);
+            this.txtNombreAlu.TabIndex = 68;
             // 
-            // radioButton1
+            // txtApellAlu
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton1.Location = new System.Drawing.Point(1224, 273);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(99, 33);
-            this.radioButton1.TabIndex = 83;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mujer";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.txtApellAlu.AutoSize = true;
+            this.txtApellAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellAlu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtApellAlu.Location = new System.Drawing.Point(874, 160);
+            this.txtApellAlu.Name = "txtApellAlu";
+            this.txtApellAlu.Size = new System.Drawing.Size(110, 29);
+            this.txtApellAlu.TabIndex = 69;
+            this.txtApellAlu.Text = "Apellido";
             // 
-            // radioButton2
+            // textBox1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton2.Location = new System.Drawing.Point(1103, 273);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(101, 33);
-            this.radioButton2.TabIndex = 81;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Varon";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(1065, 160);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(326, 31);
+            this.textBox1.TabIndex = 70;
             // 
-            // txtGradoAlu
+            // label13
             // 
-            this.txtGradoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGradoAlu.Location = new System.Drawing.Point(1065, 331);
-            this.txtGradoAlu.Multiline = true;
-            this.txtGradoAlu.Name = "txtGradoAlu";
-            this.txtGradoAlu.Size = new System.Drawing.Size(326, 31);
-            this.txtGradoAlu.TabIndex = 80;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(874, 331);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 29);
-            this.label11.TabIndex = 77;
-            this.label11.Text = "Grado";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(760, 277);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 29);
-            this.label12.TabIndex = 74;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(874, 275);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(100, 29);
+            this.label13.TabIndex = 71;
+            this.label13.Text = "Genero";
             // 
             // dataGridView1
             // 
@@ -546,107 +507,132 @@
             this.dataGridView1.Size = new System.Drawing.Size(813, 414);
             this.dataGridView1.TabIndex = 64;
             // 
-            // label13
+            // label12
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(874, 275);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(100, 29);
-            this.label13.TabIndex = 71;
-            this.label13.Text = "Genero";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(760, 277);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 29);
+            this.label12.TabIndex = 74;
             // 
-            // textBox1
+            // label11
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1065, 160);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 31);
-            this.textBox1.TabIndex = 70;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(874, 331);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 29);
+            this.label11.TabIndex = 77;
+            this.label11.Text = "Grado";
             // 
-            // txtApellAlu
+            // txtGradoAlu
             // 
-            this.txtApellAlu.AutoSize = true;
-            this.txtApellAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellAlu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtApellAlu.Location = new System.Drawing.Point(874, 160);
-            this.txtApellAlu.Name = "txtApellAlu";
-            this.txtApellAlu.Size = new System.Drawing.Size(110, 29);
-            this.txtApellAlu.TabIndex = 69;
-            this.txtApellAlu.Text = "Apellido";
+            this.txtGradoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGradoAlu.Location = new System.Drawing.Point(1065, 331);
+            this.txtGradoAlu.Multiline = true;
+            this.txtGradoAlu.Name = "txtGradoAlu";
+            this.txtGradoAlu.Size = new System.Drawing.Size(326, 31);
+            this.txtGradoAlu.TabIndex = 80;
             // 
-            // txtNombreAlu
+            // btnSaveAlumno
             // 
-            this.txtNombreAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreAlu.Location = new System.Drawing.Point(1065, 102);
-            this.txtNombreAlu.Multiline = true;
-            this.txtNombreAlu.Name = "txtNombreAlu";
-            this.txtNombreAlu.Size = new System.Drawing.Size(326, 31);
-            this.txtNombreAlu.TabIndex = 68;
+            this.btnSaveAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAlumno.Location = new System.Drawing.Point(1011, 486);
+            this.btnSaveAlumno.Name = "btnSaveAlumno";
+            this.btnSaveAlumno.Size = new System.Drawing.Size(393, 53);
+            this.btnSaveAlumno.TabIndex = 73;
+            this.btnSaveAlumno.Text = "save";
+            this.btnSaveAlumno.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // label10
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(874, 102);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 29);
-            this.label14.TabIndex = 67;
-            this.label14.Text = "Nombre";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(874, 388);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(134, 29);
+            this.label10.TabIndex = 85;
+            this.label10.Text = "Año Curso";
             // 
-            // txtCIAlu
+            // txtAñoCursoAlu
             // 
-            this.txtCIAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCIAlu.Location = new System.Drawing.Point(1065, 45);
-            this.txtCIAlu.Multiline = true;
-            this.txtCIAlu.Name = "txtCIAlu";
-            this.txtCIAlu.Size = new System.Drawing.Size(326, 31);
-            this.txtCIAlu.TabIndex = 66;
+            this.txtAñoCursoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAñoCursoAlu.Location = new System.Drawing.Point(1065, 386);
+            this.txtAñoCursoAlu.Multiline = true;
+            this.txtAñoCursoAlu.Name = "txtAñoCursoAlu";
+            this.txtAñoCursoAlu.Size = new System.Drawing.Size(326, 31);
+            this.txtAñoCursoAlu.TabIndex = 86;
             // 
-            // label15
+            // label9
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(874, 45);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(132, 29);
-            this.label15.TabIndex = 65;
-            this.label15.Text = "CI Alumno";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(874, 223);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 29);
+            this.label9.TabIndex = 87;
+            this.label9.Text = "Edad";
             // 
-            // UpdateAlu
+            // txtEdadAlu
             // 
-            this.UpdateAlu.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.UpdateAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateAlu.ForeColor = System.Drawing.Color.Black;
-            this.UpdateAlu.Location = new System.Drawing.Point(142, 486);
-            this.UpdateAlu.Name = "UpdateAlu";
-            this.UpdateAlu.Size = new System.Drawing.Size(243, 53);
-            this.UpdateAlu.TabIndex = 63;
-            this.UpdateAlu.Text = "update";
-            this.UpdateAlu.UseVisualStyleBackColor = false;
+            this.txtEdadAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdadAlu.Location = new System.Drawing.Point(1065, 219);
+            this.txtEdadAlu.Multiline = true;
+            this.txtEdadAlu.Name = "txtEdadAlu";
+            this.txtEdadAlu.Size = new System.Drawing.Size(326, 31);
+            this.txtEdadAlu.TabIndex = 88;
+            this.txtEdadAlu.Text = "                   ";
             // 
-            // DeleteAlu
+            // panel3
             // 
-            this.DeleteAlu.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.DeleteAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteAlu.ForeColor = System.Drawing.Color.Black;
-            this.DeleteAlu.Location = new System.Drawing.Point(480, 486);
-            this.DeleteAlu.Name = "DeleteAlu";
-            this.DeleteAlu.Size = new System.Drawing.Size(251, 53);
-            this.DeleteAlu.TabIndex = 62;
-            this.DeleteAlu.Text = "delete";
-            this.DeleteAlu.UseVisualStyleBackColor = false;
+            this.panel3.Controls.Add(this.cbxGeneroAlu);
+            this.panel3.Controls.Add(this.txtEdadAlu);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.txtAñoCursoAlu);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.btnSaveAlumno);
+            this.panel3.Controls.Add(this.txtGradoAlu);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtApellAlu);
+            this.panel3.Controls.Add(this.txtNombreAlu);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.txtCIAlu);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.UpdateAlu);
+            this.panel3.Controls.Add(this.DeleteAlu);
+            this.panel3.Location = new System.Drawing.Point(274, 245);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1430, 568);
+            this.panel3.TabIndex = 41;
+            // 
+            // cbxGeneroAlu
+            // 
+            this.cbxGeneroAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGeneroAlu.FormattingEnabled = true;
+            this.cbxGeneroAlu.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer",
+            "Guey"});
+            this.cbxGeneroAlu.Location = new System.Drawing.Point(1065, 271);
+            this.cbxGeneroAlu.Name = "cbxGeneroAlu";
+            this.cbxGeneroAlu.Size = new System.Drawing.Size(326, 33);
+            this.cbxGeneroAlu.TabIndex = 89;
             // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(1716, 749);
+            this.ClientSize = new System.Drawing.Size(1716, 825);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelProductos);
             this.Controls.Add(this.panel1);
@@ -656,9 +642,9 @@
             this.panelProductos.ResumeLayout(false);
             this.panelProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -691,26 +677,25 @@
         private System.Windows.Forms.RadioButton radioMujer;
         private System.Windows.Forms.RadioButton radioVaron;
         private System.Windows.Forms.ComboBox cbxEspecialidadDoc;
-        public System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtEdadAlu;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtAñoCursoAlu;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnSaveAlumno;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox txtGradoAlu;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label txtApellAlu;
-        private System.Windows.Forms.TextBox txtNombreAlu;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtCIAlu;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button UpdateAlu;
         private System.Windows.Forms.Button DeleteAlu;
+        private System.Windows.Forms.Button UpdateAlu;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtCIAlu;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtNombreAlu;
+        private System.Windows.Forms.Label txtApellAlu;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtGradoAlu;
+        private System.Windows.Forms.Button btnSaveAlumno;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtAñoCursoAlu;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtEdadAlu;
+        public System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox cbxGeneroAlu;
     }
 }

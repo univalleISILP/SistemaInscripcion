@@ -16,5 +16,26 @@ namespace SistemaInscripcion
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            usuario u1 = new usuario();
+            u1.CodUsuario = textBox1.Text;
+            u1.Contraseña = textBox1.Text;
+            if (LoginABML.Autenticar(u1) == "adm")
+            {
+                PlataformaAdmin pA = new PlataformaAdmin();
+                pA.Show();
+                this.Hide();
+            }
+            if (LoginABML.Autenticar(u1) == "doc")
+            {
+                MessageBox.Show("Docente");
+            }
+            if (LoginABML.Autenticar(u1) == "alm")
+            {
+                MessageBox.Show("Alumno");
+            }
+        }
     }
 }

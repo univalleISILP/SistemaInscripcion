@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,24 +18,101 @@ namespace SistemaInscripcion
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+
+        private void BtnAcceder_Click(object sender, EventArgs e)
         {
-            usuario u1 = new usuario();
-            u1.CodUsuario = textBox1.Text;
-            u1.Contraseña = textBox1.Text;
-            if (LoginABML.Autenticar(u1) == "adm")
+
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            panelLogin.Left += 20;
+            if (panelLogin.Left >= 800)
             {
-                PlataformaAdmin pA = new PlataformaAdmin();
-                pA.Show();
-                this.Hide();
+                timer1.Stop();
+                TopMost = false;
+                timer2.Start();
             }
-            if (LoginABML.Autenticar(u1) == "doc")
+        }
+
+        private void Timer2_Tick(object sender, EventArgs e)
+        {
+                //PanelRegistrarse.Left -= 10;
+                //if (PanelRegistrarse.Left <= 286)
+                //{
+                //    timer2.Stop();
+                //}
+        }
+
+        private void BtnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Panel1_MouseEnter(object sender, EventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PanelLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void TxtUserName_Leave(object sender, EventArgs e)
+        {
+            if (txtUserName.Text == "")
             {
-                MessageBox.Show("Docente");
+                txtUserName.Text = "UserName";
+                txtUserName.ForeColor = Color.White;
             }
-            if (LoginABML.Autenticar(u1) == "alm")
+        }
+
+        private void TxtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
             {
-                MessageBox.Show("Alumno");
+                txtPassword.Text = "Password";
+                txtPassword.ForeColor = Color.White;
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void TxtUserName_Enter(object sender, EventArgs e)
+        {
+            if (txtUserName.Text == "UserName")
+            {
+                txtUserName.Text = "";
+                txtUserName.ForeColor = Color.White;
+
+                lblusuario.Visible = false;
+                lblpassword.Visible = false;
+                
+            }
+        }
+
+        private void TxtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Password")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.White;
+                txtPassword.UseSystemPasswordChar = false;
+                lblusuario.Visible = false;
+                lblpassword.Visible = false;
             }
         }
     }

@@ -116,10 +116,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 252);
+            this.button2.Location = new System.Drawing.Point(12, 252);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 56);
+            this.button2.Size = new System.Drawing.Size(184, 56);
             this.button2.TabIndex = 7;
             this.button2.Text = "CAMBIAR PASSWORD";
             this.button2.UseVisualStyleBackColor = false;

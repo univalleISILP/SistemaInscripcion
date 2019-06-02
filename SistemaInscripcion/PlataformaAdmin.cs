@@ -238,9 +238,10 @@ namespace SistemaInscripcion
             }
         }
 
-        private void Panel3_Paint(object sender, PaintEventArgs e)
+        private void TxtCIalumnoBuscar_TextChanged(object sender, EventArgs e)
         {
-
+            string datoCIALU = txtCIalumnoBuscar.Text;
+            dbgListaAlumnosBuscar.DataSource = alumnosABML.listarXci(datoCIALU);
         }
     }
 }

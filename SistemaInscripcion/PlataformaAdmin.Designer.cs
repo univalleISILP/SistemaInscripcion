@@ -69,14 +69,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtEdadAlu = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtApellAlumno = new System.Windows.Forms.TextBox();
+            this.cbxAñoCursoAlu = new System.Windows.Forms.ComboBox();
             this.cbxGeneroAlu = new System.Windows.Forms.ComboBox();
+            this.cbxGradoAlu = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dbgListaAlumnosBuscar = new System.Windows.Forms.DataGridView();
             this.btnBuscarAlumno = new System.Windows.Forms.Button();
             this.txtCIalumnoBuscar = new System.Windows.Forms.TextBox();
-            this.cbxGradoAlu = new System.Windows.Forms.ComboBox();
-            this.cbxAñoCursoAlu = new System.Windows.Forms.ComboBox();
-            this.txtApellAlumno = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosGridView)).BeginInit();
@@ -582,7 +582,31 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1430, 568);
             this.panel3.TabIndex = 41;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel3_Paint);
+            // 
+            // txtApellAlumno
+            // 
+            this.txtApellAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellAlumno.Location = new System.Drawing.Point(1065, 157);
+            this.txtApellAlumno.Multiline = true;
+            this.txtApellAlumno.Name = "txtApellAlumno";
+            this.txtApellAlumno.Size = new System.Drawing.Size(326, 32);
+            this.txtApellAlumno.TabIndex = 92;
+            // 
+            // cbxAñoCursoAlu
+            // 
+            this.cbxAñoCursoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAñoCursoAlu.FormattingEnabled = true;
+            this.cbxAñoCursoAlu.Items.AddRange(new object[] {
+            "Primero",
+            "Segundo",
+            "Tercero",
+            "Cuarto",
+            "Quinto",
+            "Sexto"});
+            this.cbxAñoCursoAlu.Location = new System.Drawing.Point(1065, 384);
+            this.cbxAñoCursoAlu.Name = "cbxAñoCursoAlu";
+            this.cbxAñoCursoAlu.Size = new System.Drawing.Size(326, 33);
+            this.cbxAñoCursoAlu.TabIndex = 91;
             // 
             // cbxGeneroAlu
             // 
@@ -596,6 +620,18 @@
             this.cbxGeneroAlu.Name = "cbxGeneroAlu";
             this.cbxGeneroAlu.Size = new System.Drawing.Size(326, 33);
             this.cbxGeneroAlu.TabIndex = 89;
+            // 
+            // cbxGradoAlu
+            // 
+            this.cbxGradoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGradoAlu.FormattingEnabled = true;
+            this.cbxGradoAlu.Items.AddRange(new object[] {
+            "Primaria",
+            "Secundaria"});
+            this.cbxGradoAlu.Location = new System.Drawing.Point(1065, 326);
+            this.cbxGradoAlu.Name = "cbxGradoAlu";
+            this.cbxGradoAlu.Size = new System.Drawing.Size(326, 33);
+            this.cbxGradoAlu.TabIndex = 90;
             // 
             // panel2
             // 
@@ -615,6 +651,7 @@
             this.dbgListaAlumnosBuscar.Location = new System.Drawing.Point(264, 797);
             this.dbgListaAlumnosBuscar.Name = "dbgListaAlumnosBuscar";
             this.dbgListaAlumnosBuscar.ReadOnly = true;
+            this.dbgListaAlumnosBuscar.RowHeadersVisible = false;
             this.dbgListaAlumnosBuscar.RowHeadersWidth = 62;
             this.dbgListaAlumnosBuscar.RowTemplate.Height = 28;
             this.dbgListaAlumnosBuscar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -639,43 +676,7 @@
             this.txtCIalumnoBuscar.Name = "txtCIalumnoBuscar";
             this.txtCIalumnoBuscar.Size = new System.Drawing.Size(326, 32);
             this.txtCIalumnoBuscar.TabIndex = 90;
-            // 
-            // cbxGradoAlu
-            // 
-            this.cbxGradoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGradoAlu.FormattingEnabled = true;
-            this.cbxGradoAlu.Items.AddRange(new object[] {
-            "Primaria",
-            "Secundaria"});
-            this.cbxGradoAlu.Location = new System.Drawing.Point(1065, 326);
-            this.cbxGradoAlu.Name = "cbxGradoAlu";
-            this.cbxGradoAlu.Size = new System.Drawing.Size(326, 33);
-            this.cbxGradoAlu.TabIndex = 90;
-            // 
-            // cbxAñoCursoAlu
-            // 
-            this.cbxAñoCursoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxAñoCursoAlu.FormattingEnabled = true;
-            this.cbxAñoCursoAlu.Items.AddRange(new object[] {
-            "Primero",
-            "Segundo",
-            "Tercero",
-            "Cuarto",
-            "Quinto",
-            "Sexto"});
-            this.cbxAñoCursoAlu.Location = new System.Drawing.Point(1065, 384);
-            this.cbxAñoCursoAlu.Name = "cbxAñoCursoAlu";
-            this.cbxAñoCursoAlu.Size = new System.Drawing.Size(326, 33);
-            this.cbxAñoCursoAlu.TabIndex = 91;
-            // 
-            // txtApellAlumno
-            // 
-            this.txtApellAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellAlumno.Location = new System.Drawing.Point(1065, 157);
-            this.txtApellAlumno.Multiline = true;
-            this.txtApellAlumno.Name = "txtApellAlumno";
-            this.txtApellAlumno.Size = new System.Drawing.Size(326, 32);
-            this.txtApellAlumno.TabIndex = 92;
+            this.txtCIalumnoBuscar.TextChanged += new System.EventHandler(this.TxtCIalumnoBuscar_TextChanged);
             // 
             // PlataformaAdmin
             // 

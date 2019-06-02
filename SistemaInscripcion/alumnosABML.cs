@@ -108,9 +108,7 @@ namespace SistemaInscripcion
             using (SqlConnection conexion =Conexion.ObtenerConexion1())
             {
 
-                SqlCommand comando = new SqlCommand(string.Format(@"SELECT a.nombre,a.apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf 
-FROM Alumnos a,Docentes d,Modulo M,materias mat 
-where a.CI_Alumno=M.CI_Alumno and d.CI_Docente=M.CI_Docente and mat.Clave_Materia=M.Clave_Materia and mat.Nombre='{0}' and a.Año_Curso='{1}'", mat,año), conexion);
+                SqlCommand comando = new SqlCommand(string.Format(@"SELECT a.nombre,a.apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf FROM Alumnos a,Docentes d,Modulo M,materias mat where a.CI_Alumno=M.CI_Alumno and d.CI_Docente=M.CI_Docente and mat.Clave_Materia=M.Clave_Materia and mat.Nombre='{0}' and a.Año_Curso='{1}'", mat,año), conexion);
                 SqlDataReader leer = comando.ExecuteReader();
 
                 while (leer.Read())
@@ -136,6 +134,34 @@ where a.CI_Alumno=M.CI_Alumno and d.CI_Docente=M.CI_Docente and mat.Clave_Materi
             {
 
                 SqlCommand comando = new SqlCommand(string.Format(@"SELECT g.*,f.Edad,f.genero FROM Alumnos g,proyectoBD2.dbo.Alumnos f where g.ci_alumno=f.ci_Alumno"), conexion);
+                SqlDataReader leer = comando.ExecuteReader();
+
+                while (leer.Read())
+                {
+                    alumno alumno = new alumno();
+                    alumno.CI_Alumno = leer.GetInt32(0);
+                    alumno.Nombre = leer.GetString(1);
+                    alumno.Apellido = leer.GetString(2);
+                    alumno.Grado = leer.GetString(3);
+                    alumno.AñoCurso = leer.GetString(4);
+                    alumno.Edad = leer.GetInt32(5);
+                    alumno.Genero = leer.GetString(6);
+                    lista.Add(alumno);
+                }
+                conexion.Close();
+            }
+            return lista;
+        }
+
+
+        public static List<alumno> listarXci(string dato)
+        {
+            List<alumno> lista = new List<alumno>();
+
+            using (SqlConnection conexion = Conexion.ObtenerConexion1())
+            {
+
+                SqlCommand comando = new SqlCommand(string.Format(@"SELECT g.*,f.Edad,f.genero FROM Alumnos g,proyectoBD2.dbo.Alumnos f where g.ci_alumno=f.ci_Alumno and g.ci_alumno like '%{0}'",dato), conexion);
                 SqlDataReader leer = comando.ExecuteReader();
 
                 while (leer.Read())

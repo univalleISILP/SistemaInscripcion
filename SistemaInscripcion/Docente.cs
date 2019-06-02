@@ -11,14 +11,14 @@ namespace SistemaInscripcion
         public int CI { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public char Genero { get; set; }
+        public String Genero { get; set; }
         public string Especialidad { get; set; }
         public int Telefono { get; set; }
         public string Direccion { get; set; }
 
         public Docente() { }
 
-        public Docente(int ci, string nombre, string apellido, char genero, string especialidad, int telefono, string direccion)
+        public Docente(int ci, string nombre, string apellido, string genero, string especialidad, int telefono, string direccion)
         {
             CI = ci;
             Nombre = nombre;

@@ -62,7 +62,7 @@ create table Alumnos(
 	Edad int,
 	Genero char,	
 	primary key(CI_Alumno)
-);
+);--hasta aca
 alter table alumnos alter column Genero varchar(10)
 
 drop table Modulo

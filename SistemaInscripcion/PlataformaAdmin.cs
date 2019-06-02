@@ -138,18 +138,10 @@ namespace SistemaInscripcion
 
         }
 
-        private void BtnSaveAlumno_Click(object sender, EventArgs e)
-        {
+       
 
-            if (radioButton2.Text == "varon")
-            {
-                gen = "V";
-            }
-            if (radioButton1.Text == "mujer")
-            {
-                gen = "M";
-            }
-
+        private void BtnSaveAlumno_Click_1(object sender, EventArgs e)
+        {           
             if (editar == false)
             {
                 alumno doc = new alumno();
@@ -157,7 +149,7 @@ namespace SistemaInscripcion
                 doc.CI_Alumno = int.Parse(txtCIAlu.Text);
                 doc.Nombre = txtNombreAlu.Text;
                 doc.Apellido = txtApellAlu.Text;
-                doc.Genero = gen;
+                doc.Genero = cbxGeneroAlu.Text;
                 doc.Edad = int.Parse(txtEdadAlu.Text);
                 doc.Grado = txtGradoAlu.Text;
                 doc.AñoCurso = txtAñoCursoAlu.Text;
@@ -166,7 +158,7 @@ namespace SistemaInscripcion
 
                 alumnosABML.Agregar(doc);
                 alumnosABML.Agregar2(doc);
-                dtgDatosAlu.DataSource = alumnosABML.listar();
+                dataGridView1.DataSource = alumnosABML.listar();
                 MessageBox.Show("se agrego correctamente");
                 limpiar();
             }

@@ -141,7 +141,6 @@
             this.btnAddAlumnos.TabIndex = 4;
             this.btnAddAlumnos.Text = "ALUMNOS";
             this.btnAddAlumnos.UseVisualStyleBackColor = false;
-            this.btnAddAlumnos.Click += new System.EventHandler(this.BtnAddAlumnos_Click);
             // 
             // panelProductos
             // 
@@ -170,7 +169,6 @@
             this.panelProductos.Size = new System.Drawing.Size(1430, 67);
             this.panelProductos.TabIndex = 39;
             this.panelProductos.Visible = false;
-            this.panelProductos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelProductos_Paint);
             // 
             // cbxEspecialidadDoc
             // 

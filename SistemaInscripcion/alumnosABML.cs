@@ -47,7 +47,7 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"update Alumnos set  nombre='{0}',apellido='{1}',Grado='{2}', Año_Curso='{3}',CI_Alumno={4}",
+                SqlCommand comando = new SqlCommand(String.Format(@"update Alumnos set  nombre='{0}',apellido='{1}',Grado='{2}', Año_Curso='{3}' WHERE CI_Alumno={4}",
                     alumno.Nombre,
                     alumno.Apellido,                    
                     alumno.Grado,
@@ -64,7 +64,7 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion2())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"update Alumnos set  Edad={0},Genero='{1}',CI_Alumno={2}",
+                SqlCommand comando = new SqlCommand(String.Format(@"update Alumnos set  Edad={0},Genero='{1}' WHERE CI_Alumno={2}",
                     alumno.Edad,
                     alumno.Genero,            
                     alumno.CI_Alumno), conexion);

@@ -32,6 +32,9 @@ namespace SistemaInscripcion
             txtNombreAlu.Clear();
             txtApellAlumno.Clear();
             txtEdadAlu.Clear();
+            cbxAñoCursoAlu.Text = "";
+            cbxGeneroAlu.Text = "";
+            cbxGradoAlu.Text = "";
         }
 
         private void BtnSaveDocentes_Click(object sender, EventArgs e)
@@ -129,24 +132,7 @@ namespace SistemaInscripcion
             }
         }
 
-        private void PanelProductos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void BtnAddAlumnos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UpdateAlu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void BtnSaveAlumno_Click_1(object sender, EventArgs e)
+             private void BtnSaveAlumno_Click_1(object sender, EventArgs e)
         {
             if (editar == false)
             {
@@ -154,7 +140,7 @@ namespace SistemaInscripcion
 
                 GuardarAlu.CI_Alumno = int.Parse(txtCIAlu.Text);
                 GuardarAlu.Nombre = txtNombreAlu.Text;
-                GuardarAlu.Apellido = txtApellAlu.Text;
+                GuardarAlu.Apellido = txtApellAlumno.Text;
                 GuardarAlu.Genero = cbxGeneroAlu.Text;
                 GuardarAlu.Edad = int.Parse(txtEdadAlu.Text);
                 GuardarAlu.Grado = cbxGradoAlu.Text;
@@ -173,10 +159,10 @@ namespace SistemaInscripcion
                 alumno modificarAlu1 = new alumno();
                 alumno modificarAlu2 = new alumno();
 
-                modificarAlu1.CI_Alumno = int.Parse(txtCIDoc.Text);
-                modificarAlu1.Nombre = txtNombreDoc.Text;
-                modificarAlu1.Apellido = txtApellidosDoc.Text;
-                modificarAlu1.Grado = cbxGeneroAlu.Text;
+                modificarAlu1.CI_Alumno = int.Parse(txtCIAlu.Text);
+                modificarAlu1.Nombre = txtNombreAlu.Text;
+                modificarAlu1.Apellido = txtApellAlumno.Text;
+                modificarAlu1.Grado = cbxGradoAlu.Text;
                 modificarAlu1.AñoCurso = cbxAñoCursoAlu.Text;
 
 
@@ -206,6 +192,10 @@ namespace SistemaInscripcion
                 cbxGeneroAlu.Text = datosAlumnos.CurrentRow.Cells["Genero"].Value.ToString();
                 cbxGradoAlu.Text = datosAlumnos.CurrentRow.Cells["Grado"].Value.ToString();
                 cbxAñoCursoAlu.Text = datosAlumnos.CurrentRow.Cells["AñoCurso"].Value.ToString();
+
+                txtCIAlu.Enabled = false;
+                txtEdadAlu.Enabled = false;
+                cbxGeneroAlu.Enabled = false;
 
             }
             else

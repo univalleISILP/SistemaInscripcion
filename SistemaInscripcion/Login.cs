@@ -134,5 +134,10 @@ namespace SistemaInscripcion
                 lblpassword.Visible = false;
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

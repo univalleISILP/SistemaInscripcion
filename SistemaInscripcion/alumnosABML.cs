@@ -161,7 +161,7 @@ namespace SistemaInscripcion
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
 
-                SqlCommand comando = new SqlCommand(string.Format(@"SELECT g.*,f.Edad,f.genero FROM Alumnos g,proyectoBD2.dbo.Alumnos f where g.ci_alumno=f.ci_Alumno and g.ci_alumno like '%{0}'",dato), conexion);
+                SqlCommand comando = new SqlCommand(string.Format(@"SELECT g.*,f.Edad,f.genero FROM Alumnos g,proyectoBD2.dbo.Alumnos f where g.ci_alumno=f.ci_Alumno and g.ci_alumno like '%{0}%'",dato), conexion);
                 SqlDataReader leer = comando.ExecuteReader();
 
                 while (leer.Read())

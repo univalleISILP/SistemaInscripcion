@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,11 @@ namespace SistemaInscripcion
 {
     public partial class PlataformaAdmin : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         private bool editarAlu = false;
         private bool editarDoc = false;
         public PlataformaAdmin()
@@ -19,6 +25,7 @@ namespace SistemaInscripcion
             InitializeComponent();
             datosAlumnos.DataSource = alumnosABML.listar();
             datosDoc.DataSource = DocentesABML.listarDocente();
+           
         }
         void limpiarDocente()
         {
@@ -231,6 +238,8 @@ namespace SistemaInscripcion
         {
             panelDocentes.Visible = true;
             panelAlumnos.Visible = false;
+            panelBuscarAlumnos.Visible = false;
+           
         }
 
         private void TxtCIalumnoBuscar_TextChanged_1(object sender, EventArgs e)
@@ -239,6 +248,10 @@ namespace SistemaInscripcion
             if (datoCIALU != "")
             {
                 dbgListaAlumnosBuscar.DataSource = alumnosABML.listarXci(datoCIALU);
+            }
+            else
+            {
+                txtCIalumnoBuscar.Text = "";
             }
         }
 
@@ -294,9 +307,43 @@ namespace SistemaInscripcion
             }
         }
 
-        private void BtnMinimizar_Click(object sender, EventArgs e)
+      
+        private void PlataformaAdmin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void BtnAddAlumnos_Click(object sender, EventArgs e)
+        {
+            panelDocentes.Visible = false;
+            panelAlumnos.Visible = true;
+            panelBuscarAlumnos.Visible = true;
+
+        }
+
+        private void BtnAddMaterias_Click(object sender, EventArgs e)
+        {
+            panelDocentes.Visible = false;
+            panelAlumnos.Visible = false;
+            panelBuscarAlumnos.Visible = false;
+          
+        }
+
+        private void BtnMinimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

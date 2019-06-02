@@ -60,15 +60,12 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtNombreAlu = new System.Windows.Forms.TextBox();
             this.txtApellAlu = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.datosAlumnos = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtGradoAlu = new System.Windows.Forms.TextBox();
             this.btnSaveAlumno = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtAñoCursoAlu = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEdadAlu = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -77,10 +74,13 @@
             this.dbgListaAlumnosBuscar = new System.Windows.Forms.DataGridView();
             this.btnBuscarAlumno = new System.Windows.Forms.Button();
             this.txtCIalumnoBuscar = new System.Windows.Forms.TextBox();
+            this.cbxGradoAlu = new System.Windows.Forms.ComboBox();
+            this.cbxAñoCursoAlu = new System.Windows.Forms.ComboBox();
+            this.txtApellAlumno = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgListaAlumnosBuscar)).BeginInit();
             this.SuspendLayout();
@@ -402,6 +402,7 @@
             this.DeleteAlu.TabIndex = 62;
             this.DeleteAlu.Text = "delete";
             this.DeleteAlu.UseVisualStyleBackColor = false;
+            this.DeleteAlu.Click += new System.EventHandler(this.DeleteAlu_Click);
             // 
             // UpdateAlu
             // 
@@ -414,6 +415,7 @@
             this.UpdateAlu.TabIndex = 63;
             this.UpdateAlu.Text = "update";
             this.UpdateAlu.UseVisualStyleBackColor = false;
+            this.UpdateAlu.Click += new System.EventHandler(this.UpdateAlu_Click_1);
             // 
             // label15
             // 
@@ -466,15 +468,6 @@
             this.txtApellAlu.TabIndex = 69;
             this.txtApellAlu.Text = "Apellido";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1065, 160);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 32);
-            this.textBox1.TabIndex = 70;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -486,21 +479,21 @@
             this.label13.TabIndex = 71;
             this.label13.Text = "Genero";
             // 
-            // dataGridView1
+            // datosAlumnos
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(813, 414);
-            this.dataGridView1.TabIndex = 64;
+            this.datosAlumnos.AllowUserToDeleteRows = false;
+            this.datosAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datosAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.datosAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datosAlumnos.Location = new System.Drawing.Point(20, 32);
+            this.datosAlumnos.Name = "datosAlumnos";
+            this.datosAlumnos.ReadOnly = true;
+            this.datosAlumnos.RowHeadersVisible = false;
+            this.datosAlumnos.RowHeadersWidth = 62;
+            this.datosAlumnos.RowTemplate.Height = 28;
+            this.datosAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datosAlumnos.Size = new System.Drawing.Size(813, 414);
+            this.datosAlumnos.TabIndex = 64;
             // 
             // label12
             // 
@@ -523,15 +516,6 @@
             this.label11.TabIndex = 77;
             this.label11.Text = "Grado";
             // 
-            // txtGradoAlu
-            // 
-            this.txtGradoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGradoAlu.Location = new System.Drawing.Point(1065, 331);
-            this.txtGradoAlu.Multiline = true;
-            this.txtGradoAlu.Name = "txtGradoAlu";
-            this.txtGradoAlu.Size = new System.Drawing.Size(326, 32);
-            this.txtGradoAlu.TabIndex = 80;
-            // 
             // btnSaveAlumno
             // 
             this.btnSaveAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -553,15 +537,6 @@
             this.label10.Size = new System.Drawing.Size(134, 29);
             this.label10.TabIndex = 85;
             this.label10.Text = "Año Curso";
-            // 
-            // txtAñoCursoAlu
-            // 
-            this.txtAñoCursoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAñoCursoAlu.Location = new System.Drawing.Point(1065, 386);
-            this.txtAñoCursoAlu.Multiline = true;
-            this.txtAñoCursoAlu.Name = "txtAñoCursoAlu";
-            this.txtAñoCursoAlu.Size = new System.Drawing.Size(326, 32);
-            this.txtAñoCursoAlu.TabIndex = 86;
             // 
             // label9
             // 
@@ -586,18 +561,18 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtApellAlumno);
+            this.panel3.Controls.Add(this.cbxAñoCursoAlu);
             this.panel3.Controls.Add(this.cbxGeneroAlu);
+            this.panel3.Controls.Add(this.cbxGradoAlu);
             this.panel3.Controls.Add(this.txtEdadAlu);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.txtAñoCursoAlu);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.btnSaveAlumno);
-            this.panel3.Controls.Add(this.txtGradoAlu);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.datosAlumnos);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.txtApellAlu);
             this.panel3.Controls.Add(this.txtNombreAlu);
             this.panel3.Controls.Add(this.label14);
@@ -609,6 +584,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1430, 568);
             this.panel3.TabIndex = 41;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel3_Paint);
             // 
             // cbxGeneroAlu
             // 
@@ -666,6 +642,43 @@
             this.txtCIalumnoBuscar.Size = new System.Drawing.Size(326, 32);
             this.txtCIalumnoBuscar.TabIndex = 90;
             // 
+            // cbxGradoAlu
+            // 
+            this.cbxGradoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGradoAlu.FormattingEnabled = true;
+            this.cbxGradoAlu.Items.AddRange(new object[] {
+            "Primaria",
+            "Secundaria"});
+            this.cbxGradoAlu.Location = new System.Drawing.Point(1065, 326);
+            this.cbxGradoAlu.Name = "cbxGradoAlu";
+            this.cbxGradoAlu.Size = new System.Drawing.Size(326, 33);
+            this.cbxGradoAlu.TabIndex = 90;
+            // 
+            // cbxAñoCursoAlu
+            // 
+            this.cbxAñoCursoAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAñoCursoAlu.FormattingEnabled = true;
+            this.cbxAñoCursoAlu.Items.AddRange(new object[] {
+            "Primero",
+            "Segundo",
+            "Tercero",
+            "Cuarto",
+            "Quinto",
+            "Sexto"});
+            this.cbxAñoCursoAlu.Location = new System.Drawing.Point(1065, 384);
+            this.cbxAñoCursoAlu.Name = "cbxAñoCursoAlu";
+            this.cbxAñoCursoAlu.Size = new System.Drawing.Size(326, 33);
+            this.cbxAñoCursoAlu.TabIndex = 91;
+            // 
+            // txtApellAlumno
+            // 
+            this.txtApellAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellAlumno.Location = new System.Drawing.Point(1065, 157);
+            this.txtApellAlumno.Multiline = true;
+            this.txtApellAlumno.Name = "txtApellAlumno";
+            this.txtApellAlumno.Size = new System.Drawing.Size(326, 32);
+            this.txtApellAlumno.TabIndex = 92;
+            // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -685,7 +698,7 @@
             this.panelProductos.ResumeLayout(false);
             this.panelProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgListaAlumnosBuscar)).EndInit();
@@ -728,15 +741,12 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtNombreAlu;
         private System.Windows.Forms.Label txtApellAlu;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView datosAlumnos;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtGradoAlu;
         private System.Windows.Forms.Button btnSaveAlumno;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtAñoCursoAlu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEdadAlu;
         public System.Windows.Forms.Panel panel3;
@@ -745,5 +755,8 @@
         public System.Windows.Forms.DataGridView dbgListaAlumnosBuscar;
         private System.Windows.Forms.Button btnBuscarAlumno;
         private System.Windows.Forms.TextBox txtCIalumnoBuscar;
+        private System.Windows.Forms.ComboBox cbxAñoCursoAlu;
+        private System.Windows.Forms.ComboBox cbxGradoAlu;
+        private System.Windows.Forms.TextBox txtApellAlumno;
     }
 }

@@ -79,7 +79,7 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"delete alumnos where CI_Alumno={0}",
+                SqlCommand comando = new SqlCommand(String.Format(@"delete alumnos where CI_Alumno = {0}",
                     ci), conexion);
                 retorno = comando.ExecuteNonQuery();
                 conexion.Close();

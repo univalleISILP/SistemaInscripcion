@@ -99,6 +99,8 @@ namespace SistemaInscripcion
             }
             return retorno;
         }
+
+        //este metodo se utiliza com  el login docentes
         public static List<ListaAlumno> listar(string mat,string año)
         {
             List<ListaAlumno> lista = new List<ListaAlumno>();
@@ -126,6 +128,32 @@ where a.CI_Alumno=M.CI_Alumno and d.CI_Docente=M.CI_Docente and mat.Clave_Materi
             }
             return lista;
         }
-        
+        public static List<alumno> listar()
+        {
+            List<alumno> lista = new List<alumno>();
+
+            using (SqlConnection conexion = Conexion.ObtenerConexion1())
+            {
+
+                SqlCommand comando = new SqlCommand(string.Format(@"SELECT g.*,f.Edad,f.genero FROM Alumnos g,proyectoBD2.dbo.Alumnos f where g.ci_alumno=f.ci_Alumno"), conexion);
+                SqlDataReader leer = comando.ExecuteReader();
+
+                while (leer.Read())
+                {
+                    alumno alumno = new alumno();
+                    alumno.CI_Alumno = leer.GetInt32(0);
+                    alumno.Nombre = leer.GetString(1);
+                    alumno.Apellido = leer.GetString(2);
+                    alumno.Grado = leer.GetString(3);
+                    alumno.AñoCurso = leer.GetString(4);
+                    alumno.Edad = leer.GetInt32(5);
+                    alumno.Genero = leer.GetString(6);
+                    lista.Add(alumno);
+                }
+                conexion.Close();
+            }
+            return lista;
+        }
+
     }
 }

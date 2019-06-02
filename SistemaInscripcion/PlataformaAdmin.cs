@@ -27,18 +27,10 @@ namespace SistemaInscripcion
             txtTelefonoDoc.Clear();
             txtDirecDoc.Clear();
         }
-        char gen;
+        string gen;
         private void BtnSaveDocentes_Click(object sender, EventArgs e)
         {
-            if (radioVaron.Text == "varon")
-            {
-                gen = 'v';
-            }
-            if (radioMujer.Text == "mujer")
-            {
-                gen = 'm';
-            }
-
+           
             if (editar == false)
             {
                 Docente doc = new Docente();
@@ -46,7 +38,7 @@ namespace SistemaInscripcion
                 doc.CI = int.Parse(txtCIDoc.Text);
                 doc.Nombre = txtNombreDoc.Text;
                 doc.Apellido = txtApellidosDoc.Text;
-                doc.Genero = gen;
+               // doc.Genero = txt;
                 doc.Especialidad = cbxEspecialidadDoc.Text;
                 doc.Telefono = int.Parse(txtTelefonoDoc.Text);
                 doc.Direccion = txtDirecDoc.Text;
@@ -139,6 +131,65 @@ namespace SistemaInscripcion
         private void BtnAddAlumnos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UpdateAlu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSaveAlumno_Click(object sender, EventArgs e)
+        {
+
+            if (radioButton2.Text == "varon")
+            {
+                gen = "V";
+            }
+            if (radioButton1.Text == "mujer")
+            {
+                gen = "M";
+            }
+
+            if (editar == false)
+            {
+                alumno doc = new alumno();
+
+                doc.CI_Alumno = int.Parse(txtCIAlu.Text);
+                doc.Nombre = txtNombreAlu.Text;
+                doc.Apellido = txtApellAlu.Text;
+                doc.Genero = gen;
+                doc.Edad = int.Parse(txtEdadAlu.Text);
+                doc.Grado = txtGradoAlu.Text;
+                doc.AñoCurso = txtAñoCursoAlu.Text;
+
+
+
+                alumnosABML.Agregar(doc);
+                alumnosABML.Agregar2(doc);
+                dtgDatosAlu.DataSource = alumnosABML.listar();
+                MessageBox.Show("se agrego correctamente");
+                limpiar();
+            }
+            else
+            {
+                //Docente modificar = new Docente();
+
+                //modificar.CI = int.Parse(txtCIDoc.Text);
+                //modificar.Nombre = txtNombreDoc.Text;
+                //modificar.Apellido = txtApellidosDoc.Text;
+                //modificar.Genero;
+                //modificar.Especialidad = txtEspecialidadDoc.Text;
+                //modificar.Telefono = int.Parse(txtTelefonoDoc.Text);
+                //modificar.Direccion = txtDirecDoc.Text;
+
+
+                //clsProductosABML.ModificarProducto(modificar);
+
+                //datosGridView.DataSource = clsProductosABML.listar();
+
+                //MessageBox.Show("modificado");
+                limpiar();
+            }
         }
     }
 }

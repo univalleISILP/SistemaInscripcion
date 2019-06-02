@@ -120,7 +120,6 @@ namespace SistemaInscripcion
 
                 lblusuario.Visible = false;
                 lblpassword.Visible = false;
-                
             }
         }
 

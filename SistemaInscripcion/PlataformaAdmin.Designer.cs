@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlataformaAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddMaterias = new System.Windows.Forms.Button();
             this.btnAddDocentes = new System.Windows.Forms.Button();
             this.btnAddAlumnos = new System.Windows.Forms.Button();
-            this.panelProductos = new System.Windows.Forms.Panel();
+            this.panelDocentes = new System.Windows.Forms.Panel();
             this.btnDeleteDoc = new System.Windows.Forms.Button();
             this.cbxGeneroDoc = new System.Windows.Forms.ComboBox();
             this.cbxEspecialidadDoc = new System.Windows.Forms.ComboBox();
@@ -67,20 +68,23 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEdadAlu = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelAlumnos = new System.Windows.Forms.Panel();
             this.txtApellAlumno = new System.Windows.Forms.TextBox();
             this.cbxAñoCursoAlu = new System.Windows.Forms.ComboBox();
             this.cbxGeneroAlu = new System.Windows.Forms.ComboBox();
             this.cbxGradoAlu = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dbgListaAlumnosBuscar = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.txtCIalumnoBuscar = new System.Windows.Forms.TextBox();
+            this.dbgListaAlumnosBuscar = new System.Windows.Forms.DataGridView();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panelProductos.SuspendLayout();
+            this.panelDocentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).BeginInit();
+            this.panelAlumnos.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgListaAlumnosBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,14 +96,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 974);
+            this.panel1.Size = new System.Drawing.Size(248, 991);
             this.panel1.TabIndex = 2;
             // 
             // btnAddMaterias
             // 
-            this.btnAddMaterias.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAddMaterias.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAddMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnAddMaterias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(230)))));
+            this.btnAddMaterias.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnAddMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddMaterias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAddMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnAddMaterias.ForeColor = System.Drawing.Color.Black;
@@ -112,24 +117,27 @@
             // 
             // btnAddDocentes
             // 
-            this.btnAddDocentes.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAddDocentes.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAddDocentes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnAddDocentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(230)))));
+            this.btnAddDocentes.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnAddDocentes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddDocentes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAddDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDocentes.ForeColor = System.Drawing.Color.Black;
-            this.btnAddDocentes.Location = new System.Drawing.Point(30, 72);
+            this.btnAddDocentes.Location = new System.Drawing.Point(30, 74);
             this.btnAddDocentes.Name = "btnAddDocentes";
             this.btnAddDocentes.Size = new System.Drawing.Size(180, 55);
             this.btnAddDocentes.TabIndex = 3;
             this.btnAddDocentes.Text = "DOCENTES";
             this.btnAddDocentes.UseVisualStyleBackColor = false;
+            this.btnAddDocentes.Click += new System.EventHandler(this.BtnAddDocentes_Click);
             // 
             // btnAddAlumnos
             // 
-            this.btnAddAlumnos.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAddAlumnos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAddAlumnos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnAddAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(230)))));
+            this.btnAddAlumnos.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnAddAlumnos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAddAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAlumnos.ForeColor = System.Drawing.Color.Black;
@@ -140,31 +148,31 @@
             this.btnAddAlumnos.Text = "ALUMNOS";
             this.btnAddAlumnos.UseVisualStyleBackColor = false;
             // 
-            // panelProductos
+            // panelDocentes
             // 
-            this.panelProductos.Controls.Add(this.btnDeleteDoc);
-            this.panelProductos.Controls.Add(this.cbxGeneroDoc);
-            this.panelProductos.Controls.Add(this.cbxEspecialidadDoc);
-            this.panelProductos.Controls.Add(this.txtDirecDoc);
-            this.panelProductos.Controls.Add(this.txtTelefonoDoc);
-            this.panelProductos.Controls.Add(this.label8);
-            this.panelProductos.Controls.Add(this.label7);
-            this.panelProductos.Controls.Add(this.label6);
-            this.panelProductos.Controls.Add(this.label5);
-            this.panelProductos.Controls.Add(this.datosDoc);
-            this.panelProductos.Controls.Add(this.label4);
-            this.panelProductos.Controls.Add(this.txtApellidosDoc);
-            this.panelProductos.Controls.Add(this.label3);
-            this.panelProductos.Controls.Add(this.txtNombreDoc);
-            this.panelProductos.Controls.Add(this.btnSaveDocentes);
-            this.panelProductos.Controls.Add(this.label2);
-            this.panelProductos.Controls.Add(this.txtCIDoc);
-            this.panelProductos.Controls.Add(this.label1);
-            this.panelProductos.Controls.Add(this.UpdateDoc);
-            this.panelProductos.Location = new System.Drawing.Point(274, 42);
-            this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(1430, 207);
-            this.panelProductos.TabIndex = 39;
+            this.panelDocentes.Controls.Add(this.btnDeleteDoc);
+            this.panelDocentes.Controls.Add(this.cbxGeneroDoc);
+            this.panelDocentes.Controls.Add(this.cbxEspecialidadDoc);
+            this.panelDocentes.Controls.Add(this.txtDirecDoc);
+            this.panelDocentes.Controls.Add(this.txtTelefonoDoc);
+            this.panelDocentes.Controls.Add(this.label8);
+            this.panelDocentes.Controls.Add(this.label7);
+            this.panelDocentes.Controls.Add(this.label6);
+            this.panelDocentes.Controls.Add(this.label5);
+            this.panelDocentes.Controls.Add(this.datosDoc);
+            this.panelDocentes.Controls.Add(this.label4);
+            this.panelDocentes.Controls.Add(this.txtApellidosDoc);
+            this.panelDocentes.Controls.Add(this.label3);
+            this.panelDocentes.Controls.Add(this.txtNombreDoc);
+            this.panelDocentes.Controls.Add(this.btnSaveDocentes);
+            this.panelDocentes.Controls.Add(this.label2);
+            this.panelDocentes.Controls.Add(this.txtCIDoc);
+            this.panelDocentes.Controls.Add(this.label1);
+            this.panelDocentes.Controls.Add(this.UpdateDoc);
+            this.panelDocentes.Location = new System.Drawing.Point(274, 42);
+            this.panelDocentes.Name = "panelDocentes";
+            this.panelDocentes.Size = new System.Drawing.Size(1430, 48);
+            this.panelDocentes.TabIndex = 39;
             // 
             // btnDeleteDoc
             // 
@@ -391,6 +399,7 @@
             this.DeleteAlu.TabIndex = 62;
             this.DeleteAlu.Text = "delete";
             this.DeleteAlu.UseVisualStyleBackColor = false;
+            this.DeleteAlu.Click += new System.EventHandler(this.DeleteAlu_Click_1);
             // 
             // UpdateAlu
             // 
@@ -547,31 +556,31 @@
             this.txtEdadAlu.TabIndex = 88;
             this.txtEdadAlu.Text = "                   ";
             // 
-            // panel3
+            // panelAlumnos
             // 
-            this.panel3.Controls.Add(this.txtApellAlumno);
-            this.panel3.Controls.Add(this.cbxAñoCursoAlu);
-            this.panel3.Controls.Add(this.cbxGeneroAlu);
-            this.panel3.Controls.Add(this.cbxGradoAlu);
-            this.panel3.Controls.Add(this.txtEdadAlu);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.btnSaveAlumno);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.datosAlumnos);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.txtApellAlu);
-            this.panel3.Controls.Add(this.txtNombreAlu);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.txtCIAlu);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.UpdateAlu);
-            this.panel3.Controls.Add(this.DeleteAlu);
-            this.panel3.Location = new System.Drawing.Point(274, 637);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1430, 60);
-            this.panel3.TabIndex = 41;
+            this.panelAlumnos.Controls.Add(this.txtApellAlumno);
+            this.panelAlumnos.Controls.Add(this.cbxAñoCursoAlu);
+            this.panelAlumnos.Controls.Add(this.cbxGeneroAlu);
+            this.panelAlumnos.Controls.Add(this.cbxGradoAlu);
+            this.panelAlumnos.Controls.Add(this.txtEdadAlu);
+            this.panelAlumnos.Controls.Add(this.label9);
+            this.panelAlumnos.Controls.Add(this.label10);
+            this.panelAlumnos.Controls.Add(this.btnSaveAlumno);
+            this.panelAlumnos.Controls.Add(this.label11);
+            this.panelAlumnos.Controls.Add(this.label12);
+            this.panelAlumnos.Controls.Add(this.datosAlumnos);
+            this.panelAlumnos.Controls.Add(this.label13);
+            this.panelAlumnos.Controls.Add(this.txtApellAlu);
+            this.panelAlumnos.Controls.Add(this.txtNombreAlu);
+            this.panelAlumnos.Controls.Add(this.label14);
+            this.panelAlumnos.Controls.Add(this.txtCIAlu);
+            this.panelAlumnos.Controls.Add(this.label15);
+            this.panelAlumnos.Controls.Add(this.UpdateAlu);
+            this.panelAlumnos.Controls.Add(this.DeleteAlu);
+            this.panelAlumnos.Location = new System.Drawing.Point(274, 129);
+            this.panelAlumnos.Name = "panelAlumnos";
+            this.panelAlumnos.Size = new System.Drawing.Size(1430, 52);
+            this.panelAlumnos.TabIndex = 41;
             // 
             // txtApellAlumno
             // 
@@ -623,65 +632,87 @@
             this.cbxGradoAlu.Size = new System.Drawing.Size(326, 33);
             this.cbxGradoAlu.TabIndex = 90;
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(264, 277);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(4, 415);
-            this.panel2.TabIndex = 61;
+            this.panel3.Controls.Add(this.txtCIalumnoBuscar);
+            this.panel3.Controls.Add(this.dbgListaAlumnosBuscar);
+            this.panel3.Location = new System.Drawing.Point(274, 231);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1430, 140);
+            this.panel3.TabIndex = 91;
+            // 
+            // txtCIalumnoBuscar
+            // 
+            this.txtCIalumnoBuscar.BackColor = System.Drawing.Color.White;
+            this.txtCIalumnoBuscar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCIalumnoBuscar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtCIalumnoBuscar.Location = new System.Drawing.Point(20, 18);
+            this.txtCIalumnoBuscar.Multiline = true;
+            this.txtCIalumnoBuscar.Name = "txtCIalumnoBuscar";
+            this.txtCIalumnoBuscar.Size = new System.Drawing.Size(255, 35);
+            this.txtCIalumnoBuscar.TabIndex = 91;
+            this.txtCIalumnoBuscar.Text = "numero";
+            this.txtCIalumnoBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCIalumnoBuscar.TextChanged += new System.EventHandler(this.TxtCIalumnoBuscar_TextChanged_1);
+            this.txtCIalumnoBuscar.Enter += new System.EventHandler(this.TxtCIalumnoBuscar_Enter);
+            this.txtCIalumnoBuscar.Leave += new System.EventHandler(this.TxtCIalumnoBuscar_Leave);
             // 
             // dbgListaAlumnosBuscar
             // 
             this.dbgListaAlumnosBuscar.AllowUserToDeleteRows = false;
             this.dbgListaAlumnosBuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dbgListaAlumnosBuscar.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.dbgListaAlumnosBuscar.BackgroundColor = System.Drawing.Color.LightCyan;
             this.dbgListaAlumnosBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dbgListaAlumnosBuscar.Location = new System.Drawing.Point(264, 797);
+            this.dbgListaAlumnosBuscar.Location = new System.Drawing.Point(20, 69);
             this.dbgListaAlumnosBuscar.Name = "dbgListaAlumnosBuscar";
             this.dbgListaAlumnosBuscar.ReadOnly = true;
             this.dbgListaAlumnosBuscar.RowHeadersVisible = false;
             this.dbgListaAlumnosBuscar.RowHeadersWidth = 62;
             this.dbgListaAlumnosBuscar.RowTemplate.Height = 28;
             this.dbgListaAlumnosBuscar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dbgListaAlumnosBuscar.Size = new System.Drawing.Size(935, 152);
-            this.dbgListaAlumnosBuscar.TabIndex = 90;
+            this.dbgListaAlumnosBuscar.Size = new System.Drawing.Size(1127, 119);
+            this.dbgListaAlumnosBuscar.TabIndex = 92;
             // 
-            // txtCIalumnoBuscar
+            // btnMinimizar
             // 
-            this.txtCIalumnoBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCIalumnoBuscar.Location = new System.Drawing.Point(273, 749);
-            this.txtCIalumnoBuscar.Multiline = true;
-            this.txtCIalumnoBuscar.Name = "txtCIalumnoBuscar";
-            this.txtCIalumnoBuscar.Size = new System.Drawing.Size(326, 32);
-            this.txtCIalumnoBuscar.TabIndex = 90;
-            this.txtCIalumnoBuscar.TextChanged += new System.EventHandler(this.TxtCIalumnoBuscar_TextChanged);
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizar.Location = new System.Drawing.Point(1688, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(46, 40);
+            this.btnMinimizar.TabIndex = 92;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
             // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(1735, 974);
-            this.Controls.Add(this.txtCIalumnoBuscar);
-            this.Controls.Add(this.dbgListaAlumnosBuscar);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
+            this.ClientSize = new System.Drawing.Size(1735, 991);
+            this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panelProductos);
+            this.Controls.Add(this.panelAlumnos);
+            this.Controls.Add(this.panelDocentes);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1735, 991);
+            this.MinimumSize = new System.Drawing.Size(1735, 991);
             this.Name = "PlataformaAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlataformaAdmin";
             this.panel1.ResumeLayout(false);
-            this.panelProductos.ResumeLayout(false);
-            this.panelProductos.PerformLayout();
+            this.panelDocentes.ResumeLayout(false);
+            this.panelDocentes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).EndInit();
+            this.panelAlumnos.ResumeLayout(false);
+            this.panelAlumnos.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgListaAlumnosBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -691,7 +722,7 @@
         private System.Windows.Forms.Button btnAddMaterias;
         private System.Windows.Forms.Button btnAddDocentes;
         private System.Windows.Forms.Button btnAddAlumnos;
-        public System.Windows.Forms.Panel panelProductos;
+        public System.Windows.Forms.Panel panelDocentes;
         public System.Windows.Forms.DataGridView datosDoc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtApellidosDoc;
@@ -724,15 +755,16 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEdadAlu;
-        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel panelAlumnos;
         private System.Windows.Forms.ComboBox cbxGeneroAlu;
-        private System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.DataGridView dbgListaAlumnosBuscar;
-        private System.Windows.Forms.TextBox txtCIalumnoBuscar;
         private System.Windows.Forms.ComboBox cbxAñoCursoAlu;
         private System.Windows.Forms.ComboBox cbxGradoAlu;
         private System.Windows.Forms.TextBox txtApellAlumno;
         private System.Windows.Forms.ComboBox cbxGeneroDoc;
         private System.Windows.Forms.Button btnDeleteDoc;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtCIalumnoBuscar;
+        public System.Windows.Forms.DataGridView dbgListaAlumnosBuscar;
+        private System.Windows.Forms.PictureBox btnMinimizar;
     }
 }

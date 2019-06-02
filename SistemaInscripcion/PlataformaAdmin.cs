@@ -195,7 +195,72 @@ namespace SistemaInscripcion
             }
         }
 
-        private void DeleteAlu_Click(object sender, EventArgs e)
+       private void BtnDeleteDoc_Click(object sender, EventArgs e)
+        {
+            if (datosDoc.SelectedCells.Count > 0)
+            {
+                txtCIDoc.Text = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
+
+                string message = "estas seguro";
+                string captiion = "error";
+
+                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, captiion, mensaje);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    int dato = int.Parse(txtCIDoc.Text);
+
+                    DocentesABML.EliminarDoc1(dato);
+                    DocentesABML.EliminarDoc2(dato);
+                    datosDoc.DataSource = DocentesABML.listarDocente();
+                    limpiarDocente();
+                    txtCIDoc.Enabled = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("seleccione una fila para poder eliminar");
+            }
+        }
+
+        private void BtnAddDocentes_Click(object sender, EventArgs e)
+        {
+            panelDocentes.Visible = true;
+            panelAlumnos.Visible = false;
+        }
+
+        private void TxtCIalumnoBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            string datoCIALU = txtCIalumnoBuscar.Text;
+            if (datoCIALU != "")
+            {
+                dbgListaAlumnosBuscar.DataSource = alumnosABML.listarXci(datoCIALU);
+            }
+        }
+
+        private void TxtCIalumnoBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtCIalumnoBuscar.Text == "")
+            {
+                txtCIalumnoBuscar.Text = "numero";
+                txtCIalumnoBuscar.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtCIalumnoBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtCIalumnoBuscar.Text == "numero")
+            {
+                txtCIalumnoBuscar.Text = "";
+                txtCIalumnoBuscar.ForeColor = Color.Black;
+            }
+        }
+
+        private void DeleteAlu_Click_1(object sender, EventArgs e)
         {
             if (datosAlumnos.SelectedCells.Count > 0)
             {
@@ -229,42 +294,9 @@ namespace SistemaInscripcion
             }
         }
 
-        private void TxtCIalumnoBuscar_TextChanged(object sender, EventArgs e)
+        private void BtnMinimizar_Click(object sender, EventArgs e)
         {
-            string datoCIALU = txtCIalumnoBuscar.Text;
-            dbgListaAlumnosBuscar.DataSource = alumnosABML.listarXci(datoCIALU);
-        }
-
-        private void BtnDeleteDoc_Click(object sender, EventArgs e)
-        {
-            if (datosDoc.SelectedCells.Count > 0)
-            {
-                txtCIDoc.Text = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
-
-                string message = "estas seguro";
-                string captiion = "error";
-
-                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                result = MessageBox.Show(message, captiion, mensaje);
-
-                if (result == System.Windows.Forms.DialogResult.Yes)
-                {
-
-                    int dato = int.Parse(txtCIDoc.Text);
-
-                    DocentesABML.EliminarDoc1(dato);
-                    DocentesABML.EliminarDoc2(dato);
-                    datosDoc.DataSource = DocentesABML.listarDocente();
-                    limpiarDocente();
-                    txtCIDoc.Enabled = true;
-                }
-            }
-            else
-            {
-                MessageBox.Show("seleccione una fila para poder eliminar");
-            }
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -132,7 +132,16 @@ select * from proyectoBD.dbo.Alumnos
 union
 select * from proyectoBD2.dbo.Alumnos
 
+SELECT g.*,f.Edad,f.genero FROM Alumnos g,proyectoBD2.dbo.Alumnos f where g.ci_alumno=f.ci_Alumno
+
 
 SELECT a.Nombre,a.Apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf FROM Alumnos a,Docentes d,Modulo M,materia mat where a.CI_Alumno=M.CI_Alumno, and d.CI_Docente=M.CI_Docente and mat.Clave_Materia=M.Clave_Materia and mat.Nombre='ingles' and a.Curso='tercero'
 Union 
 SELECT a.Nombre,a.Apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf FROM proyectoBD2.dbo.Alumnos a,proyectoBD2.dbo.Docentes d,Modulo M,materia mat where a.CI_Alumno=M.CI_Alumno, and d.CI_Docente=M.CI_Docente and mat.Clave_Materia=M.Clave_Materia and mat.Nombre='{0}' and a.Curso='{1}'
+
+SELECT d.*, e.Genero, e.Telefono,e.Direccion FROM Docentes d, proyectoBD2.dbo.Docentes e WHERE d.CI_Docente = e.CI_Docente
+
+	
+	select * from Docentes;
+
+delete from proyectoBD.dbo.Docentes where CI_Docente = 190;

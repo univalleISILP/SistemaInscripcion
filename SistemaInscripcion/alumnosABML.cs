@@ -9,7 +9,7 @@ namespace SistemaInscripcion
 {
     class alumnosABML
     {
-        public static int Agregar(alumno alumno)
+        public static int AgregarAlu1(alumno alumno)
         {
             int retorno = 0;
 
@@ -26,7 +26,7 @@ namespace SistemaInscripcion
             }
             return retorno;
         }
-        public static int Agregar2(alumno alumno)
+        public static int AgregarAlu2(alumno alumno)
         {
             int retorno = 0;
 

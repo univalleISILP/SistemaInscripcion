@@ -12,11 +12,13 @@ namespace SistemaInscripcion
 {
     public partial class PlataformaAdmin : Form
     {
-        private bool editar = false;
+        private bool editarAlu = false;
+        private bool editarDoc = false;
         public PlataformaAdmin()
         {
             InitializeComponent();
             datosAlumnos.DataSource = alumnosABML.listar();
+            datosDoc.DataSource = DocentesABML.listarDocente();
         }
         void limpiarDocente()
         {
@@ -25,6 +27,8 @@ namespace SistemaInscripcion
             txtApellidosDoc.Clear();
             txtTelefonoDoc.Clear();
             txtDirecDoc.Clear();
+            cbxGeneroDoc.Text = "";
+            cbxEspecialidadDoc.Text = "";
         }
         void limpiarAlumno()
         {
@@ -39,61 +43,79 @@ namespace SistemaInscripcion
 
         private void BtnSaveDocentes_Click(object sender, EventArgs e)
         {
-           
-            if (editar == false)
+            if (txtCIDoc.Text == "" ||
+                txtNombreDoc.Text == "" ||
+                txtApellidosDoc.Text == "" ||
+                cbxGeneroDoc.Text == "" ||
+                cbxEspecialidadDoc.Text == "" ||
+                txtTelefonoDoc.Text == "" ||
+                txtDirecDoc.Text == "")
             {
-                Docente doc = new Docente();
-
-                doc.CI = int.Parse(txtCIDoc.Text);
-                doc.Nombre = txtNombreDoc.Text;
-                doc.Apellido = txtApellidosDoc.Text;
-               // doc.Genero = txt;
-                doc.Especialidad = cbxEspecialidadDoc.Text;
-                doc.Telefono = int.Parse(txtTelefonoDoc.Text);
-                doc.Direccion = txtDirecDoc.Text;
-
-
-
-                //clsProductosABML.AgregarProducto(product);
-
-                //datosGridView.DataSource = clsProductosABML.listar();
-                //MessageBox.Show("Se agrego correctamente");
-                //limpiar();
+                MessageBox.Show("deve ingresar datos");
             }
             else
             {
-                //Docente modificar = new Docente();
+                if (editarDoc == false)
+                {
+                    Docente doc1 = new Docente();
+                    doc1.CI = int.Parse(txtCIDoc.Text);
+                    doc1.Nombre = txtNombreDoc.Text;
+                    doc1.Apellido = txtApellidosDoc.Text;
+                    doc1.Especialidad = cbxEspecialidadDoc.Text;
+                    doc1.Genero = cbxGeneroDoc.Text;
+                    doc1.Telefono = int.Parse(txtTelefonoDoc.Text);
+                    doc1.Direccion = txtDirecDoc.Text;
 
-                //modificar.CI = int.Parse(txtCIDoc.Text);
-                //modificar.Nombre = txtNombreDoc.Text;
-                //modificar.Apellido = txtApellidosDoc.Text;
-                //modificar.Genero;
-                //modificar.Especialidad = txtEspecialidadDoc.Text;
-                //modificar.Telefono = int.Parse(txtTelefonoDoc.Text);
-                //modificar.Direccion = txtDirecDoc.Text;
+                    DocentesABML.AgregarDocente1(doc1);
+                    DocentesABML.AgregarDocente2(doc1);
 
 
-                //clsProductosABML.ModificarProducto(modificar);
+                    datosDoc.DataSource = DocentesABML.listarDocente();
+                    MessageBox.Show("Se agrego correctamente");
+                    limpiarDocente();
+                }
+                else
+                {
+                    Docente modificarDoc1 = new Docente();
+                    Docente modificarDoc2 = new Docente();
 
-                //datosGridView.DataSource = clsProductosABML.listar();
+                    modificarDoc1.CI = int.Parse(txtCIDoc.Text);
+                    modificarDoc1.Nombre = txtNombreDoc.Text;
+                    modificarDoc1.Apellido = txtApellidosDoc.Text;
+                    modificarDoc1.Especialidad = cbxEspecialidadDoc.Text;
 
-                //MessageBox.Show("modificado");
-                //limpiar();
+                    modificarDoc2.Genero = cbxGeneroDoc.Text;
+                    modificarDoc2.Telefono = int.Parse(txtTelefonoDoc.Text);
+                    modificarDoc2.Direccion = txtDirecDoc.Text;
+
+
+                    DocentesABML.ModificarDoc1(modificarDoc1);
+                    DocentesABML.ModificarDoc2(modificarDoc2);
+
+
+                    datosDoc.DataSource = DocentesABML.listarDocente();
+
+                    MessageBox.Show("modificado");
+                    limpiarDocente();
+                }
             }
         }
 
         private void UpdateAdmin_Click(object sender, EventArgs e)
         {
-            if (datosGridView.SelectedCells.Count > 0)
+            if (datosDoc.SelectedCells.Count > 0)
             {
-                editar = true;
-                txtCIDoc.Text = datosGridView.CurrentRow.Cells[""].Value.ToString();
+                editarDoc = true;
                 txtCIDoc.Enabled = false;
-                txtNombreDoc.Text = datosGridView.CurrentRow.Cells[""].Value.ToString();
-                txtApellidosDoc.Text = datosGridView.CurrentRow.Cells[""].Value.ToString();
-                cbxEspecialidadDoc.Text = datosGridView.CurrentRow.Cells[""].Value.ToString();
-                txtTelefonoDoc.Text = datosGridView.CurrentRow.Cells[""].Value.ToString();
-                txtDirecDoc.Text = datosGridView.CurrentRow.Cells[""].Value.ToString();
+
+                txtCIDoc.Text = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
+                txtNombreDoc.Text = datosDoc.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtApellidosDoc.Text = datosDoc.CurrentRow.Cells["Apellido"].Value.ToString();
+                cbxGeneroDoc.Text = datosDoc.CurrentRow.Cells["Genero"].Value.ToString();
+                cbxEspecialidadDoc.Text = datosDoc.CurrentRow.Cells["Especialidad"].Value.ToString();
+                txtTelefonoDoc.Text = datosDoc.CurrentRow.Cells["Telefono"].Value.ToString();
+                txtDirecDoc.Text = datosDoc.CurrentRow.Cells["Direccion"].Value.ToString();
+
             }
             else
             {
@@ -101,40 +123,9 @@ namespace SistemaInscripcion
             }
         }
 
-        private void DeleteAdmin_Click(object sender, EventArgs e)
+        private void BtnSaveAlumno_Click_1(object sender, EventArgs e)
         {
-            if (datosGridView.SelectedCells.Count > 0)
-            {
-                //txtCodProducto.Text = datosGridView.CurrentRow.Cells["CodProducto"].Value.ToString();
-
-                string message = "estas seguro";
-                string captiion = "error";
-
-                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                result = MessageBox.Show(message, captiion, mensaje);
-
-                if (result == System.Windows.Forms.DialogResult.Yes)
-                {
-
-                    string dato = txtCIDoc.Text;
-
-                    //clsProductosABML.EliminarProducto(dato);
-                    //datosGridView.DataSource = clsProductosABML.listar();
-                    //limpiar();
-                    //txtCodProducto.Enabled = true;
-                }
-            }
-            else
-            {
-                MessageBox.Show("seleccione una fila para poder eliminar");
-            }
-        }
-
-             private void BtnSaveAlumno_Click_1(object sender, EventArgs e)
-        {
-            if (editar == false)
+            if (editarAlu == false)
             {
                 alumno GuardarAlu = new alumno();
 
@@ -148,8 +139,8 @@ namespace SistemaInscripcion
 
 
 
-                alumnosABML.Agregar(GuardarAlu);
-                alumnosABML.Agregar2(GuardarAlu);
+                alumnosABML.AgregarAlu1(GuardarAlu);
+                alumnosABML.AgregarAlu2(GuardarAlu);
                 datosAlumnos.DataSource = alumnosABML.listar();
                 MessageBox.Show("se agrego correctamente");
                 limpiarAlumno();
@@ -184,7 +175,7 @@ namespace SistemaInscripcion
         {
             if (datosAlumnos.SelectedCells.Count > 0)
             {
-                editar = true;
+                editarAlu = true;
                 txtCIAlu.Text = datosAlumnos.CurrentRow.Cells["CI_Alumno"].Value.ToString();
                 txtNombreAlu.Text = datosAlumnos.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtApellAlumno.Text = datosAlumnos.CurrentRow.Cells["Apellido"].Value.ToString();
@@ -209,7 +200,7 @@ namespace SistemaInscripcion
             if (datosAlumnos.SelectedCells.Count > 0)
             {
                 txtCIAlu.Text = datosAlumnos.CurrentRow.Cells["CI_Alumno"].Value.ToString();
-               
+
 
                 string message = "estas seguro";
                 string captiion = "error";
@@ -229,7 +220,7 @@ namespace SistemaInscripcion
 
                     datosAlumnos.DataSource = alumnosABML.listar();
                     limpiarAlumno();
-                   
+
                 }
             }
             else
@@ -242,6 +233,38 @@ namespace SistemaInscripcion
         {
             string datoCIALU = txtCIalumnoBuscar.Text;
             dbgListaAlumnosBuscar.DataSource = alumnosABML.listarXci(datoCIALU);
+        }
+
+        private void BtnDeleteDoc_Click(object sender, EventArgs e)
+        {
+            if (datosDoc.SelectedCells.Count > 0)
+            {
+                txtCIDoc.Text = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
+
+                string message = "estas seguro";
+                string captiion = "error";
+
+                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, captiion, mensaje);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    int dato = int.Parse(txtCIDoc.Text);
+
+                    DocentesABML.EliminarDoc1(dato);
+                    DocentesABML.EliminarDoc2(dato);
+                    datosDoc.DataSource = DocentesABML.listarDocente();
+                    limpiarDocente();
+                    txtCIDoc.Enabled = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("seleccione una fila para poder eliminar");
+            }
         }
     }
 }

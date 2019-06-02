@@ -16,6 +16,7 @@ namespace SistemaInscripcion
         public PlataformaAdmin()
         {
             InitializeComponent();
+            dataGridView1.DataSource = alumnosABML.listar();
         }
         void limpiar()
         {
@@ -27,7 +28,6 @@ namespace SistemaInscripcion
             txtTelefonoDoc.Clear();
             txtDirecDoc.Clear();
         }
-        string gen;
         private void BtnSaveDocentes_Click(object sender, EventArgs e)
         {
            
@@ -138,26 +138,26 @@ namespace SistemaInscripcion
 
         }
 
-       
+
 
         private void BtnSaveAlumno_Click_1(object sender, EventArgs e)
-        {           
+        {
             if (editar == false)
             {
-                alumno doc = new alumno();
+                alumno alu = new alumno();
 
-                doc.CI_Alumno = int.Parse(txtCIAlu.Text);
-                doc.Nombre = txtNombreAlu.Text;
-                doc.Apellido = txtApellAlu.Text;
-                doc.Genero = cbxGeneroAlu.Text;
-                doc.Edad = int.Parse(txtEdadAlu.Text);
-                doc.Grado = txtGradoAlu.Text;
-                doc.AñoCurso = txtAñoCursoAlu.Text;
+                alu.CI_Alumno = int.Parse(txtCIAlu.Text);
+                alu.Nombre = txtNombreAlu.Text;
+                alu.Apellido = txtApellAlu.Text;
+                alu.Genero = cbxGeneroAlu.Text;
+                alu.Edad = int.Parse(txtEdadAlu.Text);
+                alu.Grado = txtGradoAlu.Text;
+                alu.AñoCurso = txtAñoCursoAlu.Text;
 
 
 
-                alumnosABML.Agregar(doc);
-                alumnosABML.Agregar2(doc);
+                alumnosABML.Agregar(alu);
+                alumnosABML.Agregar2(alu);
                 dataGridView1.DataSource = alumnosABML.listar();
                 MessageBox.Show("se agrego correctamente");
                 limpiar();

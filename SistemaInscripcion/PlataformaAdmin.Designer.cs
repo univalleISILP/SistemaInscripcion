@@ -74,7 +74,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbxGeneroAlu = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dbgListaAlumnosBuscar = new System.Windows.Forms.DataGridView();
             this.btnBuscarAlumno = new System.Windows.Forms.Button();
             this.txtCIalumnoBuscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -82,7 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.datosGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgListaAlumnosBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -495,6 +495,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(20, 32);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -631,20 +632,20 @@
             this.panel2.Size = new System.Drawing.Size(4, 415);
             this.panel2.TabIndex = 61;
             // 
-            // dataGridView2
+            // dbgListaAlumnosBuscar
             // 
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(264, 797);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(935, 152);
-            this.dataGridView2.TabIndex = 90;
+            this.dbgListaAlumnosBuscar.AllowUserToDeleteRows = false;
+            this.dbgListaAlumnosBuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dbgListaAlumnosBuscar.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.dbgListaAlumnosBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbgListaAlumnosBuscar.Location = new System.Drawing.Point(264, 797);
+            this.dbgListaAlumnosBuscar.Name = "dbgListaAlumnosBuscar";
+            this.dbgListaAlumnosBuscar.ReadOnly = true;
+            this.dbgListaAlumnosBuscar.RowHeadersWidth = 62;
+            this.dbgListaAlumnosBuscar.RowTemplate.Height = 28;
+            this.dbgListaAlumnosBuscar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dbgListaAlumnosBuscar.Size = new System.Drawing.Size(935, 152);
+            this.dbgListaAlumnosBuscar.TabIndex = 90;
             // 
             // btnBuscarAlumno
             // 
@@ -673,7 +674,7 @@
             this.ClientSize = new System.Drawing.Size(1735, 974);
             this.Controls.Add(this.txtCIalumnoBuscar);
             this.Controls.Add(this.btnBuscarAlumno);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dbgListaAlumnosBuscar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelProductos);
@@ -687,7 +688,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgListaAlumnosBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -741,7 +742,7 @@
         public System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cbxGeneroAlu;
         private System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.DataGridView dataGridView2;
+        public System.Windows.Forms.DataGridView dbgListaAlumnosBuscar;
         private System.Windows.Forms.Button btnBuscarAlumno;
         private System.Windows.Forms.TextBox txtCIalumnoBuscar;
     }

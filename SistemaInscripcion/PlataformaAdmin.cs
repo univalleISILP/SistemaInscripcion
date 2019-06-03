@@ -239,7 +239,8 @@ namespace SistemaInscripcion
             panelDocentes.Visible = true;
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
-           
+            panelCambiarPass.Visible = false;
+
         }
 
         private void TxtCIalumnoBuscar_TextChanged_1(object sender, EventArgs e)
@@ -325,6 +326,7 @@ namespace SistemaInscripcion
             panelDocentes.Visible = false;
             panelAlumnos.Visible = true;
             panelBuscarAlumnos.Visible = true;
+            panelCambiarPass.Visible = false;
 
         }
 
@@ -344,6 +346,34 @@ namespace SistemaInscripcion
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            panelCambiarPass.Visible = true;
+            panelDocentes.Visible = false;
+            panelAlumnos.Visible = false;
+            panelBuscarAlumnos.Visible = false;
+        }
+
+        private void BtnGuardarContraseña_Click(object sender, EventArgs e)
+        {            
+            if (txtContraseña1.Text == txtContraseña2.Text)
+            {
+                usuario us1 = new usuario();
+                us1.CodUsuario = TxtCambiarCod.Text;
+                us1.Contraseña = txtContraseña1.Text;
+                us1.Tipo = "adm";
+                LoginABML.Modificar(us1);
+            }
+            else
+                MessageBox.Show("Las Contraseñas deben coincidir");
+           
         }
     }
 }

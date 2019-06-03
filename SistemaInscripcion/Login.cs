@@ -32,7 +32,7 @@ namespace SistemaInscripcion
             if (LoginABML.Autenticar(us)=="adm")
             {
                 PlataformaAdmin pA = new PlataformaAdmin();
-                pA.TxtCambiarCod.Text = txtUserName.Text;
+                pA.txtCambiarCod.Text = txtUserName.Text;
                 pA.Show();
                 this.Hide();
             }

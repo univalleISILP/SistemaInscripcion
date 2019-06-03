@@ -223,7 +223,7 @@ namespace SistemaInscripcion
             }
         }
 
-       private void BtnDeleteDoc_Click(object sender, EventArgs e)
+        private void BtnDeleteDoc_Click(object sender, EventArgs e)
         {
             if (datosDoc.SelectedCells.Count > 0)
             {
@@ -331,7 +331,7 @@ namespace SistemaInscripcion
             }
         }
 
-      
+
         private void PlataformaAdmin_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -391,22 +391,6 @@ namespace SistemaInscripcion
             panelModulo.Visible = false;
         }
 
-        private void BtnGuardarContraseña_Click(object sender, EventArgs e)
-        {            
-            if (txtContraseña1.Text == txtContraseña2.Text)
-            {
-                usuario us1 = new usuario();
-                us1.CodUsuario = TxtCambiarCod.Text;
-                us1.Contraseña = txtContraseña1.Text;
-                us1.Tipo = "adm";
-                LoginABML.Modificar(us1);
-                MessageBox.Show("Contraseña cambiada exitosamente");
-            }
-            else
-                MessageBox.Show("Las Contraseñas deben coincidir");
-           
-        }
-
         private void PlataformaAdmin_Load(object sender, EventArgs e)
         {
             panelDocentes.Visible = false;
@@ -416,34 +400,9 @@ namespace SistemaInscripcion
             panelMaterias.Visible = false;
         }
 
-        private void BtnSaveMateria_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-      
-        private void BtnDeleteMateria_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void BtnUpdateMateria_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void BtnGuardarModulo_Click(object sender, EventArgs e)
         {
-            Modulo agregarModulo = new Modulo();
-            agregarModulo.CI_Docente = int.Parse(cbxCIDoc.Text);
-            agregarModulo.CI_Alumno = int.Parse(cbxCIAlu.Text);
-            agregarModulo.Clave_Materia = int.Parse(cbxClaveMateria.Text);
-            agregarModulo.Nota1 = 0;
-            agregarModulo.Nota2 = 0;
-            agregarModulo.Nota3 = 0;
-            agregarModulo.Notaf = 0;
-
-            ModuloABML.Agregar(agregarModulo);
+            
 
         }
 
@@ -459,38 +418,7 @@ namespace SistemaInscripcion
 
         private void BtnDeleteModulo_Click(object sender, EventArgs e)
         {
-            if (datosModulo.SelectedCells.Count > 0)
-            {
-                string dato1 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
-                string dato2 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
-                string dato3 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
-
-
-                string message = "estas seguro";
-                string captiion = "error";
-
-                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                result = MessageBox.Show(message, captiion, mensaje);
-
-                if (result == System.Windows.Forms.DialogResult.Yes)
-                {
-                    Modulo mod = new Modulo();
-                    mod.CI_Docente = int.Parse(dato1);
-                    mod.CI_Alumno = int.Parse(dato2);
-                    mod.Clave_Materia = int.Parse(dato3);
-
-
-                    ModuloABML.Eliminar(mod);
-                    datosModulo.DataSource = ModuloABML.Listar();
-                    limpiarModulo();
-                }
-            }
-            else
-            {
-                MessageBox.Show("seleccione una fila para poder eliminar");
-            }
+            
         }
 
         private void BtnSaveMaterias_Click(object sender, EventArgs e)
@@ -567,6 +495,72 @@ namespace SistemaInscripcion
             else
             {
                 MessageBox.Show("seleccione una fila para editar");
+            }
+        }
+
+        private void BtnGuardarPass_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña1.Text == txtContraseña2.Text)
+            {
+                usuario us1 = new usuario();
+                us1.CodUsuario = txtCambiarCod.Text;
+                us1.Contraseña = txtContraseña1.Text;
+                us1.Tipo = "adm";
+                LoginABML.Modificar(us1);
+                MessageBox.Show("Contraseña cambiada exitosamente");
+            }
+            else
+                MessageBox.Show("Las Contraseñas deben coincidir");
+        }
+
+        private void BtnGuardarModulo_Click_1(object sender, EventArgs e)
+        {
+            Modulo agregarModulo = new Modulo();
+            agregarModulo.CI_Docente = int.Parse(cbxCIDoc.Text);
+            agregarModulo.CI_Alumno = int.Parse(cbxCIAlu.Text);
+            agregarModulo.Clave_Materia = int.Parse(cbxClaveMateria.Text);
+            agregarModulo.Nota1 = 0;
+            agregarModulo.Nota2 = 0;
+            agregarModulo.Nota3 = 0;
+            agregarModulo.Notaf = 0;
+
+            ModuloABML.Agregar(agregarModulo);
+            datosModulo.DataSource = ModuloABML.Listar();
+        }
+
+        private void BtnDeleteModulo_Click_1(object sender, EventArgs e)
+        {
+            if (datosModulo.SelectedCells.Count > 0)
+            {
+                string dato1 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
+                string dato2 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
+                string dato3 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
+
+
+                string message = "estas seguro";
+                string captiion = "error";
+
+                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, captiion, mensaje);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    Modulo mod = new Modulo();
+                    mod.CI_Docente = int.Parse(dato1);
+                    mod.CI_Alumno = int.Parse(dato2);
+                    mod.Clave_Materia = int.Parse(dato3);
+
+
+                    ModuloABML.Eliminar(mod);
+                    datosModulo.DataSource = ModuloABML.Listar();
+                    limpiarModulo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("seleccione una fila para poder eliminar");
             }
         }
     }

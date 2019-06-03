@@ -145,3 +145,5 @@ SELECT d.*, e.Genero, e.Telefono,e.Direccion FROM Docentes d, proyectoBD2.dbo.Do
 	select * from Docentes;
 
 delete from proyectoBD.dbo.Docentes where CI_Docente = 190;
+
+

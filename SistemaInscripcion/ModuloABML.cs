@@ -76,7 +76,7 @@ namespace SistemaInscripcion
                     Modulo mod = new Modulo();
                     mod.CI_Docente = leer.GetInt32(0);
                     mod.CI_Alumno = leer.GetInt32(1);
-                    mod.Clave_Materia = leer.GetString(2);
+                    mod.Clave_Materia = leer.GetInt32(2);
                     mod.Nota1 = leer.GetInt32(3);
                     mod.Nota2 = leer.GetInt32(4);
                     mod.Nota3 = leer.GetInt32(5);

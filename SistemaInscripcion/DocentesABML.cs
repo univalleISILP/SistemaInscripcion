@@ -126,5 +126,25 @@ namespace SistemaInscripcion
             }
             return retorno;
         }
+
+        public static List<string> ListCIdocente()
+        {
+            List<string> lista = new List<string>();
+
+            using (SqlConnection conex = Conexion.ObtenerConexion1())
+            {
+                SqlCommand comando = new SqlCommand(String.Format("SELECT CI_Docente FROM Docentes"), conex);
+                SqlDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    int Docentes;
+                    Docentes = leer.GetInt32(0);
+                    lista.Add(Docentes.ToString());
+                }
+                conex.Close();
+                return lista;
+            }
+        }
+
     }
 }

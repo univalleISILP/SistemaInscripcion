@@ -29,6 +29,10 @@ namespace SistemaInscripcion
             datosDoc.DataSource = DocentesABML.listarDocente();
             datosMateria.DataSource = MateriasABML.ListarMateria();
 
+            cbxCIDoc.DataSource = DocentesABML.ListCIdocente();
+            cbxCIAlu.DataSource = alumnosABML.ListCIAlumnos();
+            cbxClaveMateria.DataSource = MateriasABML.ListCIMateria();
+
         }
         void limpiarDocente()
         {
@@ -249,6 +253,7 @@ namespace SistemaInscripcion
             panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
             panelMateria.Visible = false;
+            panelModulo.Visible = false;
 
         }
 
@@ -337,6 +342,7 @@ namespace SistemaInscripcion
             panelBuscarAlumnos.Visible = true;
             panelCambiarPass.Visible = false;
             panelMateria.Visible = false;
+            panelModulo.Visible = false;
 
         }
 
@@ -347,7 +353,8 @@ namespace SistemaInscripcion
             panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
             panelMateria.Visible = true;
-          
+            panelModulo.Visible = false;
+
         }
 
         private void BtnMinimizar_Click_1(object sender, EventArgs e)
@@ -475,6 +482,36 @@ namespace SistemaInscripcion
             {
                 MessageBox.Show("seleccione una fila para editar");
             }
+        }
+
+        private void BtnGuardarModulo_Click(object sender, EventArgs e)
+        {
+            Modulo agregarModulo = new Modulo();
+            agregarModulo.CI_Docente = int.Parse(cbxCIDoc.Text);
+            agregarModulo.CI_Alumno = int.Parse(cbxCIAlu.Text);
+            agregarModulo.Clave_Materia = int.Parse(cbxClaveMateria.Text);
+            agregarModulo.Nota1 = 0;
+            agregarModulo.Nota2 = 0;
+            agregarModulo.Nota3 = 0;
+            agregarModulo.Notaf = 0;
+
+            ModuloABML.Agregar(agregarModulo);
+
+        }
+
+        private void BtnModulo_Click(object sender, EventArgs e)
+        {
+            panelDocentes.Visible = false;
+            panelAlumnos.Visible = false;
+            panelBuscarAlumnos.Visible = false;
+            panelCambiarPass.Visible = false;
+            panelMateria.Visible = false;
+            panelModulo.Visible = true;
+        }
+
+        private void BtnDeleteModulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

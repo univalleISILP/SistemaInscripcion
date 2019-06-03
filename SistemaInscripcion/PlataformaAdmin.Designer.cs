@@ -109,7 +109,15 @@
             this.txtCIDoc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.UpdateDoc = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDeleteMaterias = new System.Windows.Forms.Button();
+            this.btnUpdateMaterias = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.datosMaterias = new System.Windows.Forms.DataGridView();
+            this.btnSaveMaterias = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtCodMateria = new System.Windows.Forms.TextBox();
+            this.cbxNomMateria = new System.Windows.Forms.ComboBox();
+            this.panelMaterias = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelBuscarAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgListaAlumnosBuscar)).BeginInit();
@@ -123,6 +131,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.datosModulo)).BeginInit();
             this.panelDocentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosDoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosMaterias)).BeginInit();
+            this.panelMaterias.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -136,9 +146,9 @@
             this.panel1.Controls.Add(this.btnAddAlumnos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 706);
+            this.panel1.Size = new System.Drawing.Size(192, 629);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
@@ -154,7 +164,7 @@
             this.btnModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnModulo.ForeColor = System.Drawing.Color.White;
             this.btnModulo.Location = new System.Drawing.Point(-1, 342);
-            this.btnModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModulo.Name = "btnModulo";
             this.btnModulo.Size = new System.Drawing.Size(194, 67);
             this.btnModulo.TabIndex = 94;
@@ -173,7 +183,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(-4, 403);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 67);
             this.button2.TabIndex = 7;
@@ -192,7 +202,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(-1, 476);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 67);
             this.button1.TabIndex = 6;
@@ -211,7 +221,7 @@
             this.btnAddMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnAddMaterias.ForeColor = System.Drawing.Color.White;
             this.btnAddMaterias.Location = new System.Drawing.Point(-1, 270);
-            this.btnAddMaterias.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddMaterias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddMaterias.Name = "btnAddMaterias";
             this.btnAddMaterias.Size = new System.Drawing.Size(194, 67);
             this.btnAddMaterias.TabIndex = 5;
@@ -230,7 +240,7 @@
             this.btnAddDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDocentes.ForeColor = System.Drawing.Color.White;
             this.btnAddDocentes.Location = new System.Drawing.Point(-2, 126);
-            this.btnAddDocentes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddDocentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddDocentes.Name = "btnAddDocentes";
             this.btnAddDocentes.Size = new System.Drawing.Size(194, 67);
             this.btnAddDocentes.TabIndex = 3;
@@ -249,7 +259,7 @@
             this.btnAddAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAlumnos.ForeColor = System.Drawing.Color.White;
             this.btnAddAlumnos.Location = new System.Drawing.Point(-1, 198);
-            this.btnAddAlumnos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddAlumnos.Name = "btnAddAlumnos";
             this.btnAddAlumnos.Size = new System.Drawing.Size(194, 67);
             this.btnAddAlumnos.TabIndex = 4;
@@ -262,7 +272,7 @@
             this.panelBuscarAlumnos.Controls.Add(this.txtCIalumnoBuscar);
             this.panelBuscarAlumnos.Controls.Add(this.dbgListaAlumnosBuscar);
             this.panelBuscarAlumnos.Location = new System.Drawing.Point(399, 30);
-            this.panelBuscarAlumnos.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBuscarAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBuscarAlumnos.Name = "panelBuscarAlumnos";
             this.panelBuscarAlumnos.Size = new System.Drawing.Size(166, 211);
             this.panelBuscarAlumnos.TabIndex = 91;
@@ -274,7 +284,7 @@
             this.txtCIalumnoBuscar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCIalumnoBuscar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtCIalumnoBuscar.Location = new System.Drawing.Point(13, 12);
-            this.txtCIalumnoBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCIalumnoBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCIalumnoBuscar.Multiline = true;
             this.txtCIalumnoBuscar.Name = "txtCIalumnoBuscar";
             this.txtCIalumnoBuscar.Size = new System.Drawing.Size(171, 24);
@@ -292,7 +302,7 @@
             this.dbgListaAlumnosBuscar.BackgroundColor = System.Drawing.Color.LightCyan;
             this.dbgListaAlumnosBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbgListaAlumnosBuscar.Location = new System.Drawing.Point(13, 46);
-            this.dbgListaAlumnosBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.dbgListaAlumnosBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dbgListaAlumnosBuscar.Name = "dbgListaAlumnosBuscar";
             this.dbgListaAlumnosBuscar.ReadOnly = true;
             this.dbgListaAlumnosBuscar.RowHeadersVisible = false;
@@ -312,9 +322,9 @@
             this.panelCambiarPass.Controls.Add(this.TxtCambiarCod);
             this.panelCambiarPass.Controls.Add(this.label31);
             this.panelCambiarPass.Location = new System.Drawing.Point(209, 23);
-            this.panelCambiarPass.Margin = new System.Windows.Forms.Padding(2);
+            this.panelCambiarPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCambiarPass.Name = "panelCambiarPass";
-            this.panelCambiarPass.Size = new System.Drawing.Size(167, 218);
+            this.panelCambiarPass.Size = new System.Drawing.Size(130, 218);
             this.panelCambiarPass.TabIndex = 93;
             this.panelCambiarPass.Visible = false;
             // 
@@ -322,7 +332,7 @@
             // 
             this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña2.Location = new System.Drawing.Point(256, 111);
-            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContraseña2.Multiline = true;
             this.txtContraseña2.Name = "txtContraseña2";
             this.txtContraseña2.Size = new System.Drawing.Size(219, 22);
@@ -332,7 +342,7 @@
             // 
             this.btnGuardarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarContraseña.Location = new System.Drawing.Point(107, 172);
-            this.btnGuardarContraseña.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardarContraseña.Name = "btnGuardarContraseña";
             this.btnGuardarContraseña.Size = new System.Drawing.Size(262, 34);
             this.btnGuardarContraseña.TabIndex = 73;
@@ -356,7 +366,7 @@
             // 
             this.txtContraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña1.Location = new System.Drawing.Point(256, 75);
-            this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContraseña1.Multiline = true;
             this.txtContraseña1.Name = "txtContraseña1";
             this.txtContraseña1.Size = new System.Drawing.Size(219, 22);
@@ -378,7 +388,7 @@
             // 
             this.TxtCambiarCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCambiarCod.Location = new System.Drawing.Point(256, 38);
-            this.TxtCambiarCod.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtCambiarCod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtCambiarCod.Multiline = true;
             this.TxtCambiarCod.Name = "TxtCambiarCod";
             this.TxtCambiarCod.ReadOnly = true;
@@ -402,7 +412,7 @@
             this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimizar.Location = new System.Drawing.Point(1156, 0);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(31, 26);
             this.btnMinimizar.TabIndex = 93;
@@ -431,10 +441,10 @@
             this.panelAlumnos.Controls.Add(this.label15);
             this.panelAlumnos.Controls.Add(this.UpdateAlu);
             this.panelAlumnos.Controls.Add(this.DeleteAlu);
-            this.panelAlumnos.Location = new System.Drawing.Point(624, 30);
-            this.panelAlumnos.Margin = new System.Windows.Forms.Padding(2);
+            this.panelAlumnos.Location = new System.Drawing.Point(638, 42);
+            this.panelAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAlumnos.Name = "panelAlumnos";
-            this.panelAlumnos.Size = new System.Drawing.Size(134, 212);
+            this.panelAlumnos.Size = new System.Drawing.Size(108, 220);
             this.panelAlumnos.TabIndex = 97;
             this.panelAlumnos.Visible = false;
             // 
@@ -442,7 +452,7 @@
             // 
             this.txtApellAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellAlumno.Location = new System.Drawing.Point(721, 102);
-            this.txtApellAlumno.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtApellAlumno.Multiline = true;
             this.txtApellAlumno.Name = "txtApellAlumno";
             this.txtApellAlumno.Size = new System.Drawing.Size(219, 22);
@@ -460,7 +470,7 @@
             this.panelMateria.Controls.Add(this.btnUpdateMateria);
             this.panelMateria.Controls.Add(this.btnDeleteMateria);
             this.panelMateria.Location = new System.Drawing.Point(146, 403);
-            this.panelMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMateria.Name = "panelMateria";
             this.panelMateria.Size = new System.Drawing.Size(670, 63);
             this.panelMateria.TabIndex = 93;
@@ -470,7 +480,7 @@
             // 
             this.btnSaveMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveMateria.Location = new System.Drawing.Point(450, 189);
-            this.btnSaveMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSaveMateria.Name = "btnSaveMateria";
             this.btnSaveMateria.Size = new System.Drawing.Size(167, 34);
             this.btnSaveMateria.TabIndex = 73;
@@ -497,7 +507,7 @@
             this.datosMateria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datosMateria.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.datosMateria.Location = new System.Drawing.Point(46, 22);
-            this.datosMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.datosMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datosMateria.Name = "datosMateria";
             this.datosMateria.ReadOnly = true;
             this.datosMateria.RowHeadersVisible = false;
@@ -511,7 +521,7 @@
             // 
             this.txtNombreMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreMateria.Location = new System.Drawing.Point(180, 325);
-            this.txtNombreMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreMateria.Multiline = true;
             this.txtNombreMateria.Name = "txtNombreMateria";
             this.txtNombreMateria.Size = new System.Drawing.Size(219, 22);
@@ -533,7 +543,7 @@
             // 
             this.txtClaveMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClaveMateria.Location = new System.Drawing.Point(180, 288);
-            this.txtClaveMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClaveMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtClaveMateria.Multiline = true;
             this.txtClaveMateria.Name = "txtClaveMateria";
             this.txtClaveMateria.Size = new System.Drawing.Size(219, 22);
@@ -557,7 +567,7 @@
             this.btnUpdateMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateMateria.ForeColor = System.Drawing.Color.Black;
             this.btnUpdateMateria.Location = new System.Drawing.Point(450, 73);
-            this.btnUpdateMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdateMateria.Name = "btnUpdateMateria";
             this.btnUpdateMateria.Size = new System.Drawing.Size(167, 34);
             this.btnUpdateMateria.TabIndex = 63;
@@ -570,7 +580,7 @@
             this.btnDeleteMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteMateria.ForeColor = System.Drawing.Color.Black;
             this.btnDeleteMateria.Location = new System.Drawing.Point(450, 129);
-            this.btnDeleteMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteMateria.Name = "btnDeleteMateria";
             this.btnDeleteMateria.Size = new System.Drawing.Size(167, 34);
             this.btnDeleteMateria.TabIndex = 62;
@@ -589,7 +599,7 @@
             "Quinto",
             "Sexto"});
             this.cbxAñoCursoAlu.Location = new System.Drawing.Point(721, 250);
-            this.cbxAñoCursoAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxAñoCursoAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxAñoCursoAlu.Name = "cbxAñoCursoAlu";
             this.cbxAñoCursoAlu.Size = new System.Drawing.Size(219, 24);
             this.cbxAñoCursoAlu.TabIndex = 91;
@@ -603,7 +613,7 @@
             "Mujer",
             "Guey"});
             this.cbxGeneroAlu.Location = new System.Drawing.Point(721, 176);
-            this.cbxGeneroAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxGeneroAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxGeneroAlu.Name = "cbxGeneroAlu";
             this.cbxGeneroAlu.Size = new System.Drawing.Size(219, 24);
             this.cbxGeneroAlu.TabIndex = 89;
@@ -616,7 +626,7 @@
             "Primaria",
             "Secundaria"});
             this.cbxGradoAlu.Location = new System.Drawing.Point(721, 212);
-            this.cbxGradoAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxGradoAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxGradoAlu.Name = "cbxGradoAlu";
             this.cbxGradoAlu.Size = new System.Drawing.Size(219, 24);
             this.cbxGradoAlu.TabIndex = 90;
@@ -625,7 +635,7 @@
             // 
             this.txtEdadAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdadAlu.Location = new System.Drawing.Point(721, 142);
-            this.txtEdadAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEdadAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEdadAlu.Multiline = true;
             this.txtEdadAlu.Name = "txtEdadAlu";
             this.txtEdadAlu.Size = new System.Drawing.Size(219, 22);
@@ -660,7 +670,7 @@
             // 
             this.btnSaveAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveAlumno.Location = new System.Drawing.Point(674, 297);
-            this.btnSaveAlumno.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSaveAlumno.Name = "btnSaveAlumno";
             this.btnSaveAlumno.Size = new System.Drawing.Size(262, 34);
             this.btnSaveAlumno.TabIndex = 73;
@@ -699,7 +709,7 @@
             this.datosAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datosAlumnos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.datosAlumnos.Location = new System.Drawing.Point(11, 21);
-            this.datosAlumnos.Margin = new System.Windows.Forms.Padding(2);
+            this.datosAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datosAlumnos.Name = "datosAlumnos";
             this.datosAlumnos.ReadOnly = true;
             this.datosAlumnos.RowHeadersVisible = false;
@@ -737,7 +747,7 @@
             // 
             this.txtNombreAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreAlu.Location = new System.Drawing.Point(721, 66);
-            this.txtNombreAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreAlu.Multiline = true;
             this.txtNombreAlu.Name = "txtNombreAlu";
             this.txtNombreAlu.Size = new System.Drawing.Size(219, 22);
@@ -759,7 +769,7 @@
             // 
             this.txtCIAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCIAlu.Location = new System.Drawing.Point(721, 29);
-            this.txtCIAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCIAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCIAlu.Multiline = true;
             this.txtCIAlu.Name = "txtCIAlu";
             this.txtCIAlu.Size = new System.Drawing.Size(219, 22);
@@ -783,7 +793,7 @@
             this.UpdateAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateAlu.ForeColor = System.Drawing.Color.Black;
             this.UpdateAlu.Location = new System.Drawing.Point(93, 297);
-            this.UpdateAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.UpdateAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdateAlu.Name = "UpdateAlu";
             this.UpdateAlu.Size = new System.Drawing.Size(162, 34);
             this.UpdateAlu.TabIndex = 63;
@@ -796,7 +806,7 @@
             this.DeleteAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteAlu.ForeColor = System.Drawing.Color.Black;
             this.DeleteAlu.Location = new System.Drawing.Point(318, 297);
-            this.DeleteAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.DeleteAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteAlu.Name = "DeleteAlu";
             this.DeleteAlu.Size = new System.Drawing.Size(167, 34);
             this.DeleteAlu.TabIndex = 62;
@@ -815,8 +825,8 @@
             this.panelModulo.Controls.Add(this.label25);
             this.panelModulo.Controls.Add(this.label26);
             this.panelModulo.Controls.Add(this.btnDeleteModulo);
-            this.panelModulo.Location = new System.Drawing.Point(1030, 35);
-            this.panelModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.panelModulo.Location = new System.Drawing.Point(1027, 32);
+            this.panelModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelModulo.Name = "panelModulo";
             this.panelModulo.Size = new System.Drawing.Size(112, 233);
             this.panelModulo.TabIndex = 99;
@@ -827,7 +837,7 @@
             this.cbxClaveMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxClaveMateria.FormattingEnabled = true;
             this.cbxClaveMateria.Location = new System.Drawing.Point(181, 143);
-            this.cbxClaveMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxClaveMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxClaveMateria.Name = "cbxClaveMateria";
             this.cbxClaveMateria.Size = new System.Drawing.Size(210, 24);
             this.cbxClaveMateria.TabIndex = 79;
@@ -837,7 +847,7 @@
             this.cbxCIAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCIAlu.FormattingEnabled = true;
             this.cbxCIAlu.Location = new System.Drawing.Point(181, 109);
-            this.cbxCIAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxCIAlu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxCIAlu.Name = "cbxCIAlu";
             this.cbxCIAlu.Size = new System.Drawing.Size(210, 24);
             this.cbxCIAlu.TabIndex = 78;
@@ -847,7 +857,7 @@
             this.cbxCIDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCIDoc.FormattingEnabled = true;
             this.cbxCIDoc.Location = new System.Drawing.Point(181, 77);
-            this.cbxCIDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxCIDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxCIDoc.Name = "cbxCIDoc";
             this.cbxCIDoc.Size = new System.Drawing.Size(210, 24);
             this.cbxCIDoc.TabIndex = 77;
@@ -868,7 +878,7 @@
             // 
             this.btnGuardarModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarModulo.Location = new System.Drawing.Point(223, 197);
-            this.btnGuardarModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardarModulo.Name = "btnGuardarModulo";
             this.btnGuardarModulo.Size = new System.Drawing.Size(167, 34);
             this.btnGuardarModulo.TabIndex = 73;
@@ -895,7 +905,7 @@
             this.datosModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datosModulo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.datosModulo.Location = new System.Drawing.Point(405, 19);
-            this.datosModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.datosModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datosModulo.Name = "datosModulo";
             this.datosModulo.ReadOnly = true;
             this.datosModulo.RowHeadersVisible = false;
@@ -935,7 +945,7 @@
             this.btnDeleteModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteModulo.ForeColor = System.Drawing.Color.Black;
             this.btnDeleteModulo.Location = new System.Drawing.Point(37, 197);
-            this.btnDeleteModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteModulo.Name = "btnDeleteModulo";
             this.btnDeleteModulo.Size = new System.Drawing.Size(167, 34);
             this.btnDeleteModulo.TabIndex = 62;
@@ -964,7 +974,7 @@
             this.panelDocentes.Controls.Add(this.label1);
             this.panelDocentes.Controls.Add(this.UpdateDoc);
             this.panelDocentes.Location = new System.Drawing.Point(827, 30);
-            this.panelDocentes.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDocentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDocentes.Name = "panelDocentes";
             this.panelDocentes.Size = new System.Drawing.Size(146, 211);
             this.panelDocentes.TabIndex = 98;
@@ -976,7 +986,7 @@
             this.btnDeleteDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteDoc.ForeColor = System.Drawing.Color.Black;
             this.btnDeleteDoc.Location = new System.Drawing.Point(327, 317);
-            this.btnDeleteDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteDoc.Name = "btnDeleteDoc";
             this.btnDeleteDoc.Size = new System.Drawing.Size(167, 34);
             this.btnDeleteDoc.TabIndex = 94;
@@ -992,7 +1002,7 @@
             "Mujer",
             "Guey"});
             this.cbxGeneroDoc.Location = new System.Drawing.Point(753, 143);
-            this.cbxGeneroDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxGeneroDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxGeneroDoc.Name = "cbxGeneroDoc";
             this.cbxGeneroDoc.Size = new System.Drawing.Size(194, 24);
             this.cbxGeneroDoc.TabIndex = 93;
@@ -1009,7 +1019,7 @@
             "artes plasticas",
             "filosofia"});
             this.cbxEspecialidadDoc.Location = new System.Drawing.Point(753, 179);
-            this.cbxEspecialidadDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxEspecialidadDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxEspecialidadDoc.Name = "cbxEspecialidadDoc";
             this.cbxEspecialidadDoc.Size = new System.Drawing.Size(194, 24);
             this.cbxEspecialidadDoc.TabIndex = 84;
@@ -1018,7 +1028,7 @@
             // 
             this.txtDirecDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDirecDoc.Location = new System.Drawing.Point(753, 253);
-            this.txtDirecDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDirecDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDirecDoc.Multiline = true;
             this.txtDirecDoc.Name = "txtDirecDoc";
             this.txtDirecDoc.Size = new System.Drawing.Size(194, 22);
@@ -1028,7 +1038,7 @@
             // 
             this.txtTelefonoDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoDoc.Location = new System.Drawing.Point(753, 218);
-            this.txtTelefonoDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefonoDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTelefonoDoc.Multiline = true;
             this.txtTelefonoDoc.Name = "txtTelefonoDoc";
             this.txtTelefonoDoc.Size = new System.Drawing.Size(194, 22);
@@ -1088,7 +1098,7 @@
             this.datosDoc.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.datosDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datosDoc.Location = new System.Drawing.Point(13, 21);
-            this.datosDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.datosDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datosDoc.Name = "datosDoc";
             this.datosDoc.ReadOnly = true;
             this.datosDoc.RowHeadersVisible = false;
@@ -1114,7 +1124,7 @@
             // 
             this.txtApellidosDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidosDoc.Location = new System.Drawing.Point(753, 110);
-            this.txtApellidosDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidosDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtApellidosDoc.Multiline = true;
             this.txtApellidosDoc.Name = "txtApellidosDoc";
             this.txtApellidosDoc.Size = new System.Drawing.Size(194, 22);
@@ -1136,7 +1146,7 @@
             // 
             this.txtNombreDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreDoc.Location = new System.Drawing.Point(753, 71);
-            this.txtNombreDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreDoc.Multiline = true;
             this.txtNombreDoc.Name = "txtNombreDoc";
             this.txtNombreDoc.Size = new System.Drawing.Size(194, 22);
@@ -1146,7 +1156,7 @@
             // 
             this.btnSaveDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveDocentes.Location = new System.Drawing.Point(679, 317);
-            this.btnSaveDocentes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveDocentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSaveDocentes.Name = "btnSaveDocentes";
             this.btnSaveDocentes.Size = new System.Drawing.Size(262, 34);
             this.btnSaveDocentes.TabIndex = 73;
@@ -1169,7 +1179,7 @@
             // 
             this.txtCIDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCIDoc.Location = new System.Drawing.Point(753, 34);
-            this.txtCIDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCIDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCIDoc.Multiline = true;
             this.txtCIDoc.Name = "txtCIDoc";
             this.txtCIDoc.Size = new System.Drawing.Size(194, 22);
@@ -1193,36 +1203,156 @@
             this.UpdateDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateDoc.ForeColor = System.Drawing.Color.Black;
             this.UpdateDoc.Location = new System.Drawing.Point(99, 317);
-            this.UpdateDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.UpdateDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdateDoc.Name = "UpdateDoc";
             this.UpdateDoc.Size = new System.Drawing.Size(162, 34);
             this.UpdateDoc.TabIndex = 63;
             this.UpdateDoc.Text = "update";
             this.UpdateDoc.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // btnDeleteMaterias
             // 
-            this.panel2.Location = new System.Drawing.Point(240, 295);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(550, 201);
-            this.panel2.TabIndex = 100;
+            this.btnDeleteMaterias.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDeleteMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteMaterias.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteMaterias.Location = new System.Drawing.Point(405, 234);
+            this.btnDeleteMaterias.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteMaterias.Name = "btnDeleteMaterias";
+            this.btnDeleteMaterias.Size = new System.Drawing.Size(308, 34);
+            this.btnDeleteMaterias.TabIndex = 93;
+            this.btnDeleteMaterias.Text = "delete";
+            this.btnDeleteMaterias.UseVisualStyleBackColor = false;
+            this.btnDeleteMaterias.Click += new System.EventHandler(this.BtnDeleteMaterias_Click);
+            // 
+            // btnUpdateMaterias
+            // 
+            this.btnUpdateMaterias.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnUpdateMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateMaterias.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateMaterias.Location = new System.Drawing.Point(405, 183);
+            this.btnUpdateMaterias.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateMaterias.Name = "btnUpdateMaterias";
+            this.btnUpdateMaterias.Size = new System.Drawing.Size(308, 34);
+            this.btnUpdateMaterias.TabIndex = 94;
+            this.btnUpdateMaterias.Text = "update";
+            this.btnUpdateMaterias.UseVisualStyleBackColor = false;
+            this.btnUpdateMaterias.Click += new System.EventHandler(this.BtnUpdateMaterias_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(400, 82);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(71, 20);
+            this.label23.TabIndex = 101;
+            this.label23.Text = "Nombre";
+            // 
+            // datosMaterias
+            // 
+            this.datosMaterias.AllowUserToDeleteRows = false;
+            this.datosMaterias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datosMaterias.BackgroundColor = System.Drawing.Color.FloralWhite;
+            this.datosMaterias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.datosMaterias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datosMaterias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
+            this.datosMaterias.Location = new System.Drawing.Point(14, 18);
+            this.datosMaterias.Margin = new System.Windows.Forms.Padding(2);
+            this.datosMaterias.Name = "datosMaterias";
+            this.datosMaterias.ReadOnly = true;
+            this.datosMaterias.RowHeadersVisible = false;
+            this.datosMaterias.RowHeadersWidth = 62;
+            this.datosMaterias.RowTemplate.Height = 28;
+            this.datosMaterias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datosMaterias.Size = new System.Drawing.Size(360, 254);
+            this.datosMaterias.TabIndex = 95;
+            // 
+            // btnSaveMaterias
+            // 
+            this.btnSaveMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveMaterias.Location = new System.Drawing.Point(405, 135);
+            this.btnSaveMaterias.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveMaterias.Name = "btnSaveMaterias";
+            this.btnSaveMaterias.Size = new System.Drawing.Size(308, 34);
+            this.btnSaveMaterias.TabIndex = 102;
+            this.btnSaveMaterias.Text = "save";
+            this.btnSaveMaterias.UseVisualStyleBackColor = true;
+            this.btnSaveMaterias.Click += new System.EventHandler(this.BtnSaveMaterias_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(400, 48);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(106, 20);
+            this.label19.TabIndex = 105;
+            this.label19.Text = "Cod Materia";
+            // 
+            // txtCodMateria
+            // 
+            this.txtCodMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodMateria.Location = new System.Drawing.Point(527, 45);
+            this.txtCodMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodMateria.Multiline = true;
+            this.txtCodMateria.Name = "txtCodMateria";
+            this.txtCodMateria.Size = new System.Drawing.Size(186, 22);
+            this.txtCodMateria.TabIndex = 106;
+            this.txtCodMateria.Text = "                   ";
+            // 
+            // cbxNomMateria
+            // 
+            this.cbxNomMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxNomMateria.FormattingEnabled = true;
+            this.cbxNomMateria.Items.AddRange(new object[] {
+            "Matematica",
+            "Lenguaje",
+            "Quimica",
+            "Fisica",
+            "Psicologia",
+            "Biologia"});
+            this.cbxNomMateria.Location = new System.Drawing.Point(527, 79);
+            this.cbxNomMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxNomMateria.Name = "cbxNomMateria";
+            this.cbxNomMateria.Size = new System.Drawing.Size(186, 24);
+            this.cbxNomMateria.TabIndex = 107;
+            // 
+            // panelMaterias
+            // 
+            this.panelMaterias.Controls.Add(this.cbxNomMateria);
+            this.panelMaterias.Controls.Add(this.txtCodMateria);
+            this.panelMaterias.Controls.Add(this.label19);
+            this.panelMaterias.Controls.Add(this.btnSaveMaterias);
+            this.panelMaterias.Controls.Add(this.datosMaterias);
+            this.panelMaterias.Controls.Add(this.label23);
+            this.panelMaterias.Controls.Add(this.btnUpdateMaterias);
+            this.panelMaterias.Controls.Add(this.btnDeleteMaterias);
+            this.panelMaterias.Location = new System.Drawing.Point(242, 294);
+            this.panelMaterias.Name = "panelMaterias";
+            this.panelMaterias.Size = new System.Drawing.Size(742, 296);
+            this.panelMaterias.TabIndex = 100;
+            this.panelMaterias.Visible = false;
             // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1204, 706);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1197, 629);
+            this.Controls.Add(this.panelMaterias);
+            this.Controls.Add(this.panelAlumnos);
             this.Controls.Add(this.panelModulo);
             this.Controls.Add(this.panelDocentes);
-            this.Controls.Add(this.panelAlumnos);
             this.Controls.Add(this.panelCambiarPass);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.panelBuscarAlumnos);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PlataformaAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlataformaAdmin";
@@ -1247,6 +1377,9 @@
             this.panelDocentes.ResumeLayout(false);
             this.panelDocentes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosMaterias)).EndInit();
+            this.panelMaterias.ResumeLayout(false);
+            this.panelMaterias.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1333,6 +1466,14 @@
         private System.Windows.Forms.TextBox txtCIDoc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button UpdateDoc;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnDeleteMaterias;
+        private System.Windows.Forms.Button btnUpdateMaterias;
+        private System.Windows.Forms.Label label23;
+        public System.Windows.Forms.DataGridView datosMaterias;
+        private System.Windows.Forms.Button btnSaveMaterias;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtCodMateria;
+        private System.Windows.Forms.ComboBox cbxNomMateria;
+        private System.Windows.Forms.Panel panelMaterias;
     }
 }

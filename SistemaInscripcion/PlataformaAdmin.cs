@@ -27,7 +27,7 @@ namespace SistemaInscripcion
             InitializeComponent();
             datosAlumnos.DataSource = alumnosABML.listar();
             datosDoc.DataSource = DocentesABML.listarDocente();
-            datosMateria.DataSource = MateriasABML.ListarMateria();
+            datosMaterias.DataSource = MateriasABML.ListarMateria();
             datosModulo.DataSource = ModuloABML.Listar();
 
             cbxCIDoc.DataSource = DocentesABML.ListCIdocente();
@@ -261,7 +261,7 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
-            panelMateria.Visible = false;
+            panelMaterias.Visible = false;
             panelModulo.Visible = false;
 
         }
@@ -350,7 +350,7 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = true;
             panelBuscarAlumnos.Visible = true;
             panelCambiarPass.Visible = false;
-            panelMateria.Visible = false;
+            panelMaterias.Visible = false;
             panelModulo.Visible = false;
 
         }
@@ -361,7 +361,7 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
-            panelMateria.Visible = true;
+            panelMaterias.Visible = true;
             panelModulo.Visible = false;
 
         }
@@ -387,7 +387,8 @@ namespace SistemaInscripcion
             panelDocentes.Visible = false;
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
-            panelMateria.Visible = false;
+            panelMaterias.Visible = false;
+            panelModulo.Visible = false;
         }
 
         private void BtnGuardarContraseña_Click(object sender, EventArgs e)
@@ -412,85 +413,23 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
-            PanelMaterias.Visible = false;
+            panelMaterias.Visible = false;
         }
 
         private void BtnSaveMateria_Click(object sender, EventArgs e)
         {
-            if (editarMat == false)
-            {
-                Materia addMateria = new Materia();
-                addMateria.ClaveM = int.Parse(txtClaveMateria.Text);
-                addMateria.Nombre = txtNombreMateria.Text;
-
-                MateriasABML.Agregar(addMateria);
-
-                datosMateria.DataSource = MateriasABML.ListarMateria();
-                limpiarMateria();
-
-                MessageBox.Show("Materia Agregada");
-            }
-            else
-            {
-
-                Materia UpdateMateria = new Materia();
-                UpdateMateria.ClaveM = int.Parse(txtClaveMateria.Text);
-                UpdateMateria.Nombre = txtNombreMateria.Text;
-                MateriasABML.Update(UpdateMateria);
-
-                datosMateria.DataSource = MateriasABML.ListarMateria();
-                txtClaveMateria.Enabled = true;
-                MessageBox.Show("Materia Modificada");
-                limpiarMateria();
-            }
+            
         }
 
       
         private void BtnDeleteMateria_Click(object sender, EventArgs e)
         {
-            if (datosMateria.SelectedCells.Count > 0)
-            {
-                string claveMat = datosMateria.CurrentRow.Cells["ClaveM"].Value.ToString();
-                
-
-                string message = "estas seguro";
-                string captiion = "error";
-
-                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
-                DialogResult result;
-
-                result = MessageBox.Show(message, captiion, mensaje);
-
-                if (result == System.Windows.Forms.DialogResult.Yes)
-                {
-
-                    int dato = int.Parse(claveMat);
-
-                    MateriasABML.EliminarMateria(dato);
-                  
-                    datosMateria.DataSource = MateriasABML.ListarMateria();
-                    limpiarMateria();
-                }
-            }
-            else
-            {
-                MessageBox.Show("seleccione una fila para poder eliminar");
-            }
+            
         }
 
         private void BtnUpdateMateria_Click(object sender, EventArgs e)
         {
-            if (datosMateria.SelectedCells.Count > 0)
-            {
-                editarMat = true;
-                txtClaveMateria.Enabled = false;
-                txtClaveMateria.Text = datosMateria.CurrentRow.Cells["ClaveM"].Value.ToString();
-                txtNombreMateria.Text = datosMateria.CurrentRow.Cells["Nombre"].Value.ToString();
-            }
-            else
-            {
-                MessageBox.Show("seleccione una fila para editar");
-            }
+           
         }
 
         private void BtnGuardarModulo_Click(object sender, EventArgs e)
@@ -514,7 +453,7 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
-            panelMateria.Visible = false;
+            panelMaterias.Visible = false;
             panelModulo.Visible = true;
         }
 
@@ -551,6 +490,83 @@ namespace SistemaInscripcion
             else
             {
                 MessageBox.Show("seleccione una fila para poder eliminar");
+            }
+        }
+
+        private void BtnSaveMaterias_Click(object sender, EventArgs e)
+        {
+            if (editarMat == false)
+            {
+                Materia addMateria = new Materia();
+                addMateria.ClaveM = int.Parse(txtCodMateria.Text);
+                addMateria.Nombre = cbxNomMateria.Text;
+
+                MateriasABML.Agregar(addMateria);
+
+                datosMaterias.DataSource = MateriasABML.ListarMateria();
+                limpiarMateria();
+
+                MessageBox.Show("Materia Agregada");
+            }
+            else
+            {
+
+                Materia UpdateMateria = new Materia();
+                UpdateMateria.ClaveM = int.Parse(txtCodMateria.Text);
+                UpdateMateria.Nombre = cbxNomMateria.Text;
+                MateriasABML.Update(UpdateMateria);
+
+                datosMaterias.DataSource = MateriasABML.ListarMateria();
+                txtCodMateria.Enabled = true;
+                MessageBox.Show("Materia Modificada");
+                limpiarMateria();
+            }
+        }
+
+        private void BtnDeleteMaterias_Click(object sender, EventArgs e)
+        {
+            if (datosMaterias.SelectedCells.Count > 0)
+            {
+                string claveMat = datosMaterias.CurrentRow.Cells["ClaveM"].Value.ToString();
+
+
+                string message = "estas seguro";
+                string captiion = "error";
+
+                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, captiion, mensaje);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    int dato = int.Parse(claveMat);
+
+                    MateriasABML.EliminarMateria(dato);
+
+                    datosMaterias.DataSource = MateriasABML.ListarMateria();
+                    limpiarMateria();
+                }
+            }
+            else
+            {
+                MessageBox.Show("seleccione una fila para poder eliminar");
+            }
+        }
+
+        private void BtnUpdateMaterias_Click(object sender, EventArgs e)
+        {
+            if (datosMaterias.SelectedCells.Count > 0)
+            {
+                editarMat = true;
+                txtCodMateria.Enabled = false;
+                txtCodMateria.Text = datosMaterias.CurrentRow.Cells["ClaveM"].Value.ToString();
+                cbxNomMateria.Text = datosMaterias.CurrentRow.Cells["Nombre"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("seleccione una fila para editar");
             }
         }
     }

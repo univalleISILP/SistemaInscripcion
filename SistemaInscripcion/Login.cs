@@ -29,10 +29,11 @@ namespace SistemaInscripcion
             usuario us = new usuario();
             us.CodUsuario = txtUserName.Text;
             us.Contraseña = txtPassword.Text;
-            if (LoginABML.Autenticar(us)=="adm")
+            if (LoginABML.Autenticar(us)=="admin")
             {
                 PlataformaAdmin pA = new PlataformaAdmin();
                 pA.txtCambiarCod.Text = txtUserName.Text;
+                pA.lblTexto.Text = "Administrador";
                 pA.Show();
                 this.Hide();
             }
@@ -98,7 +99,7 @@ namespace SistemaInscripcion
             if (txtUserName.Text == "")
             {
                 txtUserName.Text = "UserName";
-                txtUserName.ForeColor = Color.White;
+                txtUserName.ForeColor = Color.Gray;
             }
         }
 
@@ -107,7 +108,7 @@ namespace SistemaInscripcion
             if (txtPassword.Text == "")
             {
                 txtPassword.Text = "Password";
-                txtPassword.ForeColor = Color.White;
+                txtPassword.ForeColor = Color.Gray;
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
@@ -139,6 +140,11 @@ namespace SistemaInscripcion
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

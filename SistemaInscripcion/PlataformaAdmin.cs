@@ -33,7 +33,10 @@ namespace SistemaInscripcion
             cbxCIDoc.DataSource = DocentesABML.ListCIdocente();
             cbxCIAlu.DataSource = alumnosABML.ListCIAlumnos();
             cbxClaveMateria.DataSource = MateriasABML.ListCIMateria();
+
             cbxEspecialidadDoc.DataSource = MateriasABML.ListNomMaterias();
+
+            panelInicioAdmin.Visible = true;
 
         }
         void limpiarDocente()
@@ -70,46 +73,28 @@ namespace SistemaInscripcion
             cbxClaveMateria.Text = "";
 
         }
-        private void BtnAddDocentes_Click(object sender, EventArgs e)
+        void limpiarCambiarPass()
+        {
+            txtCodCambiarPass.Clear();
+            txtContraseña1.Clear();
+            txtContraseña2.Clear();
+        }
+        private void BtnAddDocentes_Click_1(object sender, EventArgs e)
         {
             panelDocentes.Visible = true;
             panelAlumnos.Visible = false;
-            panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = false;
+
+            cbxEspecialidadDoc.DataSource = MateriasABML.ListNomMaterias();
+
+            sidePanel.Height = btnAddDocentes.Height;
+            sidePanel.Top = btnAddDocentes.Top;
+            
         }
 
-        private void TxtCIalumnoBuscar_TextChanged_1(object sender, EventArgs e)
-        {
-            string datoCIALU = txtCIalumnoBuscar.Text;
-            if (datoCIALU != "")
-            {
-                dbgListaAlumnosBuscar.DataSource = alumnosABML.listarXci(datoCIALU);
-            }
-            else
-            {
-                txtCIalumnoBuscar.Text = "";
-            }
-        }
-
-        private void TxtCIalumnoBuscar_Leave(object sender, EventArgs e)
-        {
-            if (txtCIalumnoBuscar.Text == "")
-            {
-                txtCIalumnoBuscar.Text = "numero";
-                txtCIalumnoBuscar.ForeColor = Color.Black;
-            }
-        }
-
-        private void TxtCIalumnoBuscar_Enter(object sender, EventArgs e)
-        {
-            if (txtCIalumnoBuscar.Text == "numero")
-            {
-                txtCIalumnoBuscar.Text = "";
-                txtCIalumnoBuscar.ForeColor = Color.Black;
-            }
-        }
+        
 
         private void PlataformaAdmin_MouseDown(object sender, MouseEventArgs e)
         {
@@ -127,21 +112,23 @@ namespace SistemaInscripcion
         {
             panelDocentes.Visible = false;
             panelAlumnos.Visible = true;
-            panelBuscarAlumnos.Visible = true;
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = false;
-
+            sidePanel.Height = btnAddAlumnos.Height;
+            sidePanel.Top = btnAddAlumnos.Top;
         }
 
         private void BtnAddMaterias_Click(object sender, EventArgs e)
         {
             panelDocentes.Visible = false;
             panelAlumnos.Visible = false;
-            panelBuscarAlumnos.Visible = false;
+           
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = true;
             panelModulo.Visible = false;
+            sidePanel.Height = btnAddMaterias.Height;
+            sidePanel.Top = btnAddMaterias.Top;
         }
 
         private void BtnMinimizar_Click_1(object sender, EventArgs e)
@@ -151,7 +138,22 @@ namespace SistemaInscripcion
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            sidePanel.Height = button1.Height;
+            sidePanel.Top = button1.Top;
+            string message = "estas seguro de Cerrar Session";
+            string captiion = "Cerrar session";
+
+            MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
+            DialogResult result;
+
+            result = MessageBox.Show(message, captiion, mensaje);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                Login volver = new Login();
+                this.Hide();
+                volver.Show();
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -159,31 +161,38 @@ namespace SistemaInscripcion
             panelCambiarPass.Visible = true;
             panelDocentes.Visible = false;
             panelAlumnos.Visible = false;
-            panelBuscarAlumnos.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = false;
+
+            sidePanel.Height = button2.Height;
+            sidePanel.Top = button2.Top;
         }
 
         private void PlataformaAdmin_Load(object sender, EventArgs e)
         {
             panelDocentes.Visible = false;
             panelAlumnos.Visible = false;
-            panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = false;
         }
+
 
         private void BtnModulo_Click(object sender, EventArgs e)
         {
             panelDocentes.Visible = false;
             panelAlumnos.Visible = false;
-            panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = true;
+            sidePanel.Height = btnModulo.Height;
+            sidePanel.Top = btnModulo.Top;
+
+            cbxCIDoc.DataSource = DocentesABML.ListCIdocente();
+            cbxCIAlu.DataSource = alumnosABML.ListCIAlumnos();
+            cbxClaveMateria.DataSource = MateriasABML.ListCIMateria();
         }
 
-        private void BtnSaveMaterias_Click(object sender, EventArgs e)
+        private void BtnSaveMaterias_Click_1(object sender, EventArgs e)
         {
             if (editarMat == false)
             {
@@ -213,7 +222,7 @@ namespace SistemaInscripcion
             }
         }
 
-        private void BtnDeleteMaterias_Click(object sender, EventArgs e)
+        private void BtnDeleteMaterias_Click_1(object sender, EventArgs e)
         {
             if (datosMaterias.SelectedCells.Count > 0)
             {
@@ -245,7 +254,7 @@ namespace SistemaInscripcion
             }
         }
 
-        private void BtnUpdateMaterias_Click(object sender, EventArgs e)
+        private void BtnUpdateMaterias_Click_1(object sender, EventArgs e)
         {
             if (datosMaterias.SelectedCells.Count > 0)
             {
@@ -264,18 +273,42 @@ namespace SistemaInscripcion
         {
             if (txtContraseña1.Text == txtContraseña2.Text)
             {
-                usuario us1 = new usuario();
-                us1.CodUsuario = txtCambiarCod.Text;
-                us1.Contraseña = txtContraseña1.Text;
-                us1.Tipo = "adm";
-                LoginABML.Modificar(us1);
-                MessageBox.Show("Contraseña cambiada exitosamente");
+                if (txtCambiarCod.Text == txtCodCambiarPass.Text)
+                {
+                    string message = "estas seguro de guardar el Password";
+                    string captiion = "Cambiar Password";
+
+                    MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
+                    DialogResult result;
+
+                    result = MessageBox.Show(message, captiion, mensaje);
+
+                    if (result == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        usuario us1 = new usuario();
+                        us1.CodUsuario = txtCodCambiarPass.Text;
+                        us1.Contraseña = txtContraseña1.Text;
+                        us1.Tipo = "adm";
+                        LoginABML.Modificar(us1);
+                        MessageBox.Show("Contraseña cambiada exitosamente");
+                        Login volver = new Login();
+                        this.Hide();
+                        volver.Show();
+                        limpiarCambiarPass();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Codigo invalido.!!");
+                }
             }
             else
+            {
                 MessageBox.Show("Las Contraseñas deben coincidir");
+            }
         }
 
-        private void BtnGuardarModulo_Click_1(object sender, EventArgs e)
+        private void BtnGuardarModulo_Click(object sender, EventArgs e)
         {
             Modulo agregarModulo = new Modulo();
             agregarModulo.CI_Docente = int.Parse(cbxCIDoc.Text);
@@ -290,7 +323,7 @@ namespace SistemaInscripcion
             datosModulo.DataSource = ModuloABML.Listar();
         }
 
-        private void BtnDeleteModulo_Click_1(object sender, EventArgs e)
+        private void BtnDeleteModulo_Click(object sender, EventArgs e)
         {
             if (datosModulo.SelectedCells.Count > 0)
             {
@@ -347,6 +380,9 @@ namespace SistemaInscripcion
                 datosAlumnos.DataSource = alumnosABML.listar();
                 MessageBox.Show("se agrego correctamente");
                 limpiarAlumno();
+                txtCIAlu.Enabled = true;
+                txtEdadAlu.Enabled = true;
+                cbxGeneroAlu.Enabled = true;
             }
             else
             {
@@ -369,12 +405,16 @@ namespace SistemaInscripcion
 
                 datosAlumnos.DataSource = alumnosABML.listar();
 
+                txtCIAlu.Enabled = true;
+                txtEdadAlu.Enabled = true;
+                cbxGeneroAlu.Enabled = true;
+
                 MessageBox.Show("modificado");
                 limpiarAlumno();
             }
         }
 
-        private void DeleteAlu_Click(object sender, EventArgs e)
+        private void DeleteAlu_Click_1(object sender, EventArgs e)
         {
             if (datosAlumnos.SelectedCells.Count > 0)
             {
@@ -408,7 +448,7 @@ namespace SistemaInscripcion
             }
         }
 
-        private void UpdateAlu_Click(object sender, EventArgs e)
+        private void UpdateAlu_Click_1(object sender, EventArgs e)
         {
             if (datosAlumnos.SelectedCells.Count > 0)
             {
@@ -432,7 +472,7 @@ namespace SistemaInscripcion
             }
         }
 
-        private void BtnSaveDocentes_Click_1(object sender, EventArgs e)
+        private void BtnSaveDocentes_Click(object sender, EventArgs e)
         {
             if (txtCIDoc.Text == "" ||
                txtNombreDoc.Text == "" ||
@@ -460,7 +500,8 @@ namespace SistemaInscripcion
                     DocentesABML.AgregarDocente1(doc1);
                     DocentesABML.AgregarDocente2(doc1);
 
-
+                    txtCIDoc.Enabled = true;
+                    
                     datosDoc.DataSource = DocentesABML.listarDocente();
                     MessageBox.Show("Se agrego correctamente");
                     limpiarDocente();
@@ -483,7 +524,7 @@ namespace SistemaInscripcion
                     DocentesABML.ModificarDoc1(modificarDoc1);
                     DocentesABML.ModificarDoc2(modificarDoc2);
 
-
+                    txtCIDoc.Enabled = true;
                     datosDoc.DataSource = DocentesABML.listarDocente();
 
                     MessageBox.Show("modificado");
@@ -524,7 +565,7 @@ namespace SistemaInscripcion
             }
         }
 
-        private void UpdateDoc_Click(object sender, EventArgs e)
+        private void UpdateDoc_Click_1(object sender, EventArgs e)
         {
             if (datosDoc.SelectedCells.Count > 0)
             {
@@ -544,6 +585,30 @@ namespace SistemaInscripcion
             {
                 MessageBox.Show("seleccione una fila para editar");
             }
+        }
+
+        private void BtnInicioAdmin_Click(object sender, EventArgs e)
+        {
+            panelInicioAdmin.Visible = true;
+            panelCambiarPass.Visible = false;
+            panelDocentes.Visible = false;
+            panelAlumnos.Visible = false;
+            panelMaterias.Visible = false;
+            panelModulo.Visible = false;
+
+            sidePanel.Height = btnInicioAdmin.Height;
+            sidePanel.Top = btnInicioAdmin.Top;
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnBuscarAlumno_Click(object sender, EventArgs e)
+        {
+            BuscarAlumno buscarAlumno = new BuscarAlumno();
+            buscarAlumno.Show();
         }
     }
 }

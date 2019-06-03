@@ -28,6 +28,7 @@ namespace SistemaInscripcion
             datosAlumnos.DataSource = alumnosABML.listar();
             datosDoc.DataSource = DocentesABML.listarDocente();
             datosMateria.DataSource = MateriasABML.ListarMateria();
+            datosModulo.DataSource = ModuloABML.Listar();
 
             cbxCIDoc.DataSource = DocentesABML.ListCIdocente();
             cbxCIAlu.DataSource = alumnosABML.ListCIAlumnos();
@@ -511,7 +512,38 @@ namespace SistemaInscripcion
 
         private void BtnDeleteModulo_Click(object sender, EventArgs e)
         {
+            if (datosModulo.SelectedCells.Count > 0)
+            {
+                string dato1 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
+                string dato2 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
+                string dato3 = datosDoc.CurrentRow.Cells["CI"].Value.ToString();
 
+
+                string message = "estas seguro";
+                string captiion = "error";
+
+                MessageBoxButtons mensaje = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, captiion, mensaje);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    Modulo mod = new Modulo();
+                    mod.CI_Docente = int.Parse(dato1);
+                    mod.CI_Alumno = int.Parse(dato2);
+                    mod.Clave_Materia = int.Parse(dato3);
+
+
+                    ModuloABML.Eliminar(mod);
+                    datosModulo.DataSource = ModuloABML.Listar();
+                    //limpiarDocente();
+                }
+            }
+            else
+            {
+                MessageBox.Show("seleccione una fila para poder eliminar");
+            }
         }
     }
 }

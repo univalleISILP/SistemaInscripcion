@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.lineaPassword = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -46,21 +45,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(254, 397);
-            this.panel1.TabIndex = 26;
-            this.panel1.MouseEnter += new System.EventHandler(this.Panel1_MouseEnter);
             // 
             // panelLogin
             // 
@@ -76,7 +64,7 @@
             this.panelLogin.Controls.Add(this.btnSalir);
             this.panelLogin.Controls.Add(this.btnAcceder);
             this.panelLogin.Location = new System.Drawing.Point(289, 32);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(288, 322);
             this.panelLogin.TabIndex = 52;
@@ -87,7 +75,7 @@
             this.lineaPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(69)))));
             this.lineaPassword.Enabled = false;
             this.lineaPassword.Location = new System.Drawing.Point(32, 176);
-            this.lineaPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lineaPassword.Margin = new System.Windows.Forms.Padding(2);
             this.lineaPassword.Name = "lineaPassword";
             this.lineaPassword.Size = new System.Drawing.Size(222, 2);
             this.lineaPassword.TabIndex = 61;
@@ -99,7 +87,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.Gray;
             this.txtPassword.Location = new System.Drawing.Point(32, 153);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -116,7 +104,7 @@
             this.lineaUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(69)))));
             this.lineaUsuario.Enabled = false;
             this.lineaUsuario.Location = new System.Drawing.Point(32, 120);
-            this.lineaUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lineaUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.lineaUsuario.Name = "lineaUsuario";
             this.lineaUsuario.Size = new System.Drawing.Size(222, 2);
             this.lineaUsuario.TabIndex = 59;
@@ -128,7 +116,7 @@
             this.txtUserName.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtUserName.ForeColor = System.Drawing.Color.Gray;
             this.txtUserName.Location = new System.Drawing.Point(32, 97);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(222, 23);
@@ -254,12 +242,25 @@
             this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimizar.Location = new System.Drawing.Point(578, 0);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(31, 26);
             this.btnMinimizar.TabIndex = 54;
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.panel1.BackgroundImage = global::SistemaInscripcion.Properties.Resources.survey_2316468_960_720;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(254, 397);
+            this.panel1.TabIndex = 26;
+            this.panel1.MouseEnter += new System.EventHandler(this.Panel1_MouseEnter);
             // 
             // Login
             // 
@@ -272,7 +273,7 @@
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);

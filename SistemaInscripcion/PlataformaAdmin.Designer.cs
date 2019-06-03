@@ -106,7 +106,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.TxtCambiarCod = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panelMateria = new System.Windows.Forms.Panel();
             this.btnSaveMateria = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
@@ -117,6 +116,8 @@
             this.label34 = new System.Windows.Forms.Label();
             this.btnUpdateMateria = new System.Windows.Forms.Button();
             this.btnDeleteMateria = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnModulo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelMaterias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -127,14 +128,15 @@
             this.panelAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).BeginInit();
             this.panelCambiarPass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.panelMateria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosMateria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
+            this.panel1.Controls.Add(this.btnModulo);
             this.panel1.Controls.Add(this.PanelMaterias);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -424,7 +426,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-4, 343);
+            this.button2.Location = new System.Drawing.Point(-4, 403);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 67);
@@ -443,7 +445,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-1, 416);
+            this.button1.Location = new System.Drawing.Point(-1, 476);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 67);
@@ -1177,18 +1179,6 @@
             this.label31.TabIndex = 65;
             this.label31.Text = "Cod_Usuario:";
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.Location = new System.Drawing.Point(1156, 0);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(31, 26);
-            this.btnMinimizar.TabIndex = 93;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click_1);
-            // 
             // panelMateria
             // 
             this.panelMateria.Controls.Add(this.btnSaveMateria);
@@ -1321,6 +1311,36 @@
             this.btnDeleteMateria.UseVisualStyleBackColor = false;
             this.btnDeleteMateria.Click += new System.EventHandler(this.BtnDeleteMateria_Click);
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizar.Location = new System.Drawing.Point(1156, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(31, 26);
+            this.btnMinimizar.TabIndex = 93;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click_1);
+            // 
+            // btnModulo
+            // 
+            this.btnModulo.BackColor = System.Drawing.Color.Transparent;
+            this.btnModulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
+            this.btnModulo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
+            this.btnModulo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
+            this.btnModulo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnModulo.ForeColor = System.Drawing.Color.White;
+            this.btnModulo.Location = new System.Drawing.Point(-1, 342);
+            this.btnModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModulo.Name = "btnModulo";
+            this.btnModulo.Size = new System.Drawing.Size(194, 67);
+            this.btnModulo.TabIndex = 94;
+            this.btnModulo.Text = "MODULO";
+            this.btnModulo.UseVisualStyleBackColor = false;
+            // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1356,10 +1376,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).EndInit();
             this.panelCambiarPass.ResumeLayout(false);
             this.panelCambiarPass.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.panelMateria.ResumeLayout(false);
             this.panelMateria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosMateria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1454,5 +1474,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button btnUpdateMateria;
         private System.Windows.Forms.Button btnDeleteMateria;
+        private System.Windows.Forms.Button btnModulo;
     }
 }

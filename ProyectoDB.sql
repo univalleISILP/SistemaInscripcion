@@ -142,8 +142,9 @@ SELECT a.Nombre,a.Apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf FROM proyectoBD2.dbo.
 SELECT d.*, e.Genero, e.Telefono,e.Direccion FROM Docentes d, proyectoBD2.dbo.Docentes e WHERE d.CI_Docente = e.CI_Docente
 
 	
-	select * from Docentes;
+	select * from Modulo;
 
 delete from proyectoBD.dbo.Docentes where CI_Docente = 190;
 
 
+delete Modulo where CI_Docente=8911 and CI_Alumno=190 and Clave_Materia=200

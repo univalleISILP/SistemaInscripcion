@@ -53,10 +53,10 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"delete Modulo where CI_Alumno={0} and Clave_Materia='{1}' and CI_Docente={2}",
+                SqlCommand comando = new SqlCommand(String.Format(@"delete Modulo where CI_Docente={0} and CI_Alumno={1} and Clave_Materia={2}",
+                    mod.CI_Docente,
                     mod.CI_Alumno,
-                    mod.Clave_Materia,
-                    mod.CI_Docente), conexion);
+                    mod.Clave_Materia), conexion);
                 retorno = comando.ExecuteNonQuery();
                 conexion.Close();
             }

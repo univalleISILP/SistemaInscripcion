@@ -73,7 +73,7 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(string.Format(@"Select nombre From Materias"), conexion);
+                SqlCommand comando = new SqlCommand(string.Format(@"select nombre from Materias"), conexion);
                 SqlDataReader leer = comando.ExecuteReader();
 
                 while (leer.Read())
@@ -94,7 +94,7 @@ namespace SistemaInscripcion
 
             using (SqlConnection conex = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format("SELECT Clave_Materia FROM Materias"), conex);
+                SqlCommand comando = new SqlCommand(string.Format("SELECT Clave_Materia FROM Materias"), conex);
                 SqlDataReader leer = comando.ExecuteReader();
                 while (leer.Read())
                 {
@@ -103,8 +103,29 @@ namespace SistemaInscripcion
                     lista.Add(Materia.ToString());
                 }
                 conex.Close();
-                return lista;
             }
+            return lista;
+        }
+
+
+
+        public static List<string> ListNomMaterias()
+        {
+            List<string> lista = new List<string>();
+
+            using (SqlConnection conex = Conexion.ObtenerConexion1())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("SELECT nombre FROM Materias"), conex);
+                SqlDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    string Materias;
+                    Materias = leer.GetString(0);
+                    lista.Add(Materias);
+                }
+                conex.Close();
+            }
+            return lista;
         }
     }
 }

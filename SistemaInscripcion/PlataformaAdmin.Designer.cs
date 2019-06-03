@@ -39,7 +39,6 @@
             this.panelBuscarAlumnos = new System.Windows.Forms.Panel();
             this.txtCIalumnoBuscar = new System.Windows.Forms.TextBox();
             this.dbgListaAlumnosBuscar = new System.Windows.Forms.DataGridView();
-            this.txtContraseña1 = new System.Windows.Forms.TextBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panelAlumnos = new System.Windows.Forms.Panel();
             this.txtApellAlumno = new System.Windows.Forms.TextBox();
@@ -91,6 +90,14 @@
             this.txtCIDoc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.UpdateDoc = new System.Windows.Forms.Button();
+            this.txtContraseña1 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtCambiarCod = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtContraseña2 = new System.Windows.Forms.TextBox();
+            this.btnGuardarPass = new System.Windows.Forms.Button();
+            this.panelCambiarPass = new System.Windows.Forms.Panel();
             this.btnDeleteMaterias = new System.Windows.Forms.Button();
             this.btnUpdateMaterias = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
@@ -100,24 +107,17 @@
             this.txtCodMateria = new System.Windows.Forms.TextBox();
             this.cbxNomMateria = new System.Windows.Forms.ComboBox();
             this.panelMaterias = new System.Windows.Forms.Panel();
-            this.panelModulo = new System.Windows.Forms.Panel();
-            this.cbxClaveMateria = new System.Windows.Forms.ComboBox();
-            this.cbxCIAlu = new System.Windows.Forms.ComboBox();
-            this.cbxCIDoc = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.btnGuardarModulo = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.datosModulo = new System.Windows.Forms.DataGridView();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.btnDeleteModulo = new System.Windows.Forms.Button();
-            this.panelCambiarPass = new System.Windows.Forms.Panel();
-            this.txtCambiarCod = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtContraseña2 = new System.Windows.Forms.TextBox();
-            this.btnGuardarPass = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.datosModulo = new System.Windows.Forms.DataGridView();
+            this.label24 = new System.Windows.Forms.Label();
+            this.btnGuardarModulo = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cbxCIDoc = new System.Windows.Forms.ComboBox();
+            this.cbxCIAlu = new System.Windows.Forms.ComboBox();
+            this.cbxClaveMateria = new System.Windows.Forms.ComboBox();
+            this.panelModulo = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelBuscarAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbgListaAlumnosBuscar)).BeginInit();
@@ -128,11 +128,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).BeginInit();
             this.panelDocentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosDoc)).BeginInit();
+            this.panelCambiarPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosMaterias)).BeginInit();
             this.panelMaterias.SuspendLayout();
-            this.panelModulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosModulo)).BeginInit();
-            this.panelCambiarPass.SuspendLayout();
+            this.panelModulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -148,9 +148,8 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 740);
+            this.panel1.Size = new System.Drawing.Size(192, 698);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
             // btnModulo
@@ -271,10 +270,10 @@
             // 
             this.panelBuscarAlumnos.Controls.Add(this.txtCIalumnoBuscar);
             this.panelBuscarAlumnos.Controls.Add(this.dbgListaAlumnosBuscar);
-            this.panelBuscarAlumnos.Location = new System.Drawing.Point(203, 446);
+            this.panelBuscarAlumnos.Location = new System.Drawing.Point(235, 446);
             this.panelBuscarAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.panelBuscarAlumnos.Name = "panelBuscarAlumnos";
-            this.panelBuscarAlumnos.Size = new System.Drawing.Size(791, 69);
+            this.panelBuscarAlumnos.Size = new System.Drawing.Size(841, 241);
             this.panelBuscarAlumnos.TabIndex = 91;
             this.panelBuscarAlumnos.Visible = false;
             // 
@@ -312,16 +311,6 @@
             this.dbgListaAlumnosBuscar.Size = new System.Drawing.Size(751, 166);
             this.dbgListaAlumnosBuscar.TabIndex = 92;
             // 
-            // txtContraseña1
-            // 
-            this.txtContraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña1.Location = new System.Drawing.Point(220, 48);
-            this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña1.Multiline = true;
-            this.txtContraseña1.Name = "txtContraseña1";
-            this.txtContraseña1.Size = new System.Drawing.Size(219, 22);
-            this.txtContraseña1.TabIndex = 92;
-            // 
             // btnMinimizar
             // 
             this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
@@ -356,10 +345,10 @@
             this.panelAlumnos.Controls.Add(this.label15);
             this.panelAlumnos.Controls.Add(this.UpdateAlu);
             this.panelAlumnos.Controls.Add(this.DeleteAlu);
-            this.panelAlumnos.Location = new System.Drawing.Point(203, 43);
+            this.panelAlumnos.Location = new System.Drawing.Point(235, 43);
             this.panelAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.panelAlumnos.Name = "panelAlumnos";
-            this.panelAlumnos.Size = new System.Drawing.Size(976, 384);
+            this.panelAlumnos.Size = new System.Drawing.Size(964, 389);
             this.panelAlumnos.TabIndex = 97;
             this.panelAlumnos.Visible = false;
             // 
@@ -525,8 +514,7 @@
             this.cbxGeneroAlu.FormattingEnabled = true;
             this.cbxGeneroAlu.Items.AddRange(new object[] {
             "Hombre",
-            "Mujer",
-            "Guey"});
+            "Mujer"});
             this.cbxGeneroAlu.Location = new System.Drawing.Point(721, 176);
             this.cbxGeneroAlu.Margin = new System.Windows.Forms.Padding(2);
             this.cbxGeneroAlu.Name = "cbxGeneroAlu";
@@ -591,6 +579,7 @@
             this.btnSaveAlumno.TabIndex = 73;
             this.btnSaveAlumno.Text = "save";
             this.btnSaveAlumno.UseVisualStyleBackColor = true;
+            this.btnSaveAlumno.Click += new System.EventHandler(this.BtnSaveAlumno_Click);
             // 
             // label11
             // 
@@ -714,6 +703,7 @@
             this.UpdateAlu.TabIndex = 63;
             this.UpdateAlu.Text = "update";
             this.UpdateAlu.UseVisualStyleBackColor = false;
+            this.UpdateAlu.Click += new System.EventHandler(this.UpdateAlu_Click);
             // 
             // DeleteAlu
             // 
@@ -727,6 +717,7 @@
             this.DeleteAlu.TabIndex = 62;
             this.DeleteAlu.Text = "delete";
             this.DeleteAlu.UseVisualStyleBackColor = false;
+            this.DeleteAlu.Click += new System.EventHandler(this.DeleteAlu_Click);
             // 
             // panelDocentes
             // 
@@ -749,10 +740,10 @@
             this.panelDocentes.Controls.Add(this.txtCIDoc);
             this.panelDocentes.Controls.Add(this.label1);
             this.panelDocentes.Controls.Add(this.UpdateDoc);
-            this.panelDocentes.Location = new System.Drawing.Point(203, 43);
+            this.panelDocentes.Location = new System.Drawing.Point(227, 43);
             this.panelDocentes.Margin = new System.Windows.Forms.Padding(2);
             this.panelDocentes.Name = "panelDocentes";
-            this.panelDocentes.Size = new System.Drawing.Size(976, 384);
+            this.panelDocentes.Size = new System.Drawing.Size(976, 370);
             this.panelDocentes.TabIndex = 98;
             this.panelDocentes.Visible = false;
             // 
@@ -768,6 +759,7 @@
             this.btnDeleteDoc.TabIndex = 94;
             this.btnDeleteDoc.Text = "delete";
             this.btnDeleteDoc.UseVisualStyleBackColor = false;
+            this.btnDeleteDoc.Click += new System.EventHandler(this.BtnDeleteDoc_Click_1);
             // 
             // cbxGeneroDoc
             // 
@@ -775,8 +767,7 @@
             this.cbxGeneroDoc.FormattingEnabled = true;
             this.cbxGeneroDoc.Items.AddRange(new object[] {
             "Hombre",
-            "Mujer",
-            "Guey"});
+            "Mujer"});
             this.cbxGeneroDoc.Location = new System.Drawing.Point(753, 143);
             this.cbxGeneroDoc.Margin = new System.Windows.Forms.Padding(2);
             this.cbxGeneroDoc.Name = "cbxGeneroDoc";
@@ -787,13 +778,6 @@
             // 
             this.cbxEspecialidadDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEspecialidadDoc.FormattingEnabled = true;
-            this.cbxEspecialidadDoc.Items.AddRange(new object[] {
-            "matematica",
-            "lenguaje",
-            "quimica",
-            "fisica",
-            "artes plasticas",
-            "filosofia"});
             this.cbxEspecialidadDoc.Location = new System.Drawing.Point(753, 179);
             this.cbxEspecialidadDoc.Margin = new System.Windows.Forms.Padding(2);
             this.cbxEspecialidadDoc.Name = "cbxEspecialidadDoc";
@@ -938,6 +922,7 @@
             this.btnSaveDocentes.TabIndex = 73;
             this.btnSaveDocentes.Text = "save";
             this.btnSaveDocentes.UseVisualStyleBackColor = true;
+            this.btnSaveDocentes.Click += new System.EventHandler(this.BtnSaveDocentes_Click_1);
             // 
             // label2
             // 
@@ -985,6 +970,105 @@
             this.UpdateDoc.TabIndex = 63;
             this.UpdateDoc.Text = "update";
             this.UpdateDoc.UseVisualStyleBackColor = false;
+            this.UpdateDoc.Click += new System.EventHandler(this.UpdateDoc_Click);
+            // 
+            // txtContraseña1
+            // 
+            this.txtContraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña1.Location = new System.Drawing.Point(269, 88);
+            this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña1.Multiline = true;
+            this.txtContraseña1.Name = "txtContraseña1";
+            this.txtContraseña1.Size = new System.Drawing.Size(247, 22);
+            this.txtContraseña1.TabIndex = 92;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Transparent;
+            this.label16.Location = new System.Drawing.Point(74, 51);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(155, 20);
+            this.label16.TabIndex = 67;
+            this.label16.Text = "Ingrese su Codigo";
+            // 
+            // txtCambiarCod
+            // 
+            this.txtCambiarCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCambiarCod.Location = new System.Drawing.Point(269, 51);
+            this.txtCambiarCod.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCambiarCod.Multiline = true;
+            this.txtCambiarCod.Name = "txtCambiarCod";
+            this.txtCambiarCod.Size = new System.Drawing.Size(247, 22);
+            this.txtCambiarCod.TabIndex = 68;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Transparent;
+            this.label17.Location = new System.Drawing.Point(74, 90);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(141, 20);
+            this.label17.TabIndex = 93;
+            this.label17.Text = "Nuevo Password";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Transparent;
+            this.label18.Location = new System.Drawing.Point(74, 130);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(173, 20);
+            this.label18.TabIndex = 94;
+            this.label18.Text = "Repita su  Password";
+            // 
+            // txtContraseña2
+            // 
+            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña2.Location = new System.Drawing.Point(269, 128);
+            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña2.Multiline = true;
+            this.txtContraseña2.Name = "txtContraseña2";
+            this.txtContraseña2.Size = new System.Drawing.Size(247, 22);
+            this.txtContraseña2.TabIndex = 95;
+            // 
+            // btnGuardarPass
+            // 
+            this.btnGuardarPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardarPass.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardarPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarPass.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPass.Location = new System.Drawing.Point(198, 191);
+            this.btnGuardarPass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarPass.Name = "btnGuardarPass";
+            this.btnGuardarPass.Size = new System.Drawing.Size(167, 34);
+            this.btnGuardarPass.TabIndex = 80;
+            this.btnGuardarPass.Text = "save";
+            this.btnGuardarPass.UseVisualStyleBackColor = false;
+            this.btnGuardarPass.Click += new System.EventHandler(this.BtnGuardarPass_Click);
+            // 
+            // panelCambiarPass
+            // 
+            this.panelCambiarPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelCambiarPass.Controls.Add(this.btnGuardarPass);
+            this.panelCambiarPass.Controls.Add(this.txtContraseña2);
+            this.panelCambiarPass.Controls.Add(this.label18);
+            this.panelCambiarPass.Controls.Add(this.label17);
+            this.panelCambiarPass.Controls.Add(this.txtCambiarCod);
+            this.panelCambiarPass.Controls.Add(this.label16);
+            this.panelCambiarPass.Controls.Add(this.txtContraseña1);
+            this.panelCambiarPass.Location = new System.Drawing.Point(413, 188);
+            this.panelCambiarPass.Name = "panelCambiarPass";
+            this.panelCambiarPass.Size = new System.Drawing.Size(553, 266);
+            this.panelCambiarPass.TabIndex = 103;
+            this.panelCambiarPass.Visible = false;
             // 
             // btnDeleteMaterias
             // 
@@ -1071,14 +1155,14 @@
             // 
             // txtCodMateria
             // 
+            this.txtCodMateria.BackColor = System.Drawing.Color.White;
             this.txtCodMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodMateria.Location = new System.Drawing.Point(527, 45);
             this.txtCodMateria.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodMateria.Multiline = true;
             this.txtCodMateria.Name = "txtCodMateria";
             this.txtCodMateria.Size = new System.Drawing.Size(186, 22);
-            this.txtCodMateria.TabIndex = 106;
-            this.txtCodMateria.Text = "                   ";
+            this.txtCodMateria.TabIndex = 1;
             // 
             // cbxNomMateria
             // 
@@ -1109,93 +1193,47 @@
             this.panelMaterias.Controls.Add(this.btnDeleteMaterias);
             this.panelMaterias.Location = new System.Drawing.Point(260, 100);
             this.panelMaterias.Name = "panelMaterias";
-            this.panelMaterias.Size = new System.Drawing.Size(749, 309);
+            this.panelMaterias.Size = new System.Drawing.Size(749, 313);
             this.panelMaterias.TabIndex = 100;
             this.panelMaterias.Visible = false;
             // 
-            // panelModulo
+            // btnDeleteModulo
             // 
-            this.panelModulo.Controls.Add(this.cbxClaveMateria);
-            this.panelModulo.Controls.Add(this.cbxCIAlu);
-            this.panelModulo.Controls.Add(this.cbxCIDoc);
-            this.panelModulo.Controls.Add(this.label28);
-            this.panelModulo.Controls.Add(this.btnGuardarModulo);
-            this.panelModulo.Controls.Add(this.label24);
-            this.panelModulo.Controls.Add(this.datosModulo);
-            this.panelModulo.Controls.Add(this.label25);
-            this.panelModulo.Controls.Add(this.label26);
-            this.panelModulo.Controls.Add(this.btnDeleteModulo);
-            this.panelModulo.Location = new System.Drawing.Point(208, 170);
-            this.panelModulo.Margin = new System.Windows.Forms.Padding(2);
-            this.panelModulo.Name = "panelModulo";
-            this.panelModulo.Size = new System.Drawing.Size(984, 285);
-            this.panelModulo.TabIndex = 101;
-            this.panelModulo.Visible = false;
+            this.btnDeleteModulo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDeleteModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteModulo.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteModulo.Location = new System.Drawing.Point(219, 205);
+            this.btnDeleteModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteModulo.Name = "btnDeleteModulo";
+            this.btnDeleteModulo.Size = new System.Drawing.Size(127, 34);
+            this.btnDeleteModulo.TabIndex = 62;
+            this.btnDeleteModulo.Text = "delete";
+            this.btnDeleteModulo.UseVisualStyleBackColor = false;
+            this.btnDeleteModulo.Click += new System.EventHandler(this.BtnDeleteModulo_Click_1);
             // 
-            // cbxClaveMateria
+            // label26
             // 
-            this.cbxClaveMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxClaveMateria.FormattingEnabled = true;
-            this.cbxClaveMateria.Location = new System.Drawing.Point(181, 143);
-            this.cbxClaveMateria.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxClaveMateria.Name = "cbxClaveMateria";
-            this.cbxClaveMateria.Size = new System.Drawing.Size(165, 24);
-            this.cbxClaveMateria.TabIndex = 79;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(34, 79);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(100, 20);
+            this.label26.TabIndex = 65;
+            this.label26.Text = "CI Docente";
             // 
-            // cbxCIAlu
+            // label25
             // 
-            this.cbxCIAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCIAlu.FormattingEnabled = true;
-            this.cbxCIAlu.Location = new System.Drawing.Point(181, 109);
-            this.cbxCIAlu.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxCIAlu.Name = "cbxCIAlu";
-            this.cbxCIAlu.Size = new System.Drawing.Size(165, 24);
-            this.cbxCIAlu.TabIndex = 78;
-            // 
-            // cbxCIDoc
-            // 
-            this.cbxCIDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCIDoc.FormattingEnabled = true;
-            this.cbxCIDoc.Location = new System.Drawing.Point(181, 77);
-            this.cbxCIDoc.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxCIDoc.Name = "cbxCIDoc";
-            this.cbxCIDoc.Size = new System.Drawing.Size(165, 24);
-            this.cbxCIDoc.TabIndex = 77;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(34, 112);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(92, 20);
-            this.label28.TabIndex = 75;
-            this.label28.Text = "CI Alumno";
-            // 
-            // btnGuardarModulo
-            // 
-            this.btnGuardarModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarModulo.Location = new System.Drawing.Point(213, 197);
-            this.btnGuardarModulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardarModulo.Name = "btnGuardarModulo";
-            this.btnGuardarModulo.Size = new System.Drawing.Size(133, 34);
-            this.btnGuardarModulo.TabIndex = 73;
-            this.btnGuardarModulo.Text = "save";
-            this.btnGuardarModulo.UseVisualStyleBackColor = true;
-            this.btnGuardarModulo.Click += new System.EventHandler(this.BtnGuardarModulo_Click_1);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label24.Location = new System.Drawing.Point(107, 146);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(0, 20);
-            this.label24.TabIndex = 74;
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(34, 146);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(118, 20);
+            this.label25.TabIndex = 67;
+            this.label25.Text = "Clave Materia";
             // 
             // datosModulo
             // 
@@ -1216,133 +1254,96 @@
             this.datosModulo.Size = new System.Drawing.Size(599, 243);
             this.datosModulo.TabIndex = 64;
             // 
-            // label25
+            // label24
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(34, 146);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(118, 20);
-            this.label25.TabIndex = 67;
-            this.label25.Text = "Clave Materia";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label24.Location = new System.Drawing.Point(107, 146);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(0, 20);
+            this.label24.TabIndex = 74;
             // 
-            // label26
+            // btnGuardarModulo
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(34, 79);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(100, 20);
-            this.label26.TabIndex = 65;
-            this.label26.Text = "CI Docente";
+            this.btnGuardarModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarModulo.Location = new System.Drawing.Point(38, 205);
+            this.btnGuardarModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarModulo.Name = "btnGuardarModulo";
+            this.btnGuardarModulo.Size = new System.Drawing.Size(133, 34);
+            this.btnGuardarModulo.TabIndex = 73;
+            this.btnGuardarModulo.Text = "save";
+            this.btnGuardarModulo.UseVisualStyleBackColor = true;
+            this.btnGuardarModulo.Click += new System.EventHandler(this.BtnGuardarModulo_Click_1);
             // 
-            // btnDeleteModulo
+            // label28
             // 
-            this.btnDeleteModulo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDeleteModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteModulo.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteModulo.Location = new System.Drawing.Point(37, 197);
-            this.btnDeleteModulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteModulo.Name = "btnDeleteModulo";
-            this.btnDeleteModulo.Size = new System.Drawing.Size(127, 34);
-            this.btnDeleteModulo.TabIndex = 62;
-            this.btnDeleteModulo.Text = "delete";
-            this.btnDeleteModulo.UseVisualStyleBackColor = false;
-            this.btnDeleteModulo.Click += new System.EventHandler(this.BtnDeleteModulo_Click_1);
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Black;
+            this.label28.Location = new System.Drawing.Point(34, 112);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(92, 20);
+            this.label28.TabIndex = 75;
+            this.label28.Text = "CI Alumno";
             // 
-            // panelCambiarPass
+            // cbxCIDoc
             // 
-            this.panelCambiarPass.Controls.Add(this.btnGuardarPass);
-            this.panelCambiarPass.Controls.Add(this.txtContraseña2);
-            this.panelCambiarPass.Controls.Add(this.label18);
-            this.panelCambiarPass.Controls.Add(this.label17);
-            this.panelCambiarPass.Controls.Add(this.txtCambiarCod);
-            this.panelCambiarPass.Controls.Add(this.label16);
-            this.panelCambiarPass.Controls.Add(this.txtContraseña1);
-            this.panelCambiarPass.Location = new System.Drawing.Point(206, 559);
-            this.panelCambiarPass.Name = "panelCambiarPass";
-            this.panelCambiarPass.Size = new System.Drawing.Size(649, 152);
-            this.panelCambiarPass.TabIndex = 103;
-            this.panelCambiarPass.Visible = false;
+            this.cbxCIDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCIDoc.FormattingEnabled = true;
+            this.cbxCIDoc.Location = new System.Drawing.Point(181, 77);
+            this.cbxCIDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxCIDoc.Name = "cbxCIDoc";
+            this.cbxCIDoc.Size = new System.Drawing.Size(165, 24);
+            this.cbxCIDoc.TabIndex = 77;
             // 
-            // txtCambiarCod
+            // cbxCIAlu
             // 
-            this.txtCambiarCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCambiarCod.Location = new System.Drawing.Point(220, 22);
-            this.txtCambiarCod.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCambiarCod.Multiline = true;
-            this.txtCambiarCod.Name = "txtCambiarCod";
-            this.txtCambiarCod.Size = new System.Drawing.Size(219, 22);
-            this.txtCambiarCod.TabIndex = 68;
+            this.cbxCIAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCIAlu.FormattingEnabled = true;
+            this.cbxCIAlu.Location = new System.Drawing.Point(181, 109);
+            this.cbxCIAlu.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxCIAlu.Name = "cbxCIAlu";
+            this.cbxCIAlu.Size = new System.Drawing.Size(165, 24);
+            this.cbxCIAlu.TabIndex = 78;
             // 
-            // label16
+            // cbxClaveMateria
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(25, 22);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(155, 20);
-            this.label16.TabIndex = 67;
-            this.label16.Text = "Ingrese su Codigo";
+            this.cbxClaveMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxClaveMateria.FormattingEnabled = true;
+            this.cbxClaveMateria.Location = new System.Drawing.Point(181, 143);
+            this.cbxClaveMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxClaveMateria.Name = "cbxClaveMateria";
+            this.cbxClaveMateria.Size = new System.Drawing.Size(165, 24);
+            this.cbxClaveMateria.TabIndex = 79;
             // 
-            // label17
+            // panelModulo
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(25, 51);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(141, 20);
-            this.label17.TabIndex = 93;
-            this.label17.Text = "Nuevo Password";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(25, 76);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(173, 20);
-            this.label18.TabIndex = 94;
-            this.label18.Text = "Repita su  Password";
-            // 
-            // txtContraseña2
-            // 
-            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña2.Location = new System.Drawing.Point(220, 74);
-            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña2.Multiline = true;
-            this.txtContraseña2.Name = "txtContraseña2";
-            this.txtContraseña2.Size = new System.Drawing.Size(219, 22);
-            this.txtContraseña2.TabIndex = 95;
-            // 
-            // btnGuardarPass
-            // 
-            this.btnGuardarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarPass.Location = new System.Drawing.Point(459, 42);
-            this.btnGuardarPass.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardarPass.Name = "btnGuardarPass";
-            this.btnGuardarPass.Size = new System.Drawing.Size(167, 34);
-            this.btnGuardarPass.TabIndex = 80;
-            this.btnGuardarPass.Text = "save";
-            this.btnGuardarPass.UseVisualStyleBackColor = true;
-            this.btnGuardarPass.Click += new System.EventHandler(this.BtnGuardarPass_Click);
+            this.panelModulo.Controls.Add(this.cbxClaveMateria);
+            this.panelModulo.Controls.Add(this.cbxCIAlu);
+            this.panelModulo.Controls.Add(this.cbxCIDoc);
+            this.panelModulo.Controls.Add(this.label28);
+            this.panelModulo.Controls.Add(this.btnGuardarModulo);
+            this.panelModulo.Controls.Add(this.label24);
+            this.panelModulo.Controls.Add(this.datosModulo);
+            this.panelModulo.Controls.Add(this.label25);
+            this.panelModulo.Controls.Add(this.label26);
+            this.panelModulo.Controls.Add(this.btnDeleteModulo);
+            this.panelModulo.Location = new System.Drawing.Point(204, 170);
+            this.panelModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.panelModulo.Name = "panelModulo";
+            this.panelModulo.Size = new System.Drawing.Size(997, 284);
+            this.panelModulo.TabIndex = 101;
+            this.panelModulo.Visible = false;
             // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1211, 740);
+            this.ClientSize = new System.Drawing.Size(1218, 698);
             this.Controls.Add(this.panelCambiarPass);
             this.Controls.Add(this.panelModulo);
             this.Controls.Add(this.panelMaterias);
@@ -1372,14 +1373,14 @@
             this.panelDocentes.ResumeLayout(false);
             this.panelDocentes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosDoc)).EndInit();
+            this.panelCambiarPass.ResumeLayout(false);
+            this.panelCambiarPass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosMaterias)).EndInit();
             this.panelMaterias.ResumeLayout(false);
             this.panelMaterias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datosModulo)).EndInit();
             this.panelModulo.ResumeLayout(false);
             this.panelModulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datosModulo)).EndInit();
-            this.panelCambiarPass.ResumeLayout(false);
-            this.panelCambiarPass.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1447,6 +1448,14 @@
         private System.Windows.Forms.TextBox txtCIDoc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button UpdateDoc;
+        public System.Windows.Forms.TextBox txtContraseña1;
+        private System.Windows.Forms.Label label16;
+        public System.Windows.Forms.TextBox txtCambiarCod;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        public System.Windows.Forms.TextBox txtContraseña2;
+        private System.Windows.Forms.Button btnGuardarPass;
+        private System.Windows.Forms.Panel panelCambiarPass;
         private System.Windows.Forms.Button btnDeleteMaterias;
         private System.Windows.Forms.Button btnUpdateMaterias;
         private System.Windows.Forms.Label label23;
@@ -1456,24 +1465,16 @@
         private System.Windows.Forms.TextBox txtCodMateria;
         private System.Windows.Forms.ComboBox cbxNomMateria;
         private System.Windows.Forms.Panel panelMaterias;
-        public System.Windows.Forms.Panel panelModulo;
-        private System.Windows.Forms.ComboBox cbxClaveMateria;
-        private System.Windows.Forms.ComboBox cbxCIAlu;
-        private System.Windows.Forms.ComboBox cbxCIDoc;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button btnGuardarModulo;
-        private System.Windows.Forms.Label label24;
-        public System.Windows.Forms.DataGridView datosModulo;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnDeleteModulo;
-        private System.Windows.Forms.Panel panelCambiarPass;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        public System.Windows.Forms.TextBox txtContraseña1;
-        public System.Windows.Forms.TextBox txtCambiarCod;
-        public System.Windows.Forms.TextBox txtContraseña2;
-        private System.Windows.Forms.Button btnGuardarPass;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        public System.Windows.Forms.DataGridView datosModulo;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button btnGuardarModulo;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox cbxCIDoc;
+        private System.Windows.Forms.ComboBox cbxCIAlu;
+        private System.Windows.Forms.ComboBox cbxClaveMateria;
+        public System.Windows.Forms.Panel panelModulo;
     }
 }

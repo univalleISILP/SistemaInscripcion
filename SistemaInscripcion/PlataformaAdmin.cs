@@ -61,6 +61,14 @@ namespace SistemaInscripcion
             txtClaveMateria.Clear();
             txtNombreMateria.Clear();
         }
+
+        void limpiarModulo()
+        {
+            cbxCIDoc.Text = "";
+            cbxCIAlu.Text = "";
+            cbxClaveMateria.Text = "";
+
+        }
         private void BtnSaveDocentes_Click(object sender, EventArgs e)
         {
             if (txtCIDoc.Text == "" ||
@@ -537,7 +545,7 @@ namespace SistemaInscripcion
 
                     ModuloABML.Eliminar(mod);
                     datosModulo.DataSource = ModuloABML.Listar();
-                    //limpiarDocente();
+                    limpiarModulo();
                 }
             }
             else

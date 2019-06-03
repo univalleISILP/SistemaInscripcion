@@ -126,7 +126,7 @@ select*from Alumnos
 
 
 
-select*from modulo
+select nombre from Materias
 
 select * from proyectoBD.dbo.Alumnos
 union

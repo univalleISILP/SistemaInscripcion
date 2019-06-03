@@ -29,28 +29,25 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"update materias set nombre='{0}',Clave_Materia={1})",                    
-                    materia.Nombre,
-                    materia.ClaveM), conexion);
+                SqlCommand comando = new SqlCommand(string.Format(@"update Materias set nombre='{0}' WHERE Clave_Materia = {1}", materia.Nombre,materia.ClaveM), conexion);
                 retorno = comando.ExecuteNonQuery();
                 conexion.Close();
             }
             return retorno;
         }
-        public static int Eliminar(int Clave)
+        public static int EliminarMateria(int Clave)
         {
             int retorno = 0;
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"delete Materias where Clave_Materia={0})",
-                    Clave), conexion);
+                SqlCommand comando = new SqlCommand(String.Format(@"Delete From Materias Where Clave_Materia={0}",Clave),conexion);
                 retorno = comando.ExecuteNonQuery();
                 conexion.Close();
             }
             return retorno;
         }
-        public static List<Materia> Listar()
+        public static List<Materia> ListarMateria()
         {
             List<Materia> lista = new List<Materia>();
 
@@ -70,7 +67,7 @@ namespace SistemaInscripcion
             }
             return lista;
         }
-        public static List<Materia> Listar()
+        public static List<Materia> ListarXnombreMateria()
         {
             List<Materia> lista = new List<Materia>();
 

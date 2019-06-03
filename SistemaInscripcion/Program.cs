@@ -16,7 +16,7 @@ namespace SistemaInscripcion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PlataformaAdmin());
+            Application.Run(new Login());
         }
     }
 }

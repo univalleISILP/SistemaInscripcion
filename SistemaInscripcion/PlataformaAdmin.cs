@@ -383,6 +383,7 @@ namespace SistemaInscripcion
                 us1.Contraseña = txtContraseña1.Text;
                 us1.Tipo = "adm";
                 LoginABML.Modificar(us1);
+                MessageBox.Show("Contraseña cambiada exitosamente");
             }
             else
                 MessageBox.Show("Las Contraseñas deben coincidir");

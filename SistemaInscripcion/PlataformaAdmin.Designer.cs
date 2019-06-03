@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlataformaAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnModulo = new System.Windows.Forms.Button();
             this.PanelMaterias = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -117,7 +118,6 @@
             this.btnUpdateMateria = new System.Windows.Forms.Button();
             this.btnDeleteMateria = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnModulo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelMaterias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -151,6 +151,24 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
+            // 
+            // btnModulo
+            // 
+            this.btnModulo.BackColor = System.Drawing.Color.Transparent;
+            this.btnModulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
+            this.btnModulo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
+            this.btnModulo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
+            this.btnModulo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnModulo.ForeColor = System.Drawing.Color.White;
+            this.btnModulo.Location = new System.Drawing.Point(-1, 342);
+            this.btnModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModulo.Name = "btnModulo";
+            this.btnModulo.Size = new System.Drawing.Size(194, 67);
+            this.btnModulo.TabIndex = 94;
+            this.btnModulo.Text = "MODULO";
+            this.btnModulo.UseVisualStyleBackColor = false;
             // 
             // PanelMaterias
             // 
@@ -1096,7 +1114,7 @@
             this.panelCambiarPass.Location = new System.Drawing.Point(417, 22);
             this.panelCambiarPass.Margin = new System.Windows.Forms.Padding(2);
             this.panelCambiarPass.Name = "panelCambiarPass";
-            this.panelCambiarPass.Size = new System.Drawing.Size(673, 53);
+            this.panelCambiarPass.Size = new System.Drawing.Size(673, 243);
             this.panelCambiarPass.TabIndex = 93;
             this.panelCambiarPass.Visible = false;
             // 
@@ -1107,6 +1125,7 @@
             this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña2.Multiline = true;
             this.txtContraseña2.Name = "txtContraseña2";
+            this.txtContraseña2.PasswordChar = '*';
             this.txtContraseña2.Size = new System.Drawing.Size(219, 22);
             this.txtContraseña2.TabIndex = 92;
             // 
@@ -1141,6 +1160,7 @@
             this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña1.Multiline = true;
             this.txtContraseña1.Name = "txtContraseña1";
+            this.txtContraseña1.PasswordChar = '*';
             this.txtContraseña1.Size = new System.Drawing.Size(219, 22);
             this.txtContraseña1.TabIndex = 68;
             // 
@@ -1190,7 +1210,7 @@
             this.panelMateria.Controls.Add(this.label34);
             this.panelMateria.Controls.Add(this.btnUpdateMateria);
             this.panelMateria.Controls.Add(this.btnDeleteMateria);
-            this.panelMateria.Location = new System.Drawing.Point(336, 11);
+            this.panelMateria.Location = new System.Drawing.Point(291, 227);
             this.panelMateria.Margin = new System.Windows.Forms.Padding(2);
             this.panelMateria.Name = "panelMateria";
             this.panelMateria.Size = new System.Drawing.Size(670, 378);
@@ -1323,24 +1343,6 @@
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click_1);
             // 
-            // btnModulo
-            // 
-            this.btnModulo.BackColor = System.Drawing.Color.Transparent;
-            this.btnModulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
-            this.btnModulo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
-            this.btnModulo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
-            this.btnModulo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnModulo.ForeColor = System.Drawing.Color.White;
-            this.btnModulo.Location = new System.Drawing.Point(-1, 342);
-            this.btnModulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModulo.Name = "btnModulo";
-            this.btnModulo.Size = new System.Drawing.Size(194, 67);
-            this.btnModulo.TabIndex = 94;
-            this.btnModulo.Text = "MODULO";
-            this.btnModulo.UseVisualStyleBackColor = false;
-            // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1449,7 +1451,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtContraseña1;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox TxtCambiarCod;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txtApellAlumno;
         private System.Windows.Forms.ComboBox cbxAñoCursoAlu;
@@ -1475,5 +1476,6 @@
         private System.Windows.Forms.Button btnUpdateMateria;
         private System.Windows.Forms.Button btnDeleteMateria;
         private System.Windows.Forms.Button btnModulo;
+        public System.Windows.Forms.TextBox TxtCambiarCod;
     }
 }

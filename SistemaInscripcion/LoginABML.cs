@@ -30,7 +30,7 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"update usuario set contraseña='{0}' where Cod_Usuario={1}",
+                SqlCommand comando = new SqlCommand(String.Format(@"update usuario set contraseña='{0}' where Cod_Usuario='{1}'",
                     usuario.Contraseña,
                     usuario.CodUsuario), conexion);
                 retorno = comando.ExecuteNonQuery();

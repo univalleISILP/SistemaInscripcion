@@ -43,8 +43,9 @@
             this.panel1.Controls.Add(this.btnAddAlumnos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 746);
+            this.panel1.Size = new System.Drawing.Size(899, 555);
             this.panel1.TabIndex = 3;
             // 
             // btnAddMaterias
@@ -55,9 +56,10 @@
             this.btnAddMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnAddMaterias.ForeColor = System.Drawing.Color.Black;
-            this.btnAddMaterias.Location = new System.Drawing.Point(30, 242);
+            this.btnAddMaterias.Location = new System.Drawing.Point(20, 157);
+            this.btnAddMaterias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddMaterias.Name = "btnAddMaterias";
-            this.btnAddMaterias.Size = new System.Drawing.Size(180, 55);
+            this.btnAddMaterias.Size = new System.Drawing.Size(120, 36);
             this.btnAddMaterias.TabIndex = 5;
             this.btnAddMaterias.Text = "MATERIAS";
             this.btnAddMaterias.UseVisualStyleBackColor = false;
@@ -70,9 +72,10 @@
             this.btnAddDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDocentes.ForeColor = System.Drawing.Color.Black;
-            this.btnAddDocentes.Location = new System.Drawing.Point(30, 72);
+            this.btnAddDocentes.Location = new System.Drawing.Point(20, 47);
+            this.btnAddDocentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddDocentes.Name = "btnAddDocentes";
-            this.btnAddDocentes.Size = new System.Drawing.Size(180, 55);
+            this.btnAddDocentes.Size = new System.Drawing.Size(120, 36);
             this.btnAddDocentes.TabIndex = 3;
             this.btnAddDocentes.Text = "DOCENTES";
             this.btnAddDocentes.UseVisualStyleBackColor = false;
@@ -85,20 +88,22 @@
             this.btnAddAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAlumnos.ForeColor = System.Drawing.Color.Black;
-            this.btnAddAlumnos.Location = new System.Drawing.Point(30, 159);
+            this.btnAddAlumnos.Location = new System.Drawing.Point(20, 103);
+            this.btnAddAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddAlumnos.Name = "btnAddAlumnos";
-            this.btnAddAlumnos.Size = new System.Drawing.Size(180, 55);
+            this.btnAddAlumnos.Size = new System.Drawing.Size(120, 36);
             this.btnAddAlumnos.TabIndex = 4;
             this.btnAddAlumnos.Text = "ALUMNOS";
             this.btnAddAlumnos.UseVisualStyleBackColor = false;
             // 
             // PlataformaAlumno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(1500, 746);
+            this.ClientSize = new System.Drawing.Size(1045, 555);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PlataformaAlumno";
             this.Text = "PlataformaAlumno";
             this.panel1.ResumeLayout(false);

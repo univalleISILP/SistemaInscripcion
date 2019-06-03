@@ -61,6 +61,8 @@
     <Compile Include="LoginABML.cs" />
     <Compile Include="Materia.cs" />
     <Compile Include="MateriasABML.cs" />
+    <Compile Include="Modulo.cs" />
+    <Compile Include="ModuloABML.cs" />
     <Compile Include="PlataformaAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

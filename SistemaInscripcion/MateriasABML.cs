@@ -43,7 +43,7 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"delete Materias where Clave_Materia={0})",
+                SqlCommand comando = new SqlCommand(String.Format(@"delete Materias where Clave_Materia={0}",
                     Clave), conexion);
                 retorno = comando.ExecuteNonQuery();
                 conexion.Close();

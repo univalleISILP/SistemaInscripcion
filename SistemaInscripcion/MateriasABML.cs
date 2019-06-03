@@ -70,5 +70,24 @@ namespace SistemaInscripcion
             }
             return lista;
         }
+        public static List<Materia> Listar()
+        {
+            List<Materia> lista = new List<Materia>();
+
+            using (SqlConnection conexion = Conexion.ObtenerConexion1())
+            {
+                SqlCommand comando = new SqlCommand(string.Format(@"Select nombre From Materias"), conexion);
+                SqlDataReader leer = comando.ExecuteReader();
+
+                while (leer.Read())
+                {
+                    Materia materia = new Materia();
+                    materia.Nombre = leer.GetString(0);
+                    lista.Add(materia);
+                }
+                conexion.Close();
+            }
+            return lista;
+        }
     }
 }

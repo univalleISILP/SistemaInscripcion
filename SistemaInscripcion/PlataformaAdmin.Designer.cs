@@ -107,6 +107,16 @@
             this.UpdateAlu = new System.Windows.Forms.Button();
             this.DeleteAlu = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.panelMateria = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.datosMateria = new System.Windows.Forms.DataGridView();
+            this.txtNombreMateria = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtClaveMateria = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelMaterias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -118,6 +128,8 @@
             this.panelCambiarPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            this.panelMateria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datosMateria)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,7 +145,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 481);
+            this.panel1.Size = new System.Drawing.Size(192, 706);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
@@ -521,7 +533,7 @@
             this.panelDocentes.Location = new System.Drawing.Point(212, 58);
             this.panelDocentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDocentes.Name = "panelDocentes";
-            this.panelDocentes.Size = new System.Drawing.Size(963, 370);
+            this.panelDocentes.Size = new System.Drawing.Size(963, 90);
             this.panelDocentes.TabIndex = 39;
             this.panelDocentes.Visible = false;
             // 
@@ -762,10 +774,10 @@
             // 
             this.panelBuscarAlumnos.Controls.Add(this.txtCIalumnoBuscar);
             this.panelBuscarAlumnos.Controls.Add(this.dbgListaAlumnosBuscar);
-            this.panelBuscarAlumnos.Location = new System.Drawing.Point(212, 432);
+            this.panelBuscarAlumnos.Location = new System.Drawing.Point(212, 190);
             this.panelBuscarAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBuscarAlumnos.Name = "panelBuscarAlumnos";
-            this.panelBuscarAlumnos.Size = new System.Drawing.Size(794, 214);
+            this.panelBuscarAlumnos.Size = new System.Drawing.Size(794, 35);
             this.panelBuscarAlumnos.TabIndex = 91;
             this.panelBuscarAlumnos.Visible = false;
             // 
@@ -894,7 +906,7 @@
             this.panelAlumnos.Location = new System.Drawing.Point(212, 58);
             this.panelAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAlumnos.Name = "panelAlumnos";
-            this.panelAlumnos.Size = new System.Drawing.Size(975, 349);
+            this.panelAlumnos.Size = new System.Drawing.Size(975, 108);
             this.panelAlumnos.TabIndex = 41;
             this.panelAlumnos.Visible = false;
             // 
@@ -910,7 +922,7 @@
             this.panelCambiarPass.Location = new System.Drawing.Point(417, 22);
             this.panelCambiarPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCambiarPass.Name = "panelCambiarPass";
-            this.panelCambiarPass.Size = new System.Drawing.Size(673, 349);
+            this.panelCambiarPass.Size = new System.Drawing.Size(673, 53);
             this.panelCambiarPass.TabIndex = 93;
             this.panelCambiarPass.Visible = false;
             // 
@@ -1177,12 +1189,142 @@
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click_1);
             // 
+            // panelMateria
+            // 
+            this.panelMateria.Controls.Add(this.button6);
+            this.panelMateria.Controls.Add(this.label27);
+            this.panelMateria.Controls.Add(this.datosMateria);
+            this.panelMateria.Controls.Add(this.txtNombreMateria);
+            this.panelMateria.Controls.Add(this.label33);
+            this.panelMateria.Controls.Add(this.txtClaveMateria);
+            this.panelMateria.Controls.Add(this.label34);
+            this.panelMateria.Controls.Add(this.button7);
+            this.panelMateria.Controls.Add(this.button8);
+            this.panelMateria.Location = new System.Drawing.Point(212, 302);
+            this.panelMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMateria.Name = "panelMateria";
+            this.panelMateria.Size = new System.Drawing.Size(670, 378);
+            this.panelMateria.TabIndex = 93;
+            this.panelMateria.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(450, 189);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(167, 34);
+            this.button6.TabIndex = 73;
+            this.button6.Text = "save";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label27.Location = new System.Drawing.Point(137, 308);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(0, 20);
+            this.label27.TabIndex = 74;
+            // 
+            // datosMateria
+            // 
+            this.datosMateria.AllowUserToDeleteRows = false;
+            this.datosMateria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datosMateria.BackgroundColor = System.Drawing.Color.FloralWhite;
+            this.datosMateria.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.datosMateria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datosMateria.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
+            this.datosMateria.Location = new System.Drawing.Point(46, 22);
+            this.datosMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.datosMateria.Name = "datosMateria";
+            this.datosMateria.ReadOnly = true;
+            this.datosMateria.RowHeadersVisible = false;
+            this.datosMateria.RowHeadersWidth = 62;
+            this.datosMateria.RowTemplate.Height = 28;
+            this.datosMateria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datosMateria.Size = new System.Drawing.Size(353, 243);
+            this.datosMateria.TabIndex = 64;
+            // 
+            // txtNombreMateria
+            // 
+            this.txtNombreMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreMateria.Location = new System.Drawing.Point(180, 325);
+            this.txtNombreMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreMateria.Multiline = true;
+            this.txtNombreMateria.Name = "txtNombreMateria";
+            this.txtNombreMateria.Size = new System.Drawing.Size(219, 22);
+            this.txtNombreMateria.TabIndex = 68;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Black;
+            this.label33.Location = new System.Drawing.Point(53, 325);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(71, 20);
+            this.label33.TabIndex = 67;
+            this.label33.Text = "Nombre";
+            // 
+            // txtClaveMateria
+            // 
+            this.txtClaveMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClaveMateria.Location = new System.Drawing.Point(180, 288);
+            this.txtClaveMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClaveMateria.Multiline = true;
+            this.txtClaveMateria.Name = "txtClaveMateria";
+            this.txtClaveMateria.Size = new System.Drawing.Size(219, 22);
+            this.txtClaveMateria.TabIndex = 66;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(53, 288);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(118, 20);
+            this.label34.TabIndex = 65;
+            this.label34.Text = "Clave Materia";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(450, 73);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(167, 34);
+            this.button7.TabIndex = 63;
+            this.button7.Text = "update";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Location = new System.Drawing.Point(450, 129);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(167, 34);
+            this.button8.TabIndex = 62;
+            this.button8.Text = "delete";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1192, 481);
+            this.ClientSize = new System.Drawing.Size(1206, 706);
+            this.Controls.Add(this.panelMateria);
             this.Controls.Add(this.panelCambiarPass);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.panelBuscarAlumnos);
@@ -1212,6 +1354,9 @@
             this.panelCambiarPass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            this.panelMateria.ResumeLayout(false);
+            this.panelMateria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datosMateria)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1296,5 +1441,15 @@
         private System.Windows.Forms.Label txtApellAlu;
         private System.Windows.Forms.Button UpdateAlu;
         private System.Windows.Forms.Button DeleteAlu;
+        public System.Windows.Forms.Panel panelMateria;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label27;
+        public System.Windows.Forms.DataGridView datosMateria;
+        private System.Windows.Forms.TextBox txtNombreMateria;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txtClaveMateria;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

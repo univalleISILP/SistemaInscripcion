@@ -1194,6 +1194,7 @@
             this.Name = "PlataformaAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlataformaAdmin";
+            this.Load += new System.EventHandler(this.PlataformaAdmin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlataformaAdmin_MouseDown);
             this.panel1.ResumeLayout(false);
             this.PanelMaterias.ResumeLayout(false);

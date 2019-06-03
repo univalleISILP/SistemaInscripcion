@@ -240,6 +240,7 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
+            PanelMaterias.Visible = false;
 
         }
 
@@ -327,6 +328,7 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = true;
             panelBuscarAlumnos.Visible = true;
             panelCambiarPass.Visible = false;
+            PanelMaterias.Visible = false;
 
         }
 
@@ -335,6 +337,8 @@ namespace SistemaInscripcion
             panelDocentes.Visible = false;
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
+            panelCambiarPass.Visible = false;
+            PanelMaterias.Visible = true;
           
         }
 
@@ -359,6 +363,7 @@ namespace SistemaInscripcion
             panelDocentes.Visible = false;
             panelAlumnos.Visible = false;
             panelBuscarAlumnos.Visible = false;
+            PanelMaterias.Visible = false;
         }
 
         private void BtnGuardarContraseña_Click(object sender, EventArgs e)
@@ -374,6 +379,15 @@ namespace SistemaInscripcion
             else
                 MessageBox.Show("Las Contraseñas deben coincidir");
            
+        }
+
+        private void PlataformaAdmin_Load(object sender, EventArgs e)
+        {
+            panelDocentes.Visible = false;
+            panelAlumnos.Visible = false;
+            panelBuscarAlumnos.Visible = false;
+            panelCambiarPass.Visible = false;
+            PanelMaterias.Visible = false;
         }
     }
 }

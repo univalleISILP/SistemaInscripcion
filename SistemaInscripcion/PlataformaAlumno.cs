@@ -159,7 +159,7 @@ namespace SistemaInscripcion
 
         private void BtnInforme_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

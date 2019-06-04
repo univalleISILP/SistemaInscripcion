@@ -174,7 +174,7 @@ insert into Usuario values (11,'doc',2019);
 
 insert into Usuario values (123,'doc',12345);
 
-
+insert into Usuario values (1,'alm',1);
 
 
 

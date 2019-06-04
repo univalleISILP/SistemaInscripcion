@@ -24,10 +24,11 @@ namespace SistemaInscripcion
             mod.CI_Alumno = int.Parse(txtCIAlm.Text);
             mod.CI_Docente = int.Parse(txtCIDoc.Text);
             mod.Clave_Materia = int.Parse(txtCIMat.Text);
-            mod.Nota1 = double.Parse(txtNota1.Text);
-            mod.Nota2 = double.Parse(txtNota2.Text);
-            mod.Nota3 = double.Parse(txtNota3.Text);
-            mod.Notaf = double.Parse(txtNotaf.Text);
+            mod.Nota1 = Math.Round(double.Parse(txtNota1.Text), 0);
+            mod.Nota2 = Math.Round(double.Parse(txtNota2.Text), 0);
+            mod.Nota3 = Math.Round(double.Parse(txtNota3.Text), 0);
+            double Notaf = Math.Round((double.Parse(txtNota1.Text)+double.Parse(txtNota2.Text)+double.Parse(txtNota3.Text))/3,0);
+            mod.Notaf = Notaf;
             pU.txtCIDOC.Text = txtCIDoc.Text;
             pU.cbxAñoCurso.Text = NotasConsultas.ListarAño(int.Parse(txtCIAlm.Text));
             pU.cbxGrado.Text = NotasConsultas.ListarGrado(int.Parse(txtCIAlm.Text));

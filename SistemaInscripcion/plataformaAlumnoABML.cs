@@ -19,7 +19,7 @@ namespace SistemaInscripcion
                 SqlCommand comando = new SqlCommand(string.Format(@"
                 SELECT n.Nota1,n.Nota2,n.Nota3,n.Notaf,d.nombre as docente
                 FROM Modulo n,Materias m,Docentes d,Alumnos a	
-                Where a.CI_Alumno = {0} and m.nombre = '{1}'",ci,nom), conexion);
+                Where a.CI_Alumno = {0} and m.nombre = '{1}' and a.CI_Alumno=n.CI_Alumno and d.CI_Docente=n.CI_Docente and m.Clave_Materia=n.Clave_Materia", ci,nom), conexion);
                 SqlDataReader leer = comando.ExecuteReader();
 
                 while (leer.Read())
@@ -47,7 +47,7 @@ namespace SistemaInscripcion
                 SqlCommand comando = new SqlCommand(string.Format(@"
                 SELECT n.Nota1,n.Nota2,n.Nota3,n.Notaf,d.nombre as docente
                 FROM Modulo n,Materias m,Docentes d,Alumnos a	
-                Where a.CI_Alumno = {0}", ci), conexion);
+                Where a.CI_Alumno = {0} and a.CI_Alumno=n.CI_Alumno and d.CI_Docente=n.CI_Docente and m.Clave_Materia=n.Clave_Materia", ci), conexion);
                 SqlDataReader leer = comando.ExecuteReader();
 
                 while (leer.Read())

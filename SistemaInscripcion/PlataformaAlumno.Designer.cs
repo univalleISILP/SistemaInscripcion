@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlataformaAlumno));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sidePanel = new System.Windows.Forms.Panel();
             this.txtCIalumno = new System.Windows.Forms.TextBox();
             this.btnVerNotasAlu = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -46,6 +47,7 @@
             this.n = new System.Windows.Forms.Label();
             this.g = new System.Windows.Forms.Label();
             this.panelNotas = new System.Windows.Forms.Panel();
+            this.btnListarTodo = new System.Windows.Forms.Button();
             this.cbxMateriaAlu = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.datosAlumnoPlataformaAlumno = new System.Windows.Forms.DataGridView();
@@ -58,8 +60,6 @@
             this.txtCambiarCod = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtContraseña1 = new System.Windows.Forms.TextBox();
-            this.btnListarTodo = new System.Windows.Forms.Button();
-            this.sidePanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -71,7 +71,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(85)))), ((int)(((byte)(124)))));
             this.panel1.Controls.Add(this.sidePanel);
             this.panel1.Controls.Add(this.txtCIalumno);
             this.panel1.Controls.Add(this.btnVerNotasAlu);
@@ -85,6 +85,14 @@
             this.panel1.Size = new System.Drawing.Size(229, 499);
             this.panel1.TabIndex = 3;
             // 
+            // sidePanel
+            // 
+            this.sidePanel.BackColor = System.Drawing.Color.White;
+            this.sidePanel.Location = new System.Drawing.Point(0, 103);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(19, 48);
+            this.sidePanel.TabIndex = 117;
+            // 
             // txtCIalumno
             // 
             this.txtCIalumno.Location = new System.Drawing.Point(24, 13);
@@ -95,12 +103,12 @@
             // 
             // btnVerNotasAlu
             // 
-            this.btnVerNotasAlu.BackColor = System.Drawing.Color.White;
-            this.btnVerNotasAlu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnVerNotasAlu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnVerNotasAlu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(85)))), ((int)(((byte)(124)))));
+            this.btnVerNotasAlu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(85)))), ((int)(((byte)(124)))));
+            this.btnVerNotasAlu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MintCream;
             this.btnVerNotasAlu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerNotasAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerNotasAlu.ForeColor = System.Drawing.Color.Black;
+            this.btnVerNotasAlu.ForeColor = System.Drawing.Color.Transparent;
             this.btnVerNotasAlu.Location = new System.Drawing.Point(2, 103);
             this.btnVerNotasAlu.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerNotasAlu.Name = "btnVerNotasAlu";
@@ -126,7 +134,7 @@
             this.lblTexto.AutoSize = true;
             this.lblTexto.BackColor = System.Drawing.Color.Transparent;
             this.lblTexto.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTexto.ForeColor = System.Drawing.Color.Black;
+            this.lblTexto.ForeColor = System.Drawing.Color.White;
             this.lblTexto.Location = new System.Drawing.Point(93, 27);
             this.lblTexto.Name = "lblTexto";
             this.lblTexto.Size = new System.Drawing.Size(0, 20);
@@ -144,12 +152,12 @@
             // 
             // btnCerrarSessionAlu
             // 
-            this.btnCerrarSessionAlu.BackColor = System.Drawing.Color.White;
-            this.btnCerrarSessionAlu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCerrarSessionAlu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnCerrarSessionAlu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(85)))), ((int)(((byte)(124)))));
+            this.btnCerrarSessionAlu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(85)))), ((int)(((byte)(124)))));
+            this.btnCerrarSessionAlu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MintCream;
             this.btnCerrarSessionAlu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSessionAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCerrarSessionAlu.ForeColor = System.Drawing.Color.Black;
+            this.btnCerrarSessionAlu.ForeColor = System.Drawing.Color.Transparent;
             this.btnCerrarSessionAlu.Location = new System.Drawing.Point(2, 198);
             this.btnCerrarSessionAlu.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSessionAlu.Name = "btnCerrarSessionAlu";
@@ -161,12 +169,12 @@
             // 
             // btnCambiarPassAlu
             // 
-            this.btnCambiarPassAlu.BackColor = System.Drawing.Color.White;
-            this.btnCambiarPassAlu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCambiarPassAlu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnCambiarPassAlu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(85)))), ((int)(((byte)(124)))));
+            this.btnCambiarPassAlu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(85)))), ((int)(((byte)(124)))));
+            this.btnCambiarPassAlu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MintCream;
             this.btnCambiarPassAlu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarPassAlu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiarPassAlu.ForeColor = System.Drawing.Color.Black;
+            this.btnCambiarPassAlu.ForeColor = System.Drawing.Color.Transparent;
             this.btnCambiarPassAlu.Location = new System.Drawing.Point(2, 150);
             this.btnCambiarPassAlu.Margin = new System.Windows.Forms.Padding(2);
             this.btnCambiarPassAlu.Name = "btnCambiarPassAlu";
@@ -275,12 +283,28 @@
             this.panelNotas.Controls.Add(this.cbxMateriaAlu);
             this.panelNotas.Controls.Add(this.label26);
             this.panelNotas.Controls.Add(this.datosAlumnoPlataformaAlumno);
-            this.panelNotas.Location = new System.Drawing.Point(260, 103);
+            this.panelNotas.Location = new System.Drawing.Point(263, 64);
             this.panelNotas.Margin = new System.Windows.Forms.Padding(2);
             this.panelNotas.Name = "panelNotas";
-            this.panelNotas.Size = new System.Drawing.Size(561, 176);
+            this.panelNotas.Size = new System.Drawing.Size(592, 329);
             this.panelNotas.TabIndex = 111;
             this.panelNotas.Visible = false;
+            // 
+            // btnListarTodo
+            // 
+            this.btnListarTodo.BackColor = System.Drawing.Color.White;
+            this.btnListarTodo.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnListarTodo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnListarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarTodo.ForeColor = System.Drawing.Color.Black;
+            this.btnListarTodo.Location = new System.Drawing.Point(373, 14);
+            this.btnListarTodo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListarTodo.Name = "btnListarTodo";
+            this.btnListarTodo.Size = new System.Drawing.Size(167, 27);
+            this.btnListarTodo.TabIndex = 98;
+            this.btnListarTodo.Text = "Listar Todo";
+            this.btnListarTodo.UseVisualStyleBackColor = false;
+            this.btnListarTodo.Click += new System.EventHandler(this.BtnListarTodo_Click);
             // 
             // cbxMateriaAlu
             // 
@@ -296,7 +320,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(26, 18);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
@@ -321,7 +345,7 @@
             this.datosAlumnoPlataformaAlumno.RowHeadersWidth = 62;
             this.datosAlumnoPlataformaAlumno.RowTemplate.Height = 28;
             this.datosAlumnoPlataformaAlumno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datosAlumnoPlataformaAlumno.Size = new System.Drawing.Size(514, 106);
+            this.datosAlumnoPlataformaAlumno.Size = new System.Drawing.Size(514, 256);
             this.datosAlumnoPlataformaAlumno.TabIndex = 64;
             // 
             // panelCambiarPass
@@ -337,9 +361,9 @@
             this.panelCambiarPass.Controls.Add(this.txtCambiarCod);
             this.panelCambiarPass.Controls.Add(this.label16);
             this.panelCambiarPass.Controls.Add(this.txtContraseña1);
-            this.panelCambiarPass.Location = new System.Drawing.Point(329, 121);
+            this.panelCambiarPass.Location = new System.Drawing.Point(329, 134);
             this.panelCambiarPass.Name = "panelCambiarPass";
-            this.panelCambiarPass.Size = new System.Drawing.Size(529, 275);
+            this.panelCambiarPass.Size = new System.Drawing.Size(529, 262);
             this.panelCambiarPass.TabIndex = 112;
             this.panelCambiarPass.Visible = false;
             // 
@@ -438,35 +462,11 @@
             this.txtContraseña1.Size = new System.Drawing.Size(247, 22);
             this.txtContraseña1.TabIndex = 92;
             // 
-            // btnListarTodo
-            // 
-            this.btnListarTodo.BackColor = System.Drawing.Color.White;
-            this.btnListarTodo.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnListarTodo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnListarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarTodo.ForeColor = System.Drawing.Color.Black;
-            this.btnListarTodo.Location = new System.Drawing.Point(373, 14);
-            this.btnListarTodo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnListarTodo.Name = "btnListarTodo";
-            this.btnListarTodo.Size = new System.Drawing.Size(167, 27);
-            this.btnListarTodo.TabIndex = 98;
-            this.btnListarTodo.Text = "Listar Todo";
-            this.btnListarTodo.UseVisualStyleBackColor = false;
-            this.btnListarTodo.Click += new System.EventHandler(this.BtnListarTodo_Click);
-            // 
-            // sidePanel
-            // 
-            this.sidePanel.BackColor = System.Drawing.Color.Black;
-            this.sidePanel.Location = new System.Drawing.Point(0, 103);
-            this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(19, 48);
-            this.sidePanel.TabIndex = 117;
-            // 
             // PlataformaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(938, 499);
             this.Controls.Add(this.panelCambiarPass);
             this.Controls.Add(this.panelNotas);

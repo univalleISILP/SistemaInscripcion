@@ -68,6 +68,8 @@ namespace SistemaInscripcion
             ci = int.Parse(txtCIalumno.Text);
             string materia = cbxMateriaAlu.Text;
             datosAlumnoPlataformaAlumno.DataSource = plataformaAlumnoABML.ListarDatosAlu(ci,materia);
+            sidePanel.Height = btnVerNotasAlu.Height;
+            sidePanel.Top = btnVerNotasAlu.Top;
         }
 
         private void BtnCambiarPassAlu_Click(object sender, EventArgs e)

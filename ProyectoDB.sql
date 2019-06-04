@@ -165,9 +165,10 @@ delete Modulo where CI_Docente=8911 and CI_Alumno=190 and Clave_Materia=200
 select * from Usuario;
 
 insert into Usuario values (11,'adm',2019);
-insert into Usuario values (11111,'doc',11111);
-insert into Usuario values (22222,'alm',22222);
-insert into Usuario values (33333,'alm',190);
+insert into Usuario values (11,'alm',2019);
+insert into Usuario values (11,'doc',2019);
+
+
 
 
 

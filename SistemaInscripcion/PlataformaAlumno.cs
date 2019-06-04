@@ -87,9 +87,11 @@ namespace SistemaInscripcion
 
         private void BtnCerrarSessionAlu_Click(object sender, EventArgs e)
         {
-
+            panelNotas.Visible = false;
+            panelCambiarPass.Visible = false;
             sidePanel.Height = btnCerrarSessionAlu.Height;
             sidePanel.Top = btnCerrarSessionAlu.Top;
+
             string message = "estas seguro de Cerrar Session";
             string captiion = "Cerrar session";
 

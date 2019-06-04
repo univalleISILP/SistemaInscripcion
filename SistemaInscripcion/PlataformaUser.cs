@@ -15,21 +15,8 @@ namespace SistemaInscripcion
         public PlataformaUser()
         {
             InitializeComponent();
-        }
-
-        private void DeleteAlu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UpdateAlu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnSaveAlumno_Click(object sender, EventArgs e)
-        {
-
+            sidePanel.Height = btnNotas.Height;
+            sidePanel.Top = btnNotas.Top;
         }
 
         private void BtnNotas_Click(object sender, EventArgs e)
@@ -40,6 +27,9 @@ namespace SistemaInscripcion
             int clmat = NotasConsultas.ListCIMateria(cbxMateria.Text);
             int ci = int.Parse(txtCIDOC.Text);
             datosNotas.DataSource = NotasConsultas.listar(clmat,cbxAñoCurso.Text,ci,cbxGrado.Text);
+
+            sidePanel.Height = btnNotas.Height;
+            sidePanel.Top = btnNotas.Top;
         }
 
         private void PlataformaUser_Load(object sender, EventArgs e)
@@ -109,6 +99,8 @@ namespace SistemaInscripcion
         {
             panelCambiarPass.Visible = true;
             panelNotas.Visible = false;
+            sidePanel.Height = button2.Height;
+            sidePanel.Top = button2.Top;
         }
 
         private void BtnGuardarPass_Click(object sender, EventArgs e)
@@ -151,6 +143,9 @@ namespace SistemaInscripcion
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            sidePanel.Height = button1.Height;
+            sidePanel.Top = button1.Top;
+
             string message = "estas seguro de Cerrar Session";
             string captiion = "Cerrar session";
 

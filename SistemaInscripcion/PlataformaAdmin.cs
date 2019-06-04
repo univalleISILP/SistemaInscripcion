@@ -209,7 +209,6 @@ namespace SistemaInscripcion
             }
             else
             {
-
                 Materia UpdateMateria = new Materia();
                 UpdateMateria.ClaveM = int.Parse(txtCodMateria.Text);
                 UpdateMateria.Nombre = cbxNomMateria.Text;

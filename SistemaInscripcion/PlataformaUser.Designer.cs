@@ -38,14 +38,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelNotas = new System.Windows.Forms.Panel();
-            this.panelCambiarPass = new System.Windows.Forms.Panel();
-            this.txtCodCambiarPass = new System.Windows.Forms.TextBox();
-            this.btnGuardarPass = new System.Windows.Forms.Button();
-            this.txtContraseña2 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtContraseña1 = new System.Windows.Forms.TextBox();
             this.cbxGrado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxAñoCurso = new System.Windows.Forms.ComboBox();
@@ -55,6 +47,14 @@
             this.datosNotas = new System.Windows.Forms.DataGridView();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.panelCambiarPass = new System.Windows.Forms.Panel();
+            this.txtCodCambiarPass = new System.Windows.Forms.TextBox();
+            this.btnGuardarPass = new System.Windows.Forms.Button();
+            this.txtContraseña2 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtContraseña1 = new System.Windows.Forms.TextBox();
             this.txtCIDOC = new System.Windows.Forms.TextBox();
             this.txtCIMAT = new System.Windows.Forms.TextBox();
             this.txtCIALM = new System.Windows.Forms.TextBox();
@@ -62,17 +62,19 @@
             this.txtnota2 = new System.Windows.Forms.TextBox();
             this.txtnota1 = new System.Windows.Forms.TextBox();
             this.txtnotaf = new System.Windows.Forms.TextBox();
+            this.sidePanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.panelNotas.SuspendLayout();
-            this.panelCambiarPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosNotas)).BeginInit();
+            this.panelCambiarPass.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(205)))));
+            this.panel1.Controls.Add(this.sidePanel);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnNotas);
@@ -82,7 +84,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(192, 471);
+            this.panel1.Size = new System.Drawing.Size(229, 471);
             this.panel1.TabIndex = 3;
             // 
             // panel5
@@ -90,7 +92,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(0, 11);
+            this.panel5.Location = new System.Drawing.Point(19, 14);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(192, 64);
             this.panel5.TabIndex = 115;
@@ -103,7 +105,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 397);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(192, 74);
+            this.panel4.Size = new System.Drawing.Size(229, 74);
             this.panel4.TabIndex = 113;
             // 
             // lblTexto
@@ -137,10 +139,10 @@
             this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotas.ForeColor = System.Drawing.Color.Transparent;
-            this.btnNotas.Location = new System.Drawing.Point(0, 87);
+            this.btnNotas.Location = new System.Drawing.Point(0, 121);
             this.btnNotas.Margin = new System.Windows.Forms.Padding(2);
             this.btnNotas.Name = "btnNotas";
-            this.btnNotas.Size = new System.Drawing.Size(194, 67);
+            this.btnNotas.Size = new System.Drawing.Size(229, 49);
             this.btnNotas.TabIndex = 95;
             this.btnNotas.Text = "       NOTAS";
             this.btnNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,10 +159,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(-1, 158);
+            this.button2.Location = new System.Drawing.Point(-1, 171);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 67);
+            this.button2.Size = new System.Drawing.Size(229, 51);
             this.button2.TabIndex = 7;
             this.button2.Text = "       PASSWORD";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,10 +179,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(-4, 229);
+            this.button1.Location = new System.Drawing.Point(-4, 227);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 67);
+            this.button1.Size = new System.Drawing.Size(231, 45);
             this.button1.TabIndex = 6;
             this.button1.Text = "       CERRAR SESSION";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,6 +191,7 @@
             // 
             // panelNotas
             // 
+            this.panelNotas.Controls.Add(this.panelCambiarPass);
             this.panelNotas.Controls.Add(this.cbxGrado);
             this.panelNotas.Controls.Add(this.label1);
             this.panelNotas.Controls.Add(this.cbxAñoCurso);
@@ -198,114 +201,12 @@
             this.panelNotas.Controls.Add(this.datosNotas);
             this.panelNotas.Controls.Add(this.label25);
             this.panelNotas.Controls.Add(this.label26);
-            this.panelNotas.Location = new System.Drawing.Point(199, 0);
+            this.panelNotas.Location = new System.Drawing.Point(247, 5);
             this.panelNotas.Margin = new System.Windows.Forms.Padding(2);
             this.panelNotas.Name = "panelNotas";
             this.panelNotas.Size = new System.Drawing.Size(789, 462);
             this.panelNotas.TabIndex = 109;
             this.panelNotas.Visible = false;
-            // 
-            // panelCambiarPass
-            // 
-            this.panelCambiarPass.BackColor = System.Drawing.Color.Teal;
-            this.panelCambiarPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelCambiarPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCambiarPass.Controls.Add(this.txtCodCambiarPass);
-            this.panelCambiarPass.Controls.Add(this.btnGuardarPass);
-            this.panelCambiarPass.Controls.Add(this.txtContraseña2);
-            this.panelCambiarPass.Controls.Add(this.label18);
-            this.panelCambiarPass.Controls.Add(this.label17);
-            this.panelCambiarPass.Controls.Add(this.label16);
-            this.panelCambiarPass.Controls.Add(this.txtContraseña1);
-            this.panelCambiarPass.Location = new System.Drawing.Point(197, 24);
-            this.panelCambiarPass.Name = "panelCambiarPass";
-            this.panelCambiarPass.Size = new System.Drawing.Size(639, 371);
-            this.panelCambiarPass.TabIndex = 110;
-            this.panelCambiarPass.Visible = false;
-            // 
-            // txtCodCambiarPass
-            // 
-            this.txtCodCambiarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodCambiarPass.Location = new System.Drawing.Point(297, 89);
-            this.txtCodCambiarPass.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodCambiarPass.Multiline = true;
-            this.txtCodCambiarPass.Name = "txtCodCambiarPass";
-            this.txtCodCambiarPass.Size = new System.Drawing.Size(247, 22);
-            this.txtCodCambiarPass.TabIndex = 97;
-            // 
-            // btnGuardarPass
-            // 
-            this.btnGuardarPass.BackColor = System.Drawing.Color.White;
-            this.btnGuardarPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnGuardarPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnGuardarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarPass.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardarPass.Location = new System.Drawing.Point(227, 235);
-            this.btnGuardarPass.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardarPass.Name = "btnGuardarPass";
-            this.btnGuardarPass.Size = new System.Drawing.Size(167, 34);
-            this.btnGuardarPass.TabIndex = 80;
-            this.btnGuardarPass.Text = "save";
-            this.btnGuardarPass.UseVisualStyleBackColor = false;
-            this.btnGuardarPass.Click += new System.EventHandler(this.BtnGuardarPass_Click);
-            // 
-            // txtContraseña2
-            // 
-            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña2.Location = new System.Drawing.Point(297, 168);
-            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña2.Multiline = true;
-            this.txtContraseña2.Name = "txtContraseña2";
-            this.txtContraseña2.PasswordChar = '*';
-            this.txtContraseña2.Size = new System.Drawing.Size(247, 22);
-            this.txtContraseña2.TabIndex = 95;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(102, 170);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(173, 20);
-            this.label18.TabIndex = 94;
-            this.label18.Text = "Repita su  Password";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(102, 130);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(141, 20);
-            this.label17.TabIndex = 93;
-            this.label17.Text = "Nuevo Password";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Transparent;
-            this.label16.Location = new System.Drawing.Point(102, 91);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(155, 20);
-            this.label16.TabIndex = 67;
-            this.label16.Text = "Ingrese su Codigo";
-            // 
-            // txtContraseña1
-            // 
-            this.txtContraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña1.Location = new System.Drawing.Point(297, 128);
-            this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña1.Multiline = true;
-            this.txtContraseña1.Name = "txtContraseña1";
-            this.txtContraseña1.PasswordChar = '*';
-            this.txtContraseña1.Size = new System.Drawing.Size(247, 22);
-            this.txtContraseña1.TabIndex = 92;
             // 
             // cbxGrado
             // 
@@ -326,7 +227,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(11, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -412,7 +313,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(267, 24);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
@@ -424,13 +325,115 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Location = new System.Drawing.Point(541, 24);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(69, 20);
             this.label26.TabIndex = 65;
             this.label26.Text = "Materia";
+            // 
+            // panelCambiarPass
+            // 
+            this.panelCambiarPass.BackColor = System.Drawing.Color.Teal;
+            this.panelCambiarPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelCambiarPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCambiarPass.Controls.Add(this.txtCodCambiarPass);
+            this.panelCambiarPass.Controls.Add(this.btnGuardarPass);
+            this.panelCambiarPass.Controls.Add(this.txtContraseña2);
+            this.panelCambiarPass.Controls.Add(this.label18);
+            this.panelCambiarPass.Controls.Add(this.label17);
+            this.panelCambiarPass.Controls.Add(this.label16);
+            this.panelCambiarPass.Controls.Add(this.txtContraseña1);
+            this.panelCambiarPass.Location = new System.Drawing.Point(112, 97);
+            this.panelCambiarPass.Name = "panelCambiarPass";
+            this.panelCambiarPass.Size = new System.Drawing.Size(572, 280);
+            this.panelCambiarPass.TabIndex = 110;
+            this.panelCambiarPass.Visible = false;
+            // 
+            // txtCodCambiarPass
+            // 
+            this.txtCodCambiarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodCambiarPass.Location = new System.Drawing.Point(259, 50);
+            this.txtCodCambiarPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodCambiarPass.Multiline = true;
+            this.txtCodCambiarPass.Name = "txtCodCambiarPass";
+            this.txtCodCambiarPass.Size = new System.Drawing.Size(247, 22);
+            this.txtCodCambiarPass.TabIndex = 97;
+            // 
+            // btnGuardarPass
+            // 
+            this.btnGuardarPass.BackColor = System.Drawing.Color.White;
+            this.btnGuardarPass.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGuardarPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnGuardarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarPass.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarPass.Location = new System.Drawing.Point(189, 196);
+            this.btnGuardarPass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarPass.Name = "btnGuardarPass";
+            this.btnGuardarPass.Size = new System.Drawing.Size(167, 34);
+            this.btnGuardarPass.TabIndex = 80;
+            this.btnGuardarPass.Text = "save";
+            this.btnGuardarPass.UseVisualStyleBackColor = false;
+            this.btnGuardarPass.Click += new System.EventHandler(this.BtnGuardarPass_Click);
+            // 
+            // txtContraseña2
+            // 
+            this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña2.Location = new System.Drawing.Point(259, 129);
+            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña2.Multiline = true;
+            this.txtContraseña2.Name = "txtContraseña2";
+            this.txtContraseña2.PasswordChar = '*';
+            this.txtContraseña2.Size = new System.Drawing.Size(247, 22);
+            this.txtContraseña2.TabIndex = 95;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Transparent;
+            this.label18.Location = new System.Drawing.Point(64, 131);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(173, 20);
+            this.label18.TabIndex = 94;
+            this.label18.Text = "Repita su  Password";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Transparent;
+            this.label17.Location = new System.Drawing.Point(64, 91);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(141, 20);
+            this.label17.TabIndex = 93;
+            this.label17.Text = "Nuevo Password";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Transparent;
+            this.label16.Location = new System.Drawing.Point(64, 52);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(155, 20);
+            this.label16.TabIndex = 67;
+            this.label16.Text = "Ingrese su Codigo";
+            // 
+            // txtContraseña1
+            // 
+            this.txtContraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña1.Location = new System.Drawing.Point(259, 89);
+            this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña1.Multiline = true;
+            this.txtContraseña1.Name = "txtContraseña1";
+            this.txtContraseña1.PasswordChar = '*';
+            this.txtContraseña1.Size = new System.Drawing.Size(247, 22);
+            this.txtContraseña1.TabIndex = 92;
             // 
             // txtCIDOC
             // 
@@ -488,13 +491,20 @@
             this.txtnotaf.TabIndex = 89;
             this.txtnotaf.Visible = false;
             // 
+            // sidePanel
+            // 
+            this.sidePanel.BackColor = System.Drawing.Color.White;
+            this.sidePanel.Location = new System.Drawing.Point(-1, 120);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(19, 48);
+            this.sidePanel.TabIndex = 118;
+            // 
             // PlataformaUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(987, 471);
-            this.Controls.Add(this.panelCambiarPass);
+            this.ClientSize = new System.Drawing.Size(1070, 471);
             this.Controls.Add(this.txtCIALM);
             this.Controls.Add(this.txtCIMAT);
             this.Controls.Add(this.txtnotaf);
@@ -504,8 +514,10 @@
             this.Controls.Add(this.txtnota2);
             this.Controls.Add(this.txtnota1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PlataformaUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlataformaUser";
             this.Load += new System.EventHandler(this.PlataformaUser_Load);
             this.panel1.ResumeLayout(false);
@@ -514,9 +526,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.panelNotas.ResumeLayout(false);
             this.panelNotas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datosNotas)).EndInit();
             this.panelCambiarPass.ResumeLayout(false);
             this.panelCambiarPass.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datosNotas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,5 +569,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox txtContraseña1;
+        public System.Windows.Forms.Panel sidePanel;
     }
 }

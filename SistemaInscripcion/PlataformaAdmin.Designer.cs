@@ -116,6 +116,12 @@
             this.txtContraseña1 = new System.Windows.Forms.TextBox();
             this.panelInicioAdmin = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.panelUsuarios = new System.Windows.Forms.Panel();
+            this.cbxTipos = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.DatosUsuarios = new System.Windows.Forms.DataGridView();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -132,6 +138,8 @@
             this.panelCambiarPass.SuspendLayout();
             this.panelInicioAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            this.panelUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1316,12 +1324,100 @@
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click_1);
             // 
+            // panelUsuarios
+            // 
+            this.panelUsuarios.Controls.Add(this.cbxTipos);
+            this.panelUsuarios.Controls.Add(this.btnBuscar);
+            this.panelUsuarios.Controls.Add(this.DatosUsuarios);
+            this.panelUsuarios.Controls.Add(this.label27);
+            this.panelUsuarios.Controls.Add(this.button4);
+            this.panelUsuarios.Location = new System.Drawing.Point(195, 11);
+            this.panelUsuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.panelUsuarios.Name = "panelUsuarios";
+            this.panelUsuarios.Size = new System.Drawing.Size(987, 529);
+            this.panelUsuarios.TabIndex = 109;
+            this.panelUsuarios.Visible = false;
+            // 
+            // cbxTipos
+            // 
+            this.cbxTipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipos.FormattingEnabled = true;
+            this.cbxTipos.Items.AddRange(new object[] {
+            "adm",
+            "doc",
+            "alm"});
+            this.cbxTipos.Location = new System.Drawing.Point(195, 21);
+            this.cbxTipos.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxTipos.Name = "cbxTipos";
+            this.cbxTipos.Size = new System.Drawing.Size(165, 24);
+            this.cbxTipos.TabIndex = 77;
+            this.cbxTipos.SelectedIndexChanged += new System.EventHandler(this.CbxTipos_SelectedIndexChanged);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(427, 15);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(133, 34);
+            this.btnBuscar.TabIndex = 73;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // DatosUsuarios
+            // 
+            this.DatosUsuarios.AllowUserToDeleteRows = false;
+            this.DatosUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DatosUsuarios.BackgroundColor = System.Drawing.Color.FloralWhite;
+            this.DatosUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.DatosUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DatosUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DatosUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
+            this.DatosUsuarios.Location = new System.Drawing.Point(4, 61);
+            this.DatosUsuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.DatosUsuarios.Name = "DatosUsuarios";
+            this.DatosUsuarios.ReadOnly = true;
+            this.DatosUsuarios.RowHeadersVisible = false;
+            this.DatosUsuarios.RowHeadersWidth = 62;
+            this.DatosUsuarios.RowTemplate.Height = 28;
+            this.DatosUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DatosUsuarios.Size = new System.Drawing.Size(947, 452);
+            this.DatosUsuarios.TabIndex = 64;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Black;
+            this.label27.Location = new System.Drawing.Point(22, 22);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(169, 20);
+            this.label27.TabIndex = 65;
+            this.label27.Text = "Seleccionar por tipo";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(623, 15);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(127, 34);
+            this.button4.TabIndex = 62;
+            this.button4.Text = "delete";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
             // PlataformaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1218, 651);
+            this.Controls.Add(this.panelUsuarios);
             this.Controls.Add(this.panelInicioAdmin);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.panel1);
@@ -1355,6 +1451,9 @@
             this.panelCambiarPass.PerformLayout();
             this.panelInicioAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            this.panelUsuarios.ResumeLayout(false);
+            this.panelUsuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1448,5 +1547,11 @@
         public System.Windows.Forms.Button btnInicioAdmin;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Panel sidePanel;
+        public System.Windows.Forms.Panel panelUsuarios;
+        private System.Windows.Forms.ComboBox cbxTipos;
+        private System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.DataGridView DatosUsuarios;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button4;
     }
 }

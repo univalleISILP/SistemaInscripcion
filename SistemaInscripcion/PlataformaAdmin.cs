@@ -86,6 +86,7 @@ namespace SistemaInscripcion
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = false;
+            panelUsuarios.Visible = false;
 
             cbxEspecialidadDoc.DataSource = MateriasABML.ListNomMaterias();
 
@@ -115,6 +116,7 @@ namespace SistemaInscripcion
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = false;
+            panelUsuarios.Visible = false;
             sidePanel.Height = btnAddAlumnos.Height;
             sidePanel.Top = btnAddAlumnos.Top;
         }
@@ -123,7 +125,7 @@ namespace SistemaInscripcion
         {
             panelDocentes.Visible = false;
             panelAlumnos.Visible = false;
-           
+            panelUsuarios.Visible = false;
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = true;
             panelModulo.Visible = false;
@@ -163,7 +165,7 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = false;
-
+            panelUsuarios.Visible = false;
             sidePanel.Height = button2.Height;
             sidePanel.Top = button2.Top;
         }
@@ -174,6 +176,8 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = false;
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = false;
+            panelUsuarios.Visible = true;
+            DatosUsuarios.DataSource = LoginABML.listar();
         }
 
 
@@ -184,6 +188,7 @@ namespace SistemaInscripcion
             panelCambiarPass.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = true;
+            panelUsuarios.Visible = false;
             sidePanel.Height = btnModulo.Height;
             sidePanel.Top = btnModulo.Top;
 
@@ -606,9 +611,12 @@ namespace SistemaInscripcion
             panelAlumnos.Visible = false;
             panelMaterias.Visible = false;
             panelModulo.Visible = false;
+            panelUsuarios.Visible = true;
 
             sidePanel.Height = btnInicioAdmin.Height;
             sidePanel.Top = btnInicioAdmin.Top;
+
+            DatosUsuarios.DataSource = LoginABML.listar();
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
@@ -656,6 +664,24 @@ namespace SistemaInscripcion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void CbxTipos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DatosUsuarios.DataSource =LoginABML.listarxTipo(cbxTipos.Text);
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            string cd = Microsoft.VisualBasic.Interaction.InputBox("Inserte la clave para eliminar");
+            DatosUsuarios.DataSource = LoginABML.listar(cd);
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            string cd = Microsoft.VisualBasic.Interaction.InputBox("Inserte la clave para eliminar");
+            LoginABML.Eliminar(cd);
+            DatosUsuarios.DataSource = LoginABML.listar();
         }
     }
 }

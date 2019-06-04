@@ -29,7 +29,7 @@ namespace SistemaInscripcion
             usuario us = new usuario();
             us.CodUsuario = txtUserName.Text;
             us.Contraseña = txtPassword.Text;
-            if (LoginABML.Autenticar(us)=="admin")
+            if (LoginABML.Autenticar(us)=="adm")
             {
                 PlataformaAdmin pA = new PlataformaAdmin();
                 pA.txtCambiarCod.Text = txtUserName.Text;
@@ -47,6 +47,8 @@ namespace SistemaInscripcion
             if (LoginABML.Autenticar(us) == "alm")
             {
                 PlataformaAlumno pAL = new PlataformaAlumno();
+                pAL.txtCIalumno.Text = txtUserName.Text;
+                pAL.lblTexto.Text = "Alumno";
                 pAL.Show();
                 this.Hide();
             }

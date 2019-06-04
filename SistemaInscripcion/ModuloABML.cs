@@ -77,10 +77,6 @@ namespace SistemaInscripcion
                     mod.CI_Docente = leer.GetInt32(0);
                     mod.CI_Alumno = leer.GetInt32(1);
                     mod.Clave_Materia = leer.GetInt32(2);
-                    //mod.Nota1 = leer.GetFloat(3);
-                    //mod.Nota2 = leer.GetInt32(4);
-                    //mod.Nota3 = leer.GetInt32(5);
-                    //mod.Notaf = leer.GetInt32(6);
                     lista.Add(mod);
                 }
                 conexion.Close();

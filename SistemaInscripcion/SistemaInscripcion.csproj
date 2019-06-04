@@ -58,6 +58,7 @@
     <Compile Include="Docente.cs" />
     <Compile Include="DocentesABML.cs" />
     <Compile Include="ListaAlumno.cs" />
+    <Compile Include="ListaDatosAlumno.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +89,7 @@
     <Compile Include="PlataformaAlumno.Designer.cs">
       <DependentUpon>PlataformaAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="plataformaAlumnoABML.cs" />
     <Compile Include="PlataformaUser.cs">
       <SubType>Form</SubType>
     </Compile>

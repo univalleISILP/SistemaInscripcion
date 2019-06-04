@@ -370,9 +370,10 @@
             this.panelDocentes.Location = new System.Drawing.Point(12, 37);
             this.panelDocentes.Margin = new System.Windows.Forms.Padding(2);
             this.panelDocentes.Name = "panelDocentes";
-            this.panelDocentes.Size = new System.Drawing.Size(976, 581);
+            this.panelDocentes.Size = new System.Drawing.Size(981, 581);
             this.panelDocentes.TabIndex = 106;
             this.panelDocentes.Visible = false;
+            this.panelDocentes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelDocentes_MouseDown);
             // 
             // btnDeleteDoc
             // 
@@ -610,9 +611,10 @@
             this.panelAlumnos.Location = new System.Drawing.Point(11, 25);
             this.panelAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.panelAlumnos.Name = "panelAlumnos";
-            this.panelAlumnos.Size = new System.Drawing.Size(977, 605);
+            this.panelAlumnos.Size = new System.Drawing.Size(1000, 605);
             this.panelAlumnos.TabIndex = 105;
             this.panelAlumnos.Visible = false;
+            this.panelAlumnos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelAlumnos_MouseDown);
             // 
             // panel3
             // 
@@ -895,9 +897,10 @@
             this.panelMaterias.Controls.Add(this.datosMaterias);
             this.panelMaterias.Location = new System.Drawing.Point(51, 28);
             this.panelMaterias.Name = "panelMaterias";
-            this.panelMaterias.Size = new System.Drawing.Size(959, 576);
+            this.panelMaterias.Size = new System.Drawing.Size(928, 576);
             this.panelMaterias.TabIndex = 107;
             this.panelMaterias.Visible = false;
+            this.panelMaterias.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelMaterias_MouseDown);
             // 
             // panel2
             // 
@@ -1044,9 +1047,10 @@
             this.panelModulo.Location = new System.Drawing.Point(6, 94);
             this.panelModulo.Margin = new System.Windows.Forms.Padding(2);
             this.panelModulo.Name = "panelModulo";
-            this.panelModulo.Size = new System.Drawing.Size(982, 438);
+            this.panelModulo.Size = new System.Drawing.Size(987, 438);
             this.panelModulo.TabIndex = 108;
             this.panelModulo.Visible = false;
+            this.panelModulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelModulo_MouseDown);
             // 
             // cbxClaveMateria
             // 
@@ -1186,9 +1190,10 @@
             this.panelCambiarPass.Controls.Add(this.txtContraseña1);
             this.panelCambiarPass.Location = new System.Drawing.Point(236, 144);
             this.panelCambiarPass.Name = "panelCambiarPass";
-            this.panelCambiarPass.Size = new System.Drawing.Size(578, 301);
+            this.panelCambiarPass.Size = new System.Drawing.Size(603, 301);
             this.panelCambiarPass.TabIndex = 109;
             this.panelCambiarPass.Visible = false;
+            this.panelCambiarPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelCambiarPass_MouseDown);
             // 
             // txtCodCambiarPass
             // 
@@ -1297,6 +1302,7 @@
             this.panelInicioAdmin.Size = new System.Drawing.Size(979, 630);
             this.panelInicioAdmin.TabIndex = 105;
             this.panelInicioAdmin.Visible = false;
+            this.panelInicioAdmin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelInicioAdmin_MouseDown);
             // 
             // btnMinimizar
             // 

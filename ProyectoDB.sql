@@ -139,10 +139,22 @@ SELECT a.Nombre,a.Apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf FROM Alumnos a,Docent
 Union 
 SELECT a.Nombre,a.Apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf FROM proyectoBD2.dbo.Alumnos a,proyectoBD2.dbo.Docentes d,Modulo M,materia mat where a.CI_Alumno=M.CI_Alumno, and d.CI_Docente=M.CI_Docente and mat.Clave_Materia=M.Clave_Materia and mat.Nombre='{0}' and a.Curso='{1}'
 
-SELECT d.*, e.Genero, e.Telefono,e.Direccion FROM Docentes d, proyectoBD2.dbo.Docentes e WHERE d.CI_Docente = e.CI_Docente
 
-	
-	select * from Modulo;
+
+
+
+
+Select n.Nota1,n.Nota2,n.Nota3,n.Notaf from Modulo n;
+
+
+SELECT n.Nota1,n.Nota2,n.Nota3,n.Notaf,d.nombre as docente
+FROM Modulo n,Materias m,Docentes d,Alumnos a	
+Where a.CI_Alumno = 1010 and m.nombre = 'Matematica'
+
+
+select * from Materias;
+select * from Alumnos;
+select * from Modulo;
 
 delete from proyectoBD.dbo.Docentes where CI_Docente = 190;
 
@@ -152,6 +164,12 @@ delete Modulo where CI_Docente=8911 and CI_Alumno=190 and Clave_Materia=200
 
 select * from Usuario;
 
-insert into Usuario values (10902361,'admin',2019);
+insert into Usuario values (10902361,'adm',2019);
 insert into Usuario values (11111,'doc',11111);
 insert into Usuario values (22222,'alm',22222);
+insert into Usuario values (33333,'alm',190);
+
+
+
+
+SELECT nombre,apellido,Grado,Año_Curso FROM Alumnos where CI_Alumno = 1090

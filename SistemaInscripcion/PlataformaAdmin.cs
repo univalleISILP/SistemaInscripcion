@@ -373,10 +373,17 @@ namespace SistemaInscripcion
                 GuardarAlu.Grado = cbxGradoAlu.Text;
                 GuardarAlu.AñoCurso = cbxAñoCursoAlu.Text;
 
-
-
+                
                 alumnosABML.AgregarAlu1(GuardarAlu);
                 alumnosABML.AgregarAlu2(GuardarAlu);
+
+                usuario agregarAluUser = new usuario();
+                agregarAluUser.CodUsuario = txtCIAlu.Text;
+                agregarAluUser.Tipo = "alm";
+                agregarAluUser.Contraseña = "12345";
+
+
+                LoginABML.Agregar(agregarAluUser);
                 datosAlumnos.DataSource = alumnosABML.listar();
                 MessageBox.Show("se agrego correctamente");
                 limpiarAlumno();
@@ -609,6 +616,42 @@ namespace SistemaInscripcion
         {
             BuscarAlumno buscarAlumno = new BuscarAlumno();
             buscarAlumno.Show();
+        }
+
+        private void PanelCambiarPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PanelModulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PanelMaterias_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PanelAlumnos_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PanelDocentes_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PanelInicioAdmin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

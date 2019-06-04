@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace SistemaInscripcion
 {
     public partial class PlataformaUser : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         public PlataformaUser()
         {
             InitializeComponent();
@@ -39,6 +46,19 @@ namespace SistemaInscripcion
             int clmat = MateriasABML.ListCIMateria(cbxMateria.Text);
             int ci = int.Parse(txtCIDOC.Text);
             datosNotas.DataSource = alumnosABML.listar(clmat, cbxAñoCurso.Text, ci, cbxGrado.Text);
+
+            using (SqlConnection conexion = Conexion.ObtenerConexion1())
+            {
+                SqlCommand comando = new SqlCommand(string.Format(@"SELECT nombre,apellido,Especialidad FROM Docentes where CI_Docente = '{0}'", txtCIDOC.Text), conexion);
+                SqlDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    nd.Text = leer.GetString(0);
+                    ad.Text = leer.GetString(1);
+                    ed.Text = leer.GetString(2);
+                }
+                conexion.Close();
+            }
         }
 
         private void CbxMateria_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,6 +189,40 @@ namespace SistemaInscripcion
                 this.Hide();
                 volver.Show();
             }
+        }
+
+        private void PanelCambiarPass_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelCambiarPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PanelNotas_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void PlataformaUser_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void BtnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

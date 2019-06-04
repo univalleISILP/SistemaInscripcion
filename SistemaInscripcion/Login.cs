@@ -46,6 +46,8 @@ namespace SistemaInscripcion
             if (LoginABML.Autenticar(us) == "alm")
             {
                 PlataformaAlumno pAL = new PlataformaAlumno();
+                pAL.txtCIalumno.Text = txtUserName.Text;
+                pAL.lblTexto.Text = "Alumno";
                 pAL.Show();
                 this.Hide();
             }

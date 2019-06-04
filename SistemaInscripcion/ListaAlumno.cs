@@ -10,13 +10,13 @@ namespace SistemaInscripcion
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public float nota1 { get; set; }
-        public float nota2 { get; set; }
-        public float nota3 { get; set; }
-        public float notaf { get; set; }
+        public double nota1 { get; set; }
+        public double nota2 { get; set; }
+        public double nota3 { get; set; }
+        public double notaf { get; set; }
 
         public ListaAlumno() { }
-        public ListaAlumno(string nom,string ape,float Nota1, float Nota2, float Nota3, float Notaf)
+        public ListaAlumno(string nom,string ape,double Nota1, double Nota2, double Nota3, double Notaf)
         {
             Nombre = nom;
             Apellido = ape;

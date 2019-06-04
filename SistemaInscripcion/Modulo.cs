@@ -11,14 +11,14 @@ namespace SistemaInscripcion
         public int CI_Docente { get; set; }
         public int CI_Alumno { get; set; }
         public int Clave_Materia { get; set; }
-        public float Nota1 { get; set; }
-        public float Nota2 { get; set; }
-        public float Nota3 { get; set; }
-        public float Notaf { get; set; }
+        public double Nota1 { get; set; }
+        public double Nota2 { get; set; }
+        public double Nota3 { get; set; }
+        public double Notaf { get; set; }
 
         public Modulo() { }
 
-        public Modulo(int ciDoc, int ciAlm, int clveMat, float nota1, float nota2, float nota3, float notaf)
+        public Modulo(int ciDoc, int ciAlm, int clveMat, double nota1, double nota2, double nota3, double notaf)
         {
             CI_Docente = ciDoc;
             CI_Alumno = ciAlm;

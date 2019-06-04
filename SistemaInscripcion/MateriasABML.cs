@@ -107,6 +107,25 @@ namespace SistemaInscripcion
             return lista;
         }
 
+        public static int ListCIMateria(string nom)
+        {
+            int ci=0000;
+
+            using (SqlConnection conex = Conexion.ObtenerConexion1())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("SELECT Clave_Materia FROM Materias where nombre='{0}'",nom), conex);
+                SqlDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    int Materia;
+                    Materia = leer.GetInt32(0);
+                    ci = Materia;
+                }
+                conex.Close();
+            }
+            return ci;
+        }
+
 
 
         public static List<string> ListNomMaterias()

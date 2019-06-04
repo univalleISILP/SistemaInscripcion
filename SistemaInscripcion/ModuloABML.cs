@@ -34,7 +34,7 @@ namespace SistemaInscripcion
 
             using (SqlConnection conexion = Conexion.ObtenerConexion1())
             {
-                SqlCommand comando = new SqlCommand(String.Format(@"Update materias set Nota1={2},Nota2={3},Nota3={4},Notaf={5} where CI_Alumno={0} and Clave_Materia='{1}' and CI_Docente={6}",
+                SqlCommand comando = new SqlCommand(String.Format(@"Update modulo set Nota1={2},Nota2={3},Nota3={4},Notaf={5} where CI_Alumno={0} and Clave_Materia={1} and CI_Docente={6}",
                     mod.CI_Alumno,
                     mod.Clave_Materia,
                     mod.Nota1,

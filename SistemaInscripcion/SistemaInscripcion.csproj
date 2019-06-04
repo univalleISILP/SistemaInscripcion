@@ -69,6 +69,13 @@
     <Compile Include="MateriasABML.cs" />
     <Compile Include="Modulo.cs" />
     <Compile Include="ModuloABML.cs" />
+    <Compile Include="Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notas.Designer.cs">
+      <DependentUpon>Notas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotasConsultas.cs" />
     <Compile Include="PlataformaAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notas.resx">
+      <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlataformaAdmin.resx">
       <DependentUpon>PlataformaAdmin.cs</DependentUpon>

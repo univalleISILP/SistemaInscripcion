@@ -101,26 +101,34 @@ namespace SistemaInscripcion
         }
 
         //este metodo se utiliza com  el login docentes
-        public static List<ListaAlumno> listar(string mat,string año)
+        public static List<ListaAlumno> listar(int mat,string año,int ciDoc,string grado)
         {
             List<ListaAlumno> lista = new List<ListaAlumno>();
 
             using (SqlConnection conexion =Conexion.ObtenerConexion1())
             {
 
-                SqlCommand comando = new SqlCommand(string.Format(@"SELECT a.nombre,a.apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf FROM Alumnos a,Docentes d,Modulo M,materias mat where a.CI_Alumno=M.CI_Alumno and d.CI_Docente=M.CI_Docente and mat.Clave_Materia=M.Clave_Materia and mat.Nombre='{0}' and a.Año_Curso='{1}'", mat,año), conexion);
+                SqlCommand comando = new SqlCommand(string.Format(@"SELECT a.nombre,a.apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf 
+                FROM Alumnos a,Docentes d,Modulo M,materias mat 
+                where a.CI_Alumno=M.CI_Alumno and d.CI_Docente=M.CI_Docente and mat.Clave_Materia=M.Clave_Materia 
+                and mat.Clave_Materia={0} and a.Año_Curso='{1}' and d.ci_docente={2} and a.grado='{3}'", mat,año,ciDoc,grado), conexion);
                 SqlDataReader leer = comando.ExecuteReader();
 
                 while (leer.Read())
                 {
-                    ListaAlumno milista = new ListaAlumno();
-                    milista.Nombre = leer.GetString(0);
-                    milista.Apellido = leer.GetString(1);
-                    milista.nota1 = leer.GetFloat(2);
-                    milista.nota2 = leer.GetFloat(3);
-                    milista.nota3 = leer.GetFloat(4);
-                    milista.notaf = leer.GetFloat(5);
-                    lista.Add(milista);
+                    try
+                    {
+                        ListaAlumno milista = new ListaAlumno();
+                        milista.Nombre = leer.GetString(0);
+                        milista.Apellido = leer.GetString(1);
+                        milista.nota1 = leer.GetDouble(2);
+                        milista.nota2 = leer.GetDouble(3);
+                        milista.nota3 = leer.GetDouble(4);
+                        milista.notaf = leer.GetDouble(5);
+                        lista.Add(milista);
+                    }
+                    catch (InvalidCastException) {
+                    }                   
                 }                
                 conexion.Close();               
             }
@@ -228,5 +236,24 @@ namespace SistemaInscripcion
                 return lista;
             }
         }
+        public static int ListCIAlumnos(string nombre)
+        {
+            int ci = 0000;
+
+            using (SqlConnection conex = Conexion.ObtenerConexion1())
+            {
+                SqlCommand comando = new SqlCommand(String.Format("SELECT CI_Alumno FROM Alumnos where nombre={0}", nombre), conex);
+                SqlDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+
+                    ci = leer.GetInt32(0);
+
+                }
+                conex.Close();
+                return ci;
+            }
+        }
+
     }
 }

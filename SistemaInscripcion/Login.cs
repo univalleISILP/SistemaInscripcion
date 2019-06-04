@@ -40,6 +40,7 @@ namespace SistemaInscripcion
             if (LoginABML.Autenticar(us) == "doc")
             {
                 PlataformaUser pU = new PlataformaUser();
+                pU.txtCIDOC.Text = txtUserName.Text;
                 pU.Show();
                 this.Hide();
             }

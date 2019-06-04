@@ -686,9 +686,16 @@ namespace SistemaInscripcion
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            string cd = Microsoft.VisualBasic.Interaction.InputBox("Inserte la clave para eliminar");
-            LoginABML.Eliminar(cd);
-            DatosUsuarios.DataSource = LoginABML.listar();
+            if (DatosUsuarios.SelectedCells.Count > 0)
+            {
+                LoginABML.Eliminar(DatosUsuarios.CurrentRow.Cells["CodUsuario"].Value.ToString());
+                DatosUsuarios.DataSource = LoginABML.listar();
+            }
+            else
+            {
+                MessageBox.Show("No existe datos");
+            }
+               
         }
     }
 }

@@ -69,5 +69,27 @@ namespace SistemaInscripcion
             }
             return retorno;
         }
+
+        public static List<usuario> ListarXnombreMateria(string tipo)
+        {
+            List<usuario> lista = new List<usuario>();
+
+            using (SqlConnection conexion = Conexion.ObtenerConexion1())
+            {
+                SqlCommand comando = new SqlCommand(string.Format(@"select * from where tipo='{0}'",tipo), conexion);
+                SqlDataReader leer = comando.ExecuteReader();
+
+                while (leer.Read())
+                {
+                    usuario usuario = new usuario();
+                    usuario.CodUsuario = leer.GetString(0);
+                    usuario.CodUsuario = leer.GetString(1);
+                    usuario.Tipo = leer.GetString(2);
+                    lista.Add(usuario);
+                }
+                conexion.Close();
+            }
+            return lista;
+        }
     }
 }

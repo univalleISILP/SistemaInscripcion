@@ -61,6 +61,7 @@
             this.txtCambiarCod = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtContraseña1 = new System.Windows.Forms.TextBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -68,6 +69,7 @@
             this.panelNotas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnoPlataformaAlumno)).BeginInit();
             this.panelCambiarPass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -199,6 +201,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
+            this.panel2.Controls.Add(this.btnMinimizar);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.Grado);
             this.panel2.Controls.Add(this.Nombre);
@@ -475,6 +478,18 @@
             this.txtContraseña1.Size = new System.Drawing.Size(247, 22);
             this.txtContraseña1.TabIndex = 92;
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizar.Location = new System.Drawing.Point(677, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(31, 26);
+            this.btnMinimizar.TabIndex = 113;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
+            // 
             // PlataformaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,6 +519,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.datosAlumnoPlataformaAlumno)).EndInit();
             this.panelCambiarPass.ResumeLayout(false);
             this.panelCambiarPass.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,5 +558,6 @@
         private System.Windows.Forms.Button btnListarTodo;
         public System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox btnMinimizar;
     }
 }

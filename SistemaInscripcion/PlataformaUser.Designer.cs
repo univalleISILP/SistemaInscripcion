@@ -63,12 +63,21 @@
             this.txtnota2 = new System.Windows.Forms.TextBox();
             this.txtnota1 = new System.Windows.Forms.TextBox();
             this.txtnotaf = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.e = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.Label();
+            this.ad = new System.Windows.Forms.Label();
+            this.ed = new System.Windows.Forms.Label();
+            this.nd = new System.Windows.Forms.Label();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.panelNotas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosNotas)).BeginInit();
             this.panelCambiarPass.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,8 +93,9 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 473);
+            this.panel1.Size = new System.Drawing.Size(229, 530);
             this.panel1.TabIndex = 3;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
             // sidePanel
             // 
@@ -111,7 +121,7 @@
             this.panel4.Controls.Add(this.lblTexto);
             this.panel4.Controls.Add(this.picture);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 399);
+            this.panel4.Location = new System.Drawing.Point(0, 456);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 74);
             this.panel4.TabIndex = 113;
@@ -208,12 +218,13 @@
             this.panelNotas.Controls.Add(this.datosNotas);
             this.panelNotas.Controls.Add(this.label25);
             this.panelNotas.Controls.Add(this.label26);
-            this.panelNotas.Location = new System.Drawing.Point(247, 5);
+            this.panelNotas.Location = new System.Drawing.Point(257, 85);
             this.panelNotas.Margin = new System.Windows.Forms.Padding(2);
             this.panelNotas.Name = "panelNotas";
-            this.panelNotas.Size = new System.Drawing.Size(789, 462);
+            this.panelNotas.Size = new System.Drawing.Size(789, 440);
             this.panelNotas.TabIndex = 109;
             this.panelNotas.Visible = false;
+            this.panelNotas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelNotas_MouseDown);
             // 
             // cbxGrado
             // 
@@ -275,7 +286,7 @@
             // btnGuardarNotas
             // 
             this.btnGuardarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarNotas.Location = new System.Drawing.Point(42, 418);
+            this.btnGuardarNotas.Location = new System.Drawing.Point(19, 394);
             this.btnGuardarNotas.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarNotas.Name = "btnGuardarNotas";
             this.btnGuardarNotas.Size = new System.Drawing.Size(133, 34);
@@ -312,7 +323,7 @@
             this.datosNotas.RowHeadersWidth = 62;
             this.datosNotas.RowTemplate.Height = 28;
             this.datosNotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datosNotas.Size = new System.Drawing.Size(758, 351);
+            this.datosNotas.Size = new System.Drawing.Size(758, 320);
             this.datosNotas.TabIndex = 64;
             this.datosNotas.Click += new System.EventHandler(this.DatosNotas_Click);
             // 
@@ -357,6 +368,8 @@
             this.panelCambiarPass.Size = new System.Drawing.Size(572, 280);
             this.panelCambiarPass.TabIndex = 110;
             this.panelCambiarPass.Visible = false;
+            this.panelCambiarPass.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCambiarPass_Paint);
+            this.panelCambiarPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelCambiarPass_MouseDown);
             // 
             // txtCodCambiarPass
             // 
@@ -444,7 +457,7 @@
             // 
             // txtCIDOC
             // 
-            this.txtCIDOC.Location = new System.Drawing.Point(673, 481);
+            this.txtCIDOC.Location = new System.Drawing.Point(702, 540);
             this.txtCIDOC.Name = "txtCIDOC";
             this.txtCIDOC.Size = new System.Drawing.Size(100, 20);
             this.txtCIDOC.TabIndex = 82;
@@ -452,7 +465,7 @@
             // 
             // txtCIMAT
             // 
-            this.txtCIMAT.Location = new System.Drawing.Point(885, 480);
+            this.txtCIMAT.Location = new System.Drawing.Point(914, 539);
             this.txtCIMAT.Name = "txtCIMAT";
             this.txtCIMAT.Size = new System.Drawing.Size(100, 20);
             this.txtCIMAT.TabIndex = 84;
@@ -460,7 +473,7 @@
             // 
             // txtCIALM
             // 
-            this.txtCIALM.Location = new System.Drawing.Point(779, 481);
+            this.txtCIALM.Location = new System.Drawing.Point(808, 540);
             this.txtCIALM.Name = "txtCIALM";
             this.txtCIALM.Size = new System.Drawing.Size(100, 20);
             this.txtCIALM.TabIndex = 85;
@@ -468,7 +481,7 @@
             // 
             // txtnota3
             // 
-            this.txtnota3.Location = new System.Drawing.Point(467, 481);
+            this.txtnota3.Location = new System.Drawing.Point(496, 540);
             this.txtnota3.Name = "txtnota3";
             this.txtnota3.Size = new System.Drawing.Size(100, 20);
             this.txtnota3.TabIndex = 86;
@@ -476,7 +489,7 @@
             // 
             // txtnota2
             // 
-            this.txtnota2.Location = new System.Drawing.Point(357, 483);
+            this.txtnota2.Location = new System.Drawing.Point(386, 542);
             this.txtnota2.Name = "txtnota2";
             this.txtnota2.Size = new System.Drawing.Size(100, 20);
             this.txtnota2.TabIndex = 87;
@@ -484,7 +497,7 @@
             // 
             // txtnota1
             // 
-            this.txtnota1.Location = new System.Drawing.Point(238, 481);
+            this.txtnota1.Location = new System.Drawing.Point(267, 540);
             this.txtnota1.Name = "txtnota1";
             this.txtnota1.Size = new System.Drawing.Size(100, 20);
             this.txtnota1.TabIndex = 88;
@@ -492,18 +505,101 @@
             // 
             // txtnotaf
             // 
-            this.txtnotaf.Location = new System.Drawing.Point(583, 481);
+            this.txtnotaf.Location = new System.Drawing.Point(612, 540);
             this.txtnotaf.Name = "txtnotaf";
             this.txtnotaf.Size = new System.Drawing.Size(100, 20);
             this.txtnotaf.TabIndex = 89;
             this.txtnotaf.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightCyan;
+            this.panel2.Controls.Add(this.btnMinimizar);
+            this.panel2.Controls.Add(this.e);
+            this.panel2.Controls.Add(this.Nombre);
+            this.panel2.Controls.Add(this.ad);
+            this.panel2.Controls.Add(this.ed);
+            this.panel2.Controls.Add(this.nd);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(229, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(848, 33);
+            this.panel2.TabIndex = 111;
+            // 
+            // e
+            // 
+            this.e.AutoSize = true;
+            this.e.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.e.ForeColor = System.Drawing.Color.Black;
+            this.e.Location = new System.Drawing.Point(303, 5);
+            this.e.Name = "e";
+            this.e.Size = new System.Drawing.Size(121, 25);
+            this.e.TabIndex = 134;
+            this.e.Text = "Especialidad";
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSize = true;
+            this.Nombre.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre.ForeColor = System.Drawing.Color.Black;
+            this.Nombre.Location = new System.Drawing.Point(29, 4);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(79, 25);
+            this.Nombre.TabIndex = 133;
+            this.Nombre.Text = "Nombre";
+            // 
+            // ad
+            // 
+            this.ad.AutoSize = true;
+            this.ad.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ad.ForeColor = System.Drawing.Color.Black;
+            this.ad.Location = new System.Drawing.Point(202, 9);
+            this.ad.Name = "ad";
+            this.ad.Size = new System.Drawing.Size(53, 19);
+            this.ad.TabIndex = 130;
+            this.ad.Text = "apell";
+            // 
+            // ed
+            // 
+            this.ed.AutoSize = true;
+            this.ed.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ed.ForeColor = System.Drawing.Color.Black;
+            this.ed.Location = new System.Drawing.Point(424, 9);
+            this.ed.Name = "ed";
+            this.ed.Size = new System.Drawing.Size(118, 19);
+            this.ed.TabIndex = 132;
+            this.ed.Text = "ESPECIALIDAD";
+            // 
+            // nd
+            // 
+            this.nd.AutoSize = true;
+            this.nd.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nd.ForeColor = System.Drawing.Color.Black;
+            this.nd.Location = new System.Drawing.Point(108, 9);
+            this.nd.Name = "nd";
+            this.nd.Size = new System.Drawing.Size(77, 19);
+            this.nd.TabIndex = 129;
+            this.nd.Text = "nombre";
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizar.Location = new System.Drawing.Point(817, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(31, 26);
+            this.btnMinimizar.TabIndex = 119;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
             // 
             // PlataformaUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(1044, 473);
+            this.ClientSize = new System.Drawing.Size(1077, 530);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelCambiarPass);
             this.Controls.Add(this.txtCIALM);
             this.Controls.Add(this.txtCIMAT);
@@ -520,6 +616,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlataformaUser";
             this.Load += new System.EventHandler(this.PlataformaUser_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlataformaUser_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -529,6 +626,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.datosNotas)).EndInit();
             this.panelCambiarPass.ResumeLayout(false);
             this.panelCambiarPass.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,5 +670,12 @@
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox txtContraseña1;
         public System.Windows.Forms.Panel sidePanel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label e;
+        private System.Windows.Forms.Label Nombre;
+        public System.Windows.Forms.Label ad;
+        public System.Windows.Forms.Label ed;
+        public System.Windows.Forms.Label nd;
+        private System.Windows.Forms.PictureBox btnMinimizar;
     }
 }

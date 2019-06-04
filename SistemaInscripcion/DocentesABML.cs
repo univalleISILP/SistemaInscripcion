@@ -9,6 +9,7 @@ namespace SistemaInscripcion
 {
     class DocentesABML
     {
+
         public static int AgregarDocente1(Docente docente)
         {
             int retorno = 0;

@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="alumno.cs" />
+    <Compile Include="AlumnoCMateria.cs" />
     <Compile Include="alumnosABML.cs" />
     <Compile Include="BuscarAlumno.cs">
       <SubType>Form</SubType>

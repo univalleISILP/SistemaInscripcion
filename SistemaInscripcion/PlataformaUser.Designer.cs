@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlataformaUser));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sidePanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTexto = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.txtnota2 = new System.Windows.Forms.TextBox();
             this.txtnota1 = new System.Windows.Forms.TextBox();
             this.txtnotaf = new System.Windows.Forms.TextBox();
-            this.sidePanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -82,10 +82,18 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 471);
+            this.panel1.Size = new System.Drawing.Size(229, 473);
             this.panel1.TabIndex = 3;
+            // 
+            // sidePanel
+            // 
+            this.sidePanel.BackColor = System.Drawing.Color.White;
+            this.sidePanel.Location = new System.Drawing.Point(-1, 120);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(19, 48);
+            this.sidePanel.TabIndex = 118;
             // 
             // panel5
             // 
@@ -103,7 +111,7 @@
             this.panel4.Controls.Add(this.lblTexto);
             this.panel4.Controls.Add(this.picture);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 397);
+            this.panel4.Location = new System.Drawing.Point(0, 399);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 74);
             this.panel4.TabIndex = 113;
@@ -140,7 +148,7 @@
             this.btnNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotas.ForeColor = System.Drawing.Color.Transparent;
             this.btnNotas.Location = new System.Drawing.Point(0, 121);
-            this.btnNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNotas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.Size = new System.Drawing.Size(229, 49);
             this.btnNotas.TabIndex = 95;
@@ -160,7 +168,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.Location = new System.Drawing.Point(-1, 171);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(229, 51);
             this.button2.TabIndex = 7;
@@ -180,7 +188,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Location = new System.Drawing.Point(-4, 227);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(231, 45);
             this.button1.TabIndex = 6;
@@ -191,7 +199,6 @@
             // 
             // panelNotas
             // 
-            this.panelNotas.Controls.Add(this.panelCambiarPass);
             this.panelNotas.Controls.Add(this.cbxGrado);
             this.panelNotas.Controls.Add(this.label1);
             this.panelNotas.Controls.Add(this.cbxAñoCurso);
@@ -202,7 +209,7 @@
             this.panelNotas.Controls.Add(this.label25);
             this.panelNotas.Controls.Add(this.label26);
             this.panelNotas.Location = new System.Drawing.Point(247, 5);
-            this.panelNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.panelNotas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelNotas.Name = "panelNotas";
             this.panelNotas.Size = new System.Drawing.Size(789, 462);
             this.panelNotas.TabIndex = 109;
@@ -216,7 +223,7 @@
             "Primaria",
             "Secundaria"});
             this.cbxGrado.Location = new System.Drawing.Point(74, 24);
-            this.cbxGrado.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxGrado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxGrado.Name = "cbxGrado";
             this.cbxGrado.Size = new System.Drawing.Size(165, 24);
             this.cbxGrado.TabIndex = 81;
@@ -247,7 +254,7 @@
             "Quinto",
             "Sexto"});
             this.cbxAñoCurso.Location = new System.Drawing.Point(364, 24);
-            this.cbxAñoCurso.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxAñoCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxAñoCurso.Name = "cbxAñoCurso";
             this.cbxAñoCurso.Size = new System.Drawing.Size(165, 24);
             this.cbxAñoCurso.TabIndex = 79;
@@ -259,7 +266,7 @@
             this.cbxMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMateria.FormattingEnabled = true;
             this.cbxMateria.Location = new System.Drawing.Point(614, 24);
-            this.cbxMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxMateria.Name = "cbxMateria";
             this.cbxMateria.Size = new System.Drawing.Size(165, 24);
             this.cbxMateria.TabIndex = 77;
@@ -269,7 +276,7 @@
             // 
             this.btnGuardarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarNotas.Location = new System.Drawing.Point(42, 418);
-            this.btnGuardarNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarNotas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardarNotas.Name = "btnGuardarNotas";
             this.btnGuardarNotas.Size = new System.Drawing.Size(133, 34);
             this.btnGuardarNotas.TabIndex = 73;
@@ -298,7 +305,7 @@
             this.datosNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datosNotas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.datosNotas.Location = new System.Drawing.Point(19, 63);
-            this.datosNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.datosNotas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datosNotas.Name = "datosNotas";
             this.datosNotas.ReadOnly = true;
             this.datosNotas.RowHeadersVisible = false;
@@ -345,7 +352,7 @@
             this.panelCambiarPass.Controls.Add(this.label17);
             this.panelCambiarPass.Controls.Add(this.label16);
             this.panelCambiarPass.Controls.Add(this.txtContraseña1);
-            this.panelCambiarPass.Location = new System.Drawing.Point(112, 97);
+            this.panelCambiarPass.Location = new System.Drawing.Point(377, 120);
             this.panelCambiarPass.Name = "panelCambiarPass";
             this.panelCambiarPass.Size = new System.Drawing.Size(572, 280);
             this.panelCambiarPass.TabIndex = 110;
@@ -355,7 +362,7 @@
             // 
             this.txtCodCambiarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodCambiarPass.Location = new System.Drawing.Point(259, 50);
-            this.txtCodCambiarPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodCambiarPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodCambiarPass.Multiline = true;
             this.txtCodCambiarPass.Name = "txtCodCambiarPass";
             this.txtCodCambiarPass.Size = new System.Drawing.Size(247, 22);
@@ -369,7 +376,7 @@
             this.btnGuardarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarPass.ForeColor = System.Drawing.Color.Black;
             this.btnGuardarPass.Location = new System.Drawing.Point(189, 196);
-            this.btnGuardarPass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardarPass.Name = "btnGuardarPass";
             this.btnGuardarPass.Size = new System.Drawing.Size(167, 34);
             this.btnGuardarPass.TabIndex = 80;
@@ -381,7 +388,7 @@
             // 
             this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña2.Location = new System.Drawing.Point(259, 129);
-            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContraseña2.Multiline = true;
             this.txtContraseña2.Name = "txtContraseña2";
             this.txtContraseña2.PasswordChar = '*';
@@ -428,7 +435,7 @@
             // 
             this.txtContraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña1.Location = new System.Drawing.Point(259, 89);
-            this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraseña1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContraseña1.Multiline = true;
             this.txtContraseña1.Name = "txtContraseña1";
             this.txtContraseña1.PasswordChar = '*';
@@ -491,20 +498,13 @@
             this.txtnotaf.TabIndex = 89;
             this.txtnotaf.Visible = false;
             // 
-            // sidePanel
-            // 
-            this.sidePanel.BackColor = System.Drawing.Color.White;
-            this.sidePanel.Location = new System.Drawing.Point(-1, 120);
-            this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(19, 48);
-            this.sidePanel.TabIndex = 118;
-            // 
             // PlataformaUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(1070, 471);
+            this.ClientSize = new System.Drawing.Size(1044, 473);
+            this.Controls.Add(this.panelCambiarPass);
             this.Controls.Add(this.txtCIALM);
             this.Controls.Add(this.txtCIMAT);
             this.Controls.Add(this.txtnotaf);
@@ -515,7 +515,7 @@
             this.Controls.Add(this.txtnota1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PlataformaUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlataformaUser";

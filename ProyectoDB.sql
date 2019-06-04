@@ -152,9 +152,7 @@ FROM Modulo n,Materias m,Docentes d,Alumnos a
 Where a.CI_Alumno = 1010 and m.nombre = 'Matematica'
 
 
-select * from Materias;
-select * from Alumnos;
-select * from Modulo;
+
 
 delete from proyectoBD.dbo.Docentes where CI_Docente = 190;
 
@@ -163,6 +161,12 @@ delete Modulo where CI_Docente=8911 and CI_Alumno=190 and Clave_Materia=200
 
 
 select * from Usuario;
+select * from Docentes;
+select * from Materias;
+select * from Alumnos;
+select * from Modulo;
+
+
 
 insert into Usuario values (11,'adm',2019);
 insert into Usuario values (11,'alm',2019);
@@ -174,3 +178,9 @@ insert into Usuario values (11,'doc',2019);
 
 
 SELECT nombre,apellido,Grado,Año_Curso FROM Alumnos where CI_Alumno = 1090
+
+
+SELECT a.nombre,a.apellido,M.Nota1,M.Nota2,M.Nota3,M.Notaf 
+                FROM Alumnos a,Docentes d,Modulo M,materias mat 
+                where a.CI_Alumno=M.CI_Alumno and d.CI_Docente=M.CI_Docente and mat.Clave_Materia=M.Clave_Materia 
+                and mat.Clave_Materia=100 and a.Año_Curso='Primero' and d.ci_docente=123 and a.grado='primaria'

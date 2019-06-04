@@ -65,7 +65,7 @@ namespace SistemaInscripcion
 
         private void DatosNotas_Click(object sender, EventArgs e)
         {
-            txtCIALM.Text = NotasConsultas.ListCIAlumnos(datosNotas.CurrentRow.Cells["Nombre"].Value.ToString(), datosNotas.CurrentRow.Cells["apellido"].Value.ToString()).ToString();
+            txtCIALM.Text = NotasConsultas.ListCIAlumnos(datosNotas.CurrentRow.Cells["Nombre"].Value.ToString(), datosNotas.CurrentRow.Cells["Apellido"].Value.ToString()).ToString();
             txtnota1.Text = datosNotas.CurrentRow.Cells["Nota1"].Value.ToString();
             txtnota2.Text = datosNotas.CurrentRow.Cells["Nota2"].Value.ToString();
             txtnota3.Text = datosNotas.CurrentRow.Cells["Nota3"].Value.ToString();

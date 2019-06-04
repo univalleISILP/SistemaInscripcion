@@ -71,9 +71,7 @@ namespace SistemaInscripcion
                 SqlDataReader leer = comando.ExecuteReader();
                 while (leer.Read())
                 {                 
-
                     ci = leer.GetInt32(0);
-                    
                 }
                 conex.Close();
                 return ci;

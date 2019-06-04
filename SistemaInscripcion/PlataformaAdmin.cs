@@ -510,6 +510,11 @@ namespace SistemaInscripcion
                     txtCIDoc.Enabled = true;
                     
                     datosDoc.DataSource = DocentesABML.listarDocente();
+                    usuario agregarAluUser = new usuario();
+                    agregarAluUser.CodUsuario = txtCIDoc.Text;
+                    agregarAluUser.Tipo = "doc";
+                    agregarAluUser.Contraseña = "12345";
+                    LoginABML.Agregar(agregarAluUser);
                     MessageBox.Show("Se agrego correctamente");
                     limpiarDocente();
                 }

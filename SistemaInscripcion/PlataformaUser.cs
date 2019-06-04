@@ -35,8 +35,7 @@ namespace SistemaInscripcion
         private void PlataformaUser_Load(object sender, EventArgs e)
         {
             string especialidad = NotasConsultas.listarespecialidad(int.Parse(txtCIDOC.Text));
-            string materia = NotasConsultas.ListarXnombreMateria(especialidad);
-            cbxMateria.Text = materia;
+            cbxMateria.DataSource = MateriasABML.ListNomMaterias();
             int clmat = MateriasABML.ListCIMateria(cbxMateria.Text);
             int ci = int.Parse(txtCIDOC.Text);
             datosNotas.DataSource = alumnosABML.listar(clmat, cbxAñoCurso.Text, ci, cbxGrado.Text);
@@ -65,12 +64,19 @@ namespace SistemaInscripcion
 
         private void DatosNotas_Click(object sender, EventArgs e)
         {
-            txtCIALM.Text = NotasConsultas.ListCIAlumnos(datosNotas.CurrentRow.Cells["Nombre"].Value.ToString(), datosNotas.CurrentRow.Cells["Apellido"].Value.ToString()).ToString();
-            txtnota1.Text = datosNotas.CurrentRow.Cells["Nota1"].Value.ToString();
-            txtnota2.Text = datosNotas.CurrentRow.Cells["Nota2"].Value.ToString();
-            txtnota3.Text = datosNotas.CurrentRow.Cells["Nota3"].Value.ToString();
-            txtnotaf.Text = datosNotas.CurrentRow.Cells["Notaf"].Value.ToString();
-            txtCIMAT.Text = NotasConsultas.ListCIMateria(cbxMateria.Text).ToString();
+            if (datosNotas.Rows.Count > 0)
+            {
+                txtCIALM.Text = NotasConsultas.ListCIAlumnos(datosNotas.CurrentRow.Cells["Nombre"].Value.ToString(), datosNotas.CurrentRow.Cells["Apellido"].Value.ToString()).ToString();
+                txtnota1.Text = datosNotas.CurrentRow.Cells["Nota1"].Value.ToString();
+                txtnota2.Text = datosNotas.CurrentRow.Cells["Nota2"].Value.ToString();
+                txtnota3.Text = datosNotas.CurrentRow.Cells["Nota3"].Value.ToString();
+                txtnotaf.Text = datosNotas.CurrentRow.Cells["Notaf"].Value.ToString();
+                txtCIMAT.Text = NotasConsultas.ListCIMateria(cbxMateria.Text).ToString();
+            }
+            else
+            {
+                MessageBox.Show("No hay datos");
+            }
         }
 
         private void BtnGuardarNotas_Click(object sender, EventArgs e)

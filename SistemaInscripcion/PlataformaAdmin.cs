@@ -138,6 +138,13 @@ namespace SistemaInscripcion
 
         private void Button1_Click(object sender, EventArgs e)
         {
+
+            panelCambiarPass.Visible = false;
+            panelDocentes.Visible = false;
+            panelAlumnos.Visible = false;
+            panelMaterias.Visible = false;
+            panelModulo.Visible = false;
+
             sidePanel.Height = button1.Height;
             sidePanel.Top = button1.Top;
             string message = "estas seguro de Cerrar Session";

@@ -156,5 +156,10 @@ namespace SistemaInscripcion
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void BtnInforme_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

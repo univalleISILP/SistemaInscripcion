@@ -41,6 +41,7 @@ namespace SistemaInscripcion
             {
                 PlataformaUser pU = new PlataformaUser();
                 pU.txtCIDOC.Text = txtUserName.Text;
+                pAL.lblTexto.Text = "Docente";
                 pU.Show();
                 this.Hide();
             }

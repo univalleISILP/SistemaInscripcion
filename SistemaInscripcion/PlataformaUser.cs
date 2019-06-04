@@ -151,6 +151,9 @@ namespace SistemaInscripcion
         {
             sidePanel.Height = button1.Height;
             sidePanel.Top = button1.Top;
+            panelCambiarPass.Visible = false;
+            panelNotas.Visible = false;
+
 
             string message = "estas seguro de Cerrar Session";
             string captiion = "Cerrar session";

@@ -122,7 +122,7 @@
             this.lblTexto.BackColor = System.Drawing.Color.Transparent;
             this.lblTexto.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTexto.ForeColor = System.Drawing.Color.White;
-            this.lblTexto.Location = new System.Drawing.Point(73, 27);
+            this.lblTexto.Location = new System.Drawing.Point(94, 27);
             this.lblTexto.Name = "lblTexto";
             this.lblTexto.Size = new System.Drawing.Size(0, 20);
             this.lblTexto.TabIndex = 114;
@@ -131,7 +131,7 @@
             // 
             this.picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picture.BackgroundImage")));
             this.picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picture.Location = new System.Drawing.Point(4, 3);
+            this.picture.Location = new System.Drawing.Point(25, 3);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(59, 68);
             this.picture.TabIndex = 113;

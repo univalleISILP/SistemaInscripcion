@@ -64,7 +64,6 @@ namespace SistemaInscripcion
         {
             panelNotas.Visible = true;
             panelCambiarPass.Visible = false;
-         
             ci = int.Parse(txtCIalumno.Text);
             string materia = cbxMateriaAlu.Text;
             datosAlumnoPlataformaAlumno.DataSource = plataformaAlumnoABML.ListarDatosAlu(ci,materia);
@@ -145,6 +144,12 @@ namespace SistemaInscripcion
             {
                 MessageBox.Show("Las Contraseñas deben coincidir");
             }
+        }
+
+        private void CbxMateriaAlu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string materia = cbxMateriaAlu.Text;
+            datosAlumnoPlataformaAlumno.DataSource = plataformaAlumnoABML.ListarDatosAlu(ci, materia);
         }
     }
 }

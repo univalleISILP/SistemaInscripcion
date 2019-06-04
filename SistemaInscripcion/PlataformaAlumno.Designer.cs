@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlataformaAlumno));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.txtCIalumno = new System.Windows.Forms.TextBox();
             this.btnVerNotasAlu = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.txtCambiarCod = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtContraseña1 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -86,6 +86,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(229, 499);
             this.panel1.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Location = new System.Drawing.Point(19, 10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(192, 64);
+            this.panel5.TabIndex = 118;
             // 
             // sidePanel
             // 
@@ -317,6 +327,7 @@
             this.cbxMateriaAlu.Name = "cbxMateriaAlu";
             this.cbxMateriaAlu.Size = new System.Drawing.Size(153, 24);
             this.cbxMateriaAlu.TabIndex = 84;
+            this.cbxMateriaAlu.SelectedIndexChanged += new System.EventHandler(this.CbxMateriaAlu_SelectedIndexChanged);
             // 
             // label26
             // 
@@ -463,16 +474,6 @@
             this.txtContraseña1.PasswordChar = '*';
             this.txtContraseña1.Size = new System.Drawing.Size(247, 22);
             this.txtContraseña1.TabIndex = 92;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(19, 10);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(192, 64);
-            this.panel5.TabIndex = 118;
             // 
             // PlataformaAlumno
             // 

@@ -49,6 +49,7 @@
             this.n = new System.Windows.Forms.Label();
             this.g = new System.Windows.Forms.Label();
             this.panelNotas = new System.Windows.Forms.Panel();
+            this.btnInforme = new System.Windows.Forms.Button();
             this.btnListarTodo = new System.Windows.Forms.Button();
             this.cbxMateriaAlu = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.txtCambiarCod = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtContraseña1 = new System.Windows.Forms.TextBox();
-            this.btnInforme = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -327,6 +327,21 @@
             this.panelNotas.TabIndex = 111;
             this.panelNotas.Visible = false;
             // 
+            // btnInforme
+            // 
+            this.btnInforme.BackColor = System.Drawing.Color.White;
+            this.btnInforme.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnInforme.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInforme.ForeColor = System.Drawing.Color.Black;
+            this.btnInforme.Location = new System.Drawing.Point(686, 21);
+            this.btnInforme.Name = "btnInforme";
+            this.btnInforme.Size = new System.Drawing.Size(124, 42);
+            this.btnInforme.TabIndex = 99;
+            this.btnInforme.Text = "Informe";
+            this.btnInforme.UseVisualStyleBackColor = false;
+            this.btnInforme.Click += new System.EventHandler(this.BtnInforme_Click);
+            // 
             // btnListarTodo
             // 
             this.btnListarTodo.BackColor = System.Drawing.Color.White;
@@ -488,21 +503,6 @@
             this.txtContraseña1.PasswordChar = '*';
             this.txtContraseña1.Size = new System.Drawing.Size(368, 32);
             this.txtContraseña1.TabIndex = 92;
-            // 
-            // btnInforme
-            // 
-            this.btnInforme.BackColor = System.Drawing.Color.White;
-            this.btnInforme.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnInforme.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInforme.ForeColor = System.Drawing.Color.Black;
-            this.btnInforme.Location = new System.Drawing.Point(698, 21);
-            this.btnInforme.Name = "btnInforme";
-            this.btnInforme.Size = new System.Drawing.Size(111, 42);
-            this.btnInforme.TabIndex = 99;
-            this.btnInforme.Text = "Informe";
-            this.btnInforme.UseVisualStyleBackColor = false;
-            this.btnInforme.Click += new System.EventHandler(this.BtnInforme_Click);
             // 
             // PlataformaAlumno
             // 

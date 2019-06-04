@@ -130,6 +130,30 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="Properties\DataSources\alumno.datasource" />
+    <None Include="Properties\DataSources\alumnosABML.datasource" />
+    <None Include="Properties\DataSources\BuscarAlumno.datasource" />
+    <None Include="Properties\DataSources\Conexion.datasource" />
+    <None Include="Properties\DataSources\Docente.datasource" />
+    <None Include="Properties\DataSources\DocentesABML.datasource" />
+    <None Include="Properties\DataSources\ListaAlumno.datasource" />
+    <None Include="Properties\DataSources\ListaDatosAlumno.datasource" />
+    <None Include="Properties\DataSources\Login.datasource" />
+    <None Include="Properties\DataSources\LoginABML.datasource" />
+    <None Include="Properties\DataSources\Materia.datasource" />
+    <None Include="Properties\DataSources\MateriasABML.datasource" />
+    <None Include="Properties\DataSources\Modulo.datasource" />
+    <None Include="Properties\DataSources\ModuloABML.datasource" />
+    <None Include="Properties\DataSources\Notas.datasource" />
+    <None Include="Properties\DataSources\NotasConsultas.datasource" />
+    <None Include="Properties\DataSources\PlataformaAdmin.datasource" />
+    <None Include="Properties\DataSources\PlataformaAlumno.datasource" />
+    <None Include="Properties\DataSources\plataformaAlumnoABML.datasource" />
+    <None Include="Properties\DataSources\PlataformaUser.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\SistemaInscripcion.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\SistemaInscripcion.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

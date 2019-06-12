@@ -459,7 +459,7 @@
         <Top>1.87537cm</Top>
         <Left>1.46967cm</Left>
         <Height>1.2cm</Height>
-        <Width>12.42188cm</Width>
+        <Width>12.42187cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -469,7 +469,12 @@
       </Tablix>
     </ReportItems>
     <Height>2in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <BackgroundColor>Teal</BackgroundColor>
+    </Style>
   </Body>
   <Width>6.28621in</Width>
   <Page>

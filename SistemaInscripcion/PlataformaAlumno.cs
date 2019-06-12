@@ -159,7 +159,8 @@ namespace SistemaInscripcion
 
         private void BtnInforme_Click(object sender, EventArgs e)
         {
-            
+            ReporteNotasAlumno reporteAlumnoNotas = new ReporteNotasAlumno();
+            reporteAlumnoNotas.Show();
         }
     }
 }

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MisDatosAlumnoNotas" targetNamespace="http://tempuri.org/MisDatosAlumnoNotas.xsd" xmlns:mstns="http://tempuri.org/MisDatosAlumnoNotas.xsd" xmlns="http://tempuri.org/MisDatosAlumnoNotas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="proyectoBDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="proyectoBDConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemaInscripcion.Properties.Settings.GlobalReference.Default.proyectoBDConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TablaNotasAlumnoTableAdapter" GeneratorDataComponentClassName="TablaNotasAlumnoTableAdapter" Name="TablaNotasAlumno" UserDataComponentName="TablaNotasAlumnoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="proyectoBDConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Materias.nombre, Modulo.Nota1, Modulo.Nota2, Modulo.Nota3, Modulo.Notaf, Docentes.nombre AS docente
+FROM            Modulo INNER JOIN
+                         Alumnos ON Modulo.CI_Alumno = Alumnos.CI_Alumno INNER JOIN
+                         Docentes ON Modulo.CI_Docente = Docentes.CI_Docente INNER JOIN
+                         Materias ON Modulo.Clave_Materia = Materias.Clave_Materia</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="Nota1" DataSetColumn="Nota1" />
+              <Mapping SourceColumn="Nota2" DataSetColumn="Nota2" />
+              <Mapping SourceColumn="Nota3" DataSetColumn="Nota3" />
+              <Mapping SourceColumn="Notaf" DataSetColumn="Notaf" />
+              <Mapping SourceColumn="docente" DataSetColumn="docente" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MisDatosAlumnoNotas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MisDatosAlumnoNotas" msprop:Generator_UserDSName="MisDatosAlumnoNotas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TablaNotasAlumno" msprop:Generator_TableClassName="TablaNotasAlumnoDataTable" msprop:Generator_TableVarName="tableTablaNotasAlumno" msprop:Generator_RowChangedName="TablaNotasAlumnoRowChanged" msprop:Generator_TablePropName="TablaNotasAlumno" msprop:Generator_RowDeletingName="TablaNotasAlumnoRowDeleting" msprop:Generator_RowChangingName="TablaNotasAlumnoRowChanging" msprop:Generator_RowEvHandlerName="TablaNotasAlumnoRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaNotasAlumnoRowDeleted" msprop:Generator_RowClassName="TablaNotasAlumnoRow" msprop:Generator_UserTableName="TablaNotasAlumno" msprop:Generator_RowEvArgName="TablaNotasAlumnoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nota1" msprop:Generator_ColumnVarNameInTable="columnNota1" msprop:Generator_ColumnPropNameInRow="Nota1" msprop:Generator_ColumnPropNameInTable="Nota1Column" msprop:Generator_UserColumnName="Nota1" type="xs:double" minOccurs="0" />
+              <xs:element name="Nota2" msprop:Generator_ColumnVarNameInTable="columnNota2" msprop:Generator_ColumnPropNameInRow="Nota2" msprop:Generator_ColumnPropNameInTable="Nota2Column" msprop:Generator_UserColumnName="Nota2" type="xs:double" minOccurs="0" />
+              <xs:element name="Nota3" msprop:Generator_ColumnVarNameInTable="columnNota3" msprop:Generator_ColumnPropNameInRow="Nota3" msprop:Generator_ColumnPropNameInTable="Nota3Column" msprop:Generator_UserColumnName="Nota3" type="xs:double" minOccurs="0" />
+              <xs:element name="Notaf" msprop:Generator_ColumnVarNameInTable="columnNotaf" msprop:Generator_ColumnPropNameInRow="Notaf" msprop:Generator_ColumnPropNameInTable="NotafColumn" msprop:Generator_UserColumnName="Notaf" type="xs:double" minOccurs="0" />
+              <xs:element name="docente" msprop:Generator_ColumnVarNameInTable="columndocente" msprop:Generator_ColumnPropNameInRow="docente" msprop:Generator_ColumnPropNameInTable="docenteColumn" msprop:Generator_UserColumnName="docente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -33,4 +33,5 @@ namespace SistemaInscripcion.Properties {
             }
         }
     }
+
 }

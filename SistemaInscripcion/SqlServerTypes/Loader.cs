@@ -4,6 +4,8 @@ using System.Runtime.InteropServices;
 
 namespace SqlServerTypes
 {
+
+
     /// <summary>
     /// Utility methods related to CLR Types for SQL Server 
     /// </summary>
@@ -27,6 +29,8 @@ namespace SqlServerTypes
 
             LoadNativeAssembly(nativeBinaryPath, "msvcr120.dll");
             LoadNativeAssembly(nativeBinaryPath, "SqlServerSpatial140.dll");
+
+            SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
         }
 
         private static void LoadNativeAssembly(string nativeBinaryPath, string assemblyName)
@@ -40,6 +44,8 @@ namespace SqlServerTypes
                     assemblyName,
                     Marshal.GetLastWin32Error()));
             }
+
+            SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
         }
     }
 }

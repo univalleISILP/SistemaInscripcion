@@ -14,7 +14,7 @@ namespace SistemaInscripcion
             //Conexion a a base de datos Cris
             //SqlConnection conex = new SqlConnection("Data Source=DESKTOP-3GSJ7HM;Initial Catalog=proyectoBD;Integrated Security=True");
             //Conexion a la base de datos Jorge
-            SqlConnection conex = new SqlConnection("Data Source=DESKTOP-22N1BH9;Initial Catalog=proyectoBD;Integrated Security=True");
+            SqlConnection conex = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=proyectoBD;Integrated Security=True");
             conex.Open();
             return conex;
         }
@@ -23,7 +23,7 @@ namespace SistemaInscripcion
             //Conexion a a base de datos
             //SqlConnection conex = new SqlConnection("Data Source=DESKTOP-3GSJ7HM;Initial Catalog=proyectoBD2;Integrated Security=True");
             //Conexion a la base de datos Jorge
-            SqlConnection conex = new SqlConnection("Data Source=DESKTOP-22N1BH9;Initial Catalog=proyectoBD2;Integrated Security=True");
+            SqlConnection conex = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=proyectoBD2;Integrated Security=True");
             conex.Open();
             return conex;
         }
